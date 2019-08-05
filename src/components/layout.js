@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import './layout.scss'
 
 import { rhythm, scale } from "../utils/typography"
 
@@ -7,66 +8,63 @@ class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
-    let header
-
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      <div className="l-site">
+        <div className="l-nav">
+          <nav className="nav">
+            <ul>
+              <li className="nav-primary">
+                <Link
+                  style={{
+                    color: (location.pathname === '/' ? '#ff0000': '#fff'),
+                  }}
+                  to={`/`}
+                >
+                  VIDEOS
+                </Link>
+              </li>
+              <li className="nav-primary">
+                <Link
+                  style={{
+                    color: (location.pathname.indexOf('/blog') === 0 ? '#ff0000': '#fff'),
+                  }}
+                  to={`/`}
+                >
+                  BLOG
+                </Link>
+              </li>
+              <li className="nav-primary">
+                <Link
+                  style={{
+                    color: (location.pathname.indexOf('/projects') === 0 ? '#ff0000': '#fff'),
+                  }}
+                  to={`/`}
+                >
+                  PROJECTS
+                </Link>
+              </li>
+              <li className="nav-primary">
+                <Link
+                  style={{
+                    color: (location.pathname.indexOf('/about') === 0 ? '#ff0000': '#fff'),
+                  }}
+                  to={`/`}
+                >
+                  ABOUT
+                </Link>
+              </li>
+              <li className="nav-secondary">
+                <a href="https://github.com/kevinponce">GITHUB</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="l-page">
+          <div className="menu">
+            <div className="menu-hamburger"></div>
+          </div>
+          <div className="child-wrapper">{children}</div>
+        </div>
       </div>
     )
   }
