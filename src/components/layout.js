@@ -16,16 +16,6 @@ class Layout extends React.Component {
               <li className="nav-primary">
                 <Link
                   style={{
-                    color: (location.pathname === '/' ? '#ff0000': '#fff'),
-                  }}
-                  to={`/`}
-                >
-                  VIDEOS
-                </Link>
-              </li>
-              <li className="nav-primary">
-                <Link
-                  style={{
                     color: (location.pathname.indexOf('/blog') === 0 ? '#ff0000': '#fff'),
                   }}
                   to={`/`}

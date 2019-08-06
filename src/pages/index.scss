@@ -158,6 +158,23 @@ $zoom-slow: all 2.4s cubic-bezier(.55,0,.1,1);
       a:hover { color: $grey; }
       a:active { color: $light-grey; }
     }
+
+    .tags-wrapper {
+      a {
+        background-color: #5d676c;
+        display: inline;
+        padding: .2em .6em .3em;
+        font-size: 75%;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: .25em;
+        margin: 0px 5px 0px 0px;
+      }
+    }
   }
 }
 

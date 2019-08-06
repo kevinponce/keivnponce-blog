@@ -1,5 +1,5 @@
 ---
-title: Adding image to Gatsby
+title: Adding image to Gatsby Component
 date: "2019-08-04T22:12:00.121Z"
 tags: ["JavaScript", "Gatsby"]
 header: { type: 'icon', bgColor: '#663399', icon: 'gatsby' }
@@ -12,7 +12,7 @@ npm install --save gatsby-image
 ```
 
 Add the following to your gatsby-config.js:
-```
+```javascript
 plugins: [
   {
     resolve: `gatsby-source-filesystem`,
@@ -35,7 +35,7 @@ import Image from "gatsby-image"
 ```
 
 ## Create a graphql query to get fetch image
-```
+```javascript
 export const pageQuery = graphql`
   query {
     gatsbyIcon: file(absolutePath: { regex: "/gatsby-icon.png/" }) {
@@ -50,7 +50,7 @@ export const pageQuery = graphql`
 ```
 
 ## Create image tag that uses the graphql query response above
-```
+```javascript
 const { data } = this.props;
 
 return (
