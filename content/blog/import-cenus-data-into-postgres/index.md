@@ -1,7 +1,7 @@
 ---
 title: Import Cenus data into Postgres
 date: "2019-08-03T22:12:00.121Z"
-tags: ["Postgres"]
+tags: ["postgres"]
 header: { type: 'icon', bgColor: '#2A5480', icon: 'postgres' }
 ---
 

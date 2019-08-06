@@ -1,7 +1,7 @@
 ---
 title: Tensorflow image recognition on mac
 date: "2019-08-03T22:12:00.121Z"
-tags: ["Python"]
+tags: ["python"]
 header: { type: 'icon', bgColor: '#4B8BBE', icon: 'python' }
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Google maps draw polygon and change color on click
 date: "2019-08-03T22:12:00.121Z"
-tags: ["Googe Maps"]
+tags: ["googe-maps"]
 header: { type: 'icon', bgColor: '#359852', icon: 'google-maps' }
 ---
 

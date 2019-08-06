@@ -1,7 +1,7 @@
 ---
 title: Adding image to Gatsby Component
 date: "2019-08-04T22:12:00.121Z"
-tags: ["JavaScript", "Gatsby"]
+tags: ["javascript", "gatsby"]
 header: { type: 'icon', bgColor: '#663399', icon: 'gatsby' }
 ---
 

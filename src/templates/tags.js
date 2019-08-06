@@ -25,7 +25,7 @@ class BlogIndex extends React.Component {
         <SEO title="All posts" />
         <Blogs posts={posts}
                pageContext={pageContext}
-               prefixUrl={'/blogs/'}
+               prefixUrl={`/tags/${pageContext.tag}/`}
                arduinoIcon={arduinoIcon}
                gatsbyIcon={gatsbyIcon}
                googleMapsIcon={googleMapsIcon}
@@ -42,13 +42,14 @@ class BlogIndex extends React.Component {
 export default BlogIndex
 
 export const pageQuery = graphql`
-   query($skip: Int, $limit: Int) {
+   query($skip: Int, $limit: Int, $tag: String) {
     site {
       siteMetadata {
         title
       }
     }
     allMarkdownRemark(
+      filter: { frontmatter: { tags: { in: [$tag] } } }
       sort: { fields: [frontmatter___date], order: DESC },
       limit: $limit,
       skip: $skip

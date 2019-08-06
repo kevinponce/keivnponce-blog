@@ -1,7 +1,7 @@
 ---
 title: Raspberry LAN OSX
 date: "2019-08-04T22:12:00.121Z"
-tags: ["Raspberry"]
+tags: ["raspberry"]
 header: { type: 'icon', bgColor: '#B41039', icon: 'raspberry' }
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Creating blog with Gatsby
 date: "2019-08-02T22:12:00.121Z"
-tags: ["JavaScript", "Gatsby"]
+tags: ["javascript", "gatsby"]
 header: { type: 'icon', bgColor: '#663399', icon: 'gatsby' }
 ---
 

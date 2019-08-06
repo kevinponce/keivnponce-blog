@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const _ = require("lodash")
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -19,6 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                tags
               }
             }
           }
@@ -45,6 +47,40 @@ exports.createPages = async ({ graphql, actions }) => {
         numPages,
         currentPage: i + 1,
       },
+    })
+  })
+
+  // Tags
+  const tags = _.reduce(posts, (results, edge) => {
+    const tags = _.get(edge, "node.frontmatter.tags");
+    if (tags) {
+      _.each(tags, tag => {
+        if(!results[tag]) {
+          results[tag] = 0;
+        }
+
+        results[tag] += 1
+      })
+    }
+
+    return results;
+  }, {});
+
+  Object.keys(tags).forEach(tag => {
+    const tagNumPages = Math.ceil(tags[tag] / postsPerPage);
+
+    Array.from({ length: tagNumPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/tags/${tag}` : `/tags/${tag}/${i + 1}`,
+        component: path.resolve("./src/templates/tags.js"),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages: tagNumPages,
+          currentPage: i + 1,
+          tag,
+        },
+      })
     })
   })
 
