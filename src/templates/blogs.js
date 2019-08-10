@@ -1,10 +1,8 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Confetti from '../components/confetti';
 import Blogs from '../components/blogs';
-import '../styles/index.scss'
 
 class BlogIndex extends React.Component {
   render() {
@@ -26,44 +24,18 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <div className="home">
-          <section className="band band-0">
-            <div className="header-wrapper">
-              <Confetti />
-              <h2>Welcome</h2>
-            </div>
-          </section>
-          <section className="band band-a">
-            <div className="band-container">
-              <div className="band-inner">
-                <p>My name is Kevin Ponce. I am a software developer, who loves to build. Started programming in high school because I was too lazy to select the class I wanted to take next semester. I am not fully sure what I am going to be doing with this site, but I just started to blog to help me remember what I know.</p>
-              </div>
-            </div>
-          </section>
-          <section className="band band-b">
-            <div className="band-container">
-              <div className="band-inner">
-                <h1>Latest Blogs</h1>
-                <Blogs posts={posts}
-                   pageContext={pageContext}
-                   prefixUrl={'/blogs/'}
-                   masonry={false}
-                   arduinoIcon={arduinoIcon}
-                   gatsbyIcon={gatsbyIcon}
-                   googleMapsIcon={googleMapsIcon}
-                   postgresIcon={postgresIcon}
-                   pythonIcon={pythonIcon}
-                   raspberryIcon={raspberryIcon}
-                   rubyIcon={rubyIcon} 
-                   jsIcon={jsIcon}
-                />
-                <div className="read-more-wrapper">
-                  <Link to='/blogs'>Read More</Link>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
+        <Blogs posts={posts}
+               pageContext={pageContext}
+               prefixUrl={'/blogs/'}
+               arduinoIcon={arduinoIcon}
+               gatsbyIcon={gatsbyIcon}
+               googleMapsIcon={googleMapsIcon}
+               postgresIcon={postgresIcon}
+               pythonIcon={pythonIcon}
+               raspberryIcon={raspberryIcon}
+               rubyIcon={rubyIcon} 
+               jsIcon={jsIcon}
+        />
       </Layout>
     );
   }
@@ -71,9 +43,8 @@ class BlogIndex extends React.Component {
 
 export default BlogIndex
 
-
 export const pageQuery = graphql`
-   query {
+   query($skip: Int, $limit: Int) {
     site {
       siteMetadata {
         title
@@ -81,7 +52,8 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC },
-      limit: 3
+      limit: $limit,
+      skip: $skip
     ) {
       edges {
         node {

@@ -1,0 +1,123 @@
+.home {
+  .header-wrapper {
+    background-color: #fff;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+
+    h2 {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      left: 0;
+      font-size: 60px;
+    }
+  }
+
+  .band {
+    h1 {
+      margin: 0;
+      padding: 0 0 10px;
+      color: #fff;
+      font-size: 32px;
+    }
+    
+    p {
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      font-size: 17px;
+    }
+  }
+
+  .band-container {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: table;
+    position: relative;
+    padding: 0 3em;
+  }
+
+  .band-inner {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3em 0 4em;
+  }
+
+  .band-0 {
+    position: relative;
+    width: 100%;
+    height: 250px;
+  }
+
+  .band-a {
+    background: #69D2E7;
+  }
+  .band-b {
+    background: #fff;
+    h1 {
+      color: #3a4043 !important;
+    }
+    .read-more-wrapper {
+          width: 100%;
+      clear: both;
+      margin: 30px 0px;
+      float: left;
+
+      a {
+        background-color: #5d676c;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: .25em;
+        margin: 0 auto;
+        text-decoration: none;
+        text-align: center;
+        padding: 10px;
+        width: 105px;
+        display: block;
+      }
+    }
+  }
+
+  .band-c {
+    background: #F9D423;
+  }
+
+  .band-d {
+    background: #F38630;
+  }
+
+  .band-e {
+    background: #FF4E50;
+  }
+
+  .blogs-wrapper {
+    width: 100%;
+
+    p {
+      color: #9f9e9f;
+      font-size: 14px;
+      line-height: 1.6em;
+    }
+
+    @media only screen and (max-width:768px) {
+      .blog-post-wrapper {
+        width: 50%;
+      }
+    }
+
+    @media only screen and (max-width:500px) {
+      .blog-post-wrapper {
+        width: 100%;
+      }
+    }
+  }
+}

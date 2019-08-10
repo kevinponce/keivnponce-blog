@@ -1,0 +1,363 @@
+$icecream-color: #FFA5A5;
+$icecream-darker-color: #EB918E;
+$icecream-tongue-color: #F9BCBB;
+$icecream-stick-color: #F8D4AC;
+$drop-delay: 3s;
+
+@mixin createCircle() {
+  &:after {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+.icecream-container {
+  width: 225px;
+  height: 500px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  
+  @mixin createDrop($color: $icecream-color) {
+    width: 100%;
+    background-color: $color;
+    position: absolute;
+    top: 100%;
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+    &:after {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  
+  .icecream-spot {
+    width: 30%;
+    height: 3.5%;
+    background: $icecream-color;
+    position: absolute;
+    bottom: 3.5%;
+    right: -3%;
+    border-radius: 50%;
+    animation: spotAnimation 5s linear infinite $drop-delay;
+  }
+  
+  @keyframes spotAnimation {
+    0% {
+      transform: scaleX(1);
+    } 18% {
+      transform: scaleX(1);
+    } 20% {
+      transform: scaleX(1.3);
+    } 32% {
+      transform: scaleX(1);
+    } 65% {
+      transform: scaleX(1);
+    } 67% {
+      transform: scaleX(1.3);
+    } 80% {
+      transform: scaleX(1);
+    }
+  }
+  
+  .icecream-drops {
+    position: absolute;
+    width: 30%;
+    height: 45%;
+    top: 91%;
+    right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+    
+    &-falling_drop {
+      @include createDrop($icecream-color);
+      animation: fallingDrop 5s ease-in infinite $drop-delay;
+      
+      &.second {
+        animation-delay: $drop-delay + 2.5s;
+      }
+    }
+    
+    &-first {
+      width: 25%;
+      height: 30%;
+      background-color: $icecream-color;
+      position: relative;
+      
+      &_end {
+        @include createDrop(); 
+      }
+    }
+    
+    &-first_space {
+      width: 25%;
+      height: 25%;
+      background-color: $icecream-color;
+      position: relative;
+      
+      &_end {
+        @include createDrop(white); 
+      }
+    }
+    
+    &-second {
+      width: 25%;
+      height: 40%;
+      background-color: $icecream-color;
+      position: relative;
+      
+      &_end {
+        @include createDrop(); 
+      }
+    }
+    
+    &-second_space {
+      width: 25%;
+      height: 25.5%;
+      background-color: $icecream-color;
+      position: relative;
+      
+      &_end {
+        @include createDrop(white);
+        border-radius: 0 50% 50% 50%;
+      }
+    }
+  }
+  
+  @keyframes fallingDrop {
+    0% {
+      top: 0%;
+    } 20% {
+      top: 350%;
+    } 100% {
+      top: 350%;
+    }
+  }
+  
+  .icecream-face {
+    width: 70%;
+    height: 25%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    &-mounth {
+      width: 30%;
+      margin-top: 10%;
+      position: relative;
+      border-radius: 10% 10% 0 0;
+      overflow: hidden;
+      
+      &:after {
+        content: '';
+        display: block;
+        padding-top: 60%;
+      }
+      
+      &_inner {
+        background: $icecream-darker-color;
+        border-radius: 0 0 50% 50%;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
+
+        &:after {
+          content: "";
+          display: block;
+          padding-top: 100%;
+        }
+      }
+      
+      &_tongue {
+        width: 100%;
+        height: 100%;
+        background-color: $icecream-tongue-color;
+        position: absolute;
+        top: 70%;
+        border-radius: 50%;
+      }
+    }
+    
+    &-eyes {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      
+      div {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background-color: $icecream-darker-color;
+        animation: eyesAnimation 4s ease-out infinite 1s;
+      }
+    }
+  }
+  
+  @keyframes eyesAnimation {
+    0% {
+      transform: scaleY(1);
+    } 5% {
+      transform: scaleY(0);
+    } 10% {
+      transform: scaleY(1);
+    }
+  }
+  
+  .icecream-body {
+    height: 70%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
+    &-shadow {
+      width: 70%;
+      height: 45%;
+      z-index: 3;
+      display: flex;
+      justify-content: space-between;
+      
+      &_item {
+        height: 100%;
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        
+        & > div {
+          width: 100%;
+          background-color: $icecream-darker-color;
+          opacity: 0.5;
+        }
+        
+        &_top {
+          height: 40%;
+          border-radius: 50% 50% 0 0;
+        }
+        
+        &_bottom {
+          height: 40%;
+          border-radius: 0 0 50% 50%;
+        }
+        
+        &_center {
+          flex-grow: 1;
+        }
+      }
+    }
+    
+    &_top {
+      position: absolute;
+      top: 0;
+      height: 50%;
+      width: 100%;
+      background-color: $icecream-color;
+      border-radius: 100% 100% 0 0;
+      z-index: 0;
+    }
+    
+    &_bottom {
+      position: absolute;
+      bottom: 0;
+      height: 50%;
+      width:100%;
+      background-color: $icecream-color;
+      border-radius: 0 0 10% 10%;
+      z-index: 0;
+    }
+  }
+  
+  .icecream-bite {
+    &_first,
+    &_second {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0;
+      animation: biteAnimation 0.5s forwards 2s; 
+      
+      @include createCircle();
+    }
+    
+    &_first {
+      top: -7%;
+      left: 20%;
+      width: 30%;
+      animation-delay: .5s;
+    }
+    
+    &_second {
+      top: 0%;
+      left: 7%;
+      width: 20%;
+    }
+  }
+  
+  @keyframes biteAnimation {
+    0% {
+      opacity: 0;
+    } 1% {
+      opacity: 1;
+    } 100% {
+      opacity: 1;
+    }
+  }
+  
+  .icecream-stick {
+    height: 20%;
+    width: 20%;
+    background-color: $icecream-stick-color;
+    position: relative;
+    
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-top: 40%;
+      position: absolute;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-top: 100%;
+      background-color: $icecream-stick-color;
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      transform: translateY(50%);
+      border-radius: 50%;
+    }
+    
+    &_shadow {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 180%;
+      background-color: rgba(0, 0, 0, .1);
+      border-radius: 50%;
+      transform: translate(-50%, 100%);
+      
+      &:after {
+        content: '';
+        display: block;
+        padding-top: 20%;
+      }
+    }
+  }
+}

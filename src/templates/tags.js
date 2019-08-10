@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Blogs from '../components/blogs';
@@ -14,6 +14,7 @@ class BlogIndex extends React.Component {
       arduinoIcon,
       gatsbyIcon,
       googleMapsIcon,
+      jsIcon,
       postgresIcon,
       pythonIcon,
       raspberryIcon,
@@ -32,7 +33,8 @@ class BlogIndex extends React.Component {
                postgresIcon={postgresIcon}
                pythonIcon={pythonIcon}
                raspberryIcon={raspberryIcon}
-               rubyIcon={rubyIcon} 
+               rubyIcon={rubyIcon}
+               jsIcon={jsIcon} 
         />
       </Layout>
     )
@@ -124,6 +126,14 @@ export const pageQuery = graphql`
     }
 
     googleMapsIcon: file(absolutePath: { regex: "/google-maps-icon.png/" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
+    jsIcon: file(absolutePath: { regex: "/js-icon.png/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed
