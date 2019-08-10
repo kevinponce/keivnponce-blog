@@ -75,6 +75,7 @@ body {
 
     &.logo {
       margin-bottom: 30px;
+      max-width: 130px;
 
       a {
         font-size: 30px;
@@ -140,28 +141,48 @@ body {
       width: 24px;
     }
   }
-  
-  &.is-active {
-    .menu-hamburger {
-      background: none;
-    }
-    .menu-hamburger:before,
-    .menu-hamburger:after {
-      top: 0;
-      width: 24px;
-      -webkit-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-              transform: rotate(45deg);
-    }
-    .menu-hamburger:after {
-      -webkit-transform: rotate(-45deg);
-          -ms-transform: rotate(-45deg);
-              transform: rotate(-45deg);
-    }
-    .menu-hamburger:hover {
-      -webkit-transform: scale(1.2);
-          -ms-transform: scale(1.2);
-              transform: scale(1.2);
+}
+
+.hide {
+  display: none !important;
+}
+
+.is-open {
+  .logo {
+    margin-top: 20px;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 240px;
+
+    .menu.close {
+      right: 10px;
+      left: auto;
+      position: absolute;
+
+      .menu-hamburger {
+        background: none;
+
+        &:before,
+        &:after {
+          top: 0;
+          width: 24px;
+          -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+                  transform: rotate(45deg);
+        }
+        &:after {
+          -webkit-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
+                  transform: rotate(-45deg);
+        }
+        &:hover {
+          -webkit-transform: scale(1.2);
+              -ms-transform: scale(1.2);
+                  transform: scale(1.2);
+        }
+      }
     }
   }
 }
@@ -237,7 +258,6 @@ body {
     z-index: 2;
   }
 }
-
 
 html {
   font-size: 10px;

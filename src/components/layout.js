@@ -21,6 +21,9 @@ class Layout extends React.Component {
       <div className={`l-site ${this.state.isOpen ? 'is-open' : ''}`}>
         <div className="l-nav">
           <nav className="nav">
+            <div className={`menu close ${this.state.isOpen ? '' : 'hide'}`}>
+              <div className="menu-hamburger" onClick={(e) => { e.preventDefault(); this.setState({ isOpen: !this.state.isOpen }) }}></div>
+            </div>
             <ul>
               <li className="nav-primary logo">
                 <Link to={`/`}>
@@ -60,7 +63,7 @@ class Layout extends React.Component {
           </nav>
         </div>
         <div className="l-page">
-          <div className={`menu ${this.state.isOpen ? 'is-active' : ''}`}>
+          <div className={`menu ${this.state.isOpen ? 'hide' : ''}`}>
             <div className="menu-hamburger dark" onClick={(e) => { e.preventDefault(); this.setState({ isOpen: !this.state.isOpen }) }}></div>
           </div>
           <div className="child-wrapper">{children}</div>
