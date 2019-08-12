@@ -203,12 +203,12 @@ $zoom-slow: all 2.4s cubic-bezier(.55,0,.1,1);
         padding: 10px;
         text-decoration: none;
 
-        i {
+        img {
           margin: 0px;
           padding: 0px;
-          line-height: 0;
           position: relative;
-          top: 7px;
+          top: 4px;
+          height: 12px;
         }
       }
     }

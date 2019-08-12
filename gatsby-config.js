@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/gatsbyjs-blog",
   siteMetadata: {
     title: `Kevin Ponce Blog`,
     author: `Kevin Ponce`,
@@ -102,7 +103,14 @@ module.exports = {
           },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-plugin-sass`
+          `gatsby-plugin-sass`,
+          {
+            resolve:"@weknow/gatsby-remark-codepen",
+            options: {
+              theme: "dark",
+              height: 400
+            }
+          }
         ],
       },
     },

@@ -33,7 +33,7 @@ class Layout extends React.Component {
               <li className="nav-primary">
                 <Link to={`/blogs`}
                   style={{
-                    color: (location.pathname.indexOf('/blog') === 0 ? '#69D2E7': '#fff'),
+                    color: ((location.pathname.indexOf('/blog') === 0 || location.pathname.indexOf('/tags') === 0) ? '#69D2E7': '#fff'),
                   }}
                   to={`/blogs`}
                 >

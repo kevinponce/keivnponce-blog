@@ -1,7 +1,7 @@
 ---
 title: Twilio Video Chat
 date: "2019-08-08T22:12:00.121Z"
-tags: ["javascript", "ruby-on-rails"]
+tags: ["javascript", "ruby-on-rails", "react"]
 header: { type: 'icon', bgColor: '#E6CE33', icon: 'js' }
 ---
 

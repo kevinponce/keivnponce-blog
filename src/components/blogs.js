@@ -5,7 +5,8 @@ import Masonry from 'react-masonry-component';
 import Image from "gatsby-image"
 import PropTypes from "prop-types"
 import _ from 'lodash';
-import MaterialIcon from 'material-icons-react';
+import chevronLeft from '../images/chevron-left-solid.svg'
+import chevronRight from '../images/chevron-right-solid.svg'
 
 const masonryOptions = {
     transitionDuration: 0
@@ -20,6 +21,7 @@ class Blogs extends React.Component {
     this.pagination = this.pagination.bind(this);
     this.renderPostsWithMasonry = this.renderPostsWithMasonry.bind(this);
   }
+
   renderHeader(node) {
     const {
       arduinoIcon,
@@ -138,7 +140,7 @@ class Blogs extends React.Component {
         {!isFirst && (
           <li>
             <Link to={prevPage} rel="prev">
-              <MaterialIcon icon="chevron_left" size={22} color='#fff' />
+              <img src={chevronLeft} alt="prev page"/>
             </Link>
           </li>
         )}
@@ -160,7 +162,7 @@ class Blogs extends React.Component {
         {!isLast && (
           <li>
             <Link to={nextPage} rel="next">
-              <MaterialIcon icon="chevron_right" size={22} color='#fff' />
+              <img src={chevronRight}alt="next page"/>
             </Link>
           </li>
         )}
@@ -170,7 +172,7 @@ class Blogs extends React.Component {
 
   renderPostsWithMasonry() {
     if(this.props.masonry === false) {
-      return this.renderPosts()
+      return this.renderPosts();
     }
 
     return (
@@ -189,6 +191,7 @@ class Blogs extends React.Component {
     return (
       <div className="blogs-wrapper">
       {this.renderPostsWithMasonry()}
+      {this.pagination()}
       </div>
     )
   }
