@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Thu, 29 Aug 2019 19:35:40 GMT</lastBuildDate><item><title><![CDATA[Checkbox Custom Style]]></title><description><![CDATA[Checkboxes are too hard to style, but designers always design them… I personally do not like to import a library to do them. So I created my…]]></description><link>https://kevinponce.com/checkbox-custom-style/</link><guid isPermaLink="false">https://kevinponce.com/checkbox-custom-style/</guid><pubDate>Thu, 29 Aug 2019 12:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Checkboxes are too hard to style, but designers always design them…&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Thu, 29 Aug 2019 21:38:59 GMT</lastBuildDate><item><title><![CDATA[Checkbox Custom Style]]></title><description><![CDATA[Checkboxes are too hard to style, but designers always design them… I personally do not like to import a library to do them. So I created my…]]></description><link>https://kevinponce.com/checkbox-custom-style/</link><guid isPermaLink="false">https://kevinponce.com/checkbox-custom-style/</guid><pubDate>Thu, 29 Aug 2019 12:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Checkboxes are too hard to style, but designers always design them…&lt;/p&gt;
 &lt;p&gt;I personally do not like to import a library to do them.&lt;/p&gt;
 &lt;p&gt;So I created my own. Well with the help of the internet.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;label&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;checkboxWrapper&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
@@ -72,7 +72,93 @@
 &lt;span class=&quot;token property-line&quot;&gt;    &lt;span class=&quot;token property&quot;&gt;-ms-transform&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; rotate(45deg);&lt;/span&gt;
 &lt;span class=&quot;token property-line&quot;&gt;    &lt;span class=&quot;token property&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; rotate(45deg);&lt;/span&gt;
   &lt;span class=&quot;token selector&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token selector&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React Confetti]]></title><description><![CDATA[Now I am almost ready to launch my website.
+&lt;span class=&quot;token selector&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React Google Place Autocomplete]]></title><description><![CDATA[Google Places autocomplete is amazing. It makes address extremely simple. I personally like to use their place id and formatted address…]]></description><link>https://kevinponce.com/react-google-place-autocomplete/</link><guid isPermaLink="false">https://kevinponce.com/react-google-place-autocomplete/</guid><pubDate>Mon, 19 Aug 2019 14:38:00 GMT</pubDate><content:encoded>&lt;p&gt;Google Places autocomplete is amazing.&lt;/p&gt;
+&lt;p&gt;It makes address extremely simple. I personally like to use their place id and formatted address instead of trying to parse it and manage the address manually. &lt;/p&gt;
+&lt;p&gt;Here is a quick example on how use use google places with react.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;babel&quot;&gt;&lt;pre class=&quot;language-babel&quot;&gt;&lt;code class=&quot;language-babel&quot;&gt;import React, { Component } from &amp;#39;react&amp;#39;;
+import PropTypes from &amp;#39;prop-types&amp;#39;;
+
+class AutocompleteInput extends Component {
+  constructor(props) {
+    super(props);
+
+    this.autoCompleteInput = React.createRef();
+    this.autocomplete = null;
+
+    this.handlePlaceChanged = this.handlePlaceChanged.bind(this);
+  }
+
+  componentDidMount() {
+    this.autocomplete = new google.maps.places.Autocomplete(
+      this.autoCompleteInput.current,
+      { &amp;#39;types&amp;#39;: [&amp;#39;geocode&amp;#39;] }
+    );
+
+    this.autocomplete.addListener(&amp;#39;place_changed&amp;#39;, this.handlePlaceChanged);
+  }
+
+  handlePlaceChanged(){
+    const place = this.autocomplete.getPlace();
+    const { location } = place.geometry;
+
+    this.props.onChange({
+      lat: location.lat(),
+      lng: location.lng(),
+      placeId: place.place_id,
+      formattedAddress: place.formatted_address,
+    })
+  }
+
+  render() {
+    return (
+      &amp;lt;input type=&amp;quot;text&amp;quot;
+             name=&amp;quot;address&amp;quot;
+             placeholder=&amp;quot;Enter address&amp;quot;
+             value={this.props.value}
+             ref={this.autoCompleteInput} /&amp;gt;
+    );
+  }
+}
+
+AddressAutoCompleteInput.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
+
+export default AddressAutoCompleteInput;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Here is an example on how to use it:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import React, { Component } from &amp;#39;react&amp;#39;;
+import AutocompleteInput from &amp;#39;autocompleteInput&amp;#39;;
+
+export default class Address extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      lat: 0,
+      lng: 0,
+      placeId: null,
+      formattedAddress: &amp;#39;&amp;#39;,
+    };
+
+    this.addressChange = this.addressChange.bind(this);
+  }
+
+  addressChange({ lat, lng, placeId, formattedAddress }){
+    this.setState({
+      lat,
+      lng,
+      placeId,
+      formattedAddress,
+    })
+  }
+
+  render() {
+    return (
+      &amp;lt;AutocompleteInput value={this.state.formattedAddress} onChange={this.addressChange} /&amp;gt;
+    );
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React Confetti]]></title><description><![CDATA[Now I am almost ready to launch my website.
 For me it is a celabration, because I have been talking about blogging and doing my site for…]]></description><link>https://kevinponce.com/react-confetti/</link><guid isPermaLink="false">https://kevinponce.com/react-confetti/</guid><pubDate>Mon, 12 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Now I am almost ready to launch my website.
 For me it is a celabration, because I have been talking about blogging and doing my site for 7 years…
 I have designed it several time during this time, but never launched them.
