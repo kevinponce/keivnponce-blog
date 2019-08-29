@@ -18,7 +18,8 @@ class BlogIndex extends React.Component {
       postgresIcon,
       pythonIcon,
       raspberryIcon,
-      rubyIcon
+      rubyIcon,
+      htmlIcon
     } = data;
 
     return (
@@ -33,7 +34,8 @@ class BlogIndex extends React.Component {
                postgresIcon={postgresIcon}
                pythonIcon={pythonIcon}
                raspberryIcon={raspberryIcon}
-               rubyIcon={rubyIcon} 
+               rubyIcon={rubyIcon}
+               htmlIcon={htmlIcon}
                jsIcon={jsIcon}
         />
       </Layout>
@@ -93,6 +95,14 @@ export const pageQuery = graphql`
     }
 
     rubyIcon: file(absolutePath: { regex: "/ruby-icon.png/" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
+    htmlIcon: file(absolutePath: { regex: "/html-icon.png/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed

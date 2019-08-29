@@ -32,6 +32,7 @@ class Blogs extends React.Component {
       pythonIcon,
       raspberryIcon,
       rubyIcon,
+      htmlIcon
     } = this.props
     const { header } = node.frontmatter;
     let iconImage;
@@ -73,6 +74,10 @@ class Blogs extends React.Component {
       } else if (icon === 'js') {
         iconImage = (<Image
           fixed={jsIcon.childImageSharp.fixed}
+        />)
+      } else if (icon === 'html') {
+        iconImage = (<Image
+          fixed={htmlIcon.childImageSharp.fixed}
         />)
       }
 
@@ -210,6 +215,7 @@ Blogs.propTypes = {
   pythonIcon: PropTypes.object,
   raspberryIcon: PropTypes.object,
   rubyIcon: PropTypes.object,
+  htmlIcon: PropTypes.object,
 }
 
 export default Blogs
