@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Sat, 07 Sep 2019 07:31:09 GMT</lastBuildDate><item><title><![CDATA[Express with es6]]></title><description><![CDATA[Express is a framework that easily provide http requests. To get start you need to create new project by the following in a terminal:
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Sat, 07 Sep 2019 07:40:52 GMT</lastBuildDate><item><title><![CDATA[Express with es6]]></title><description><![CDATA[Express is a framework that easily provide http requests. To get start you need to create new project by the following in a terminal:
 Make…]]></description><link>https://kevinponce.com/express-with-es6/</link><guid isPermaLink="false">https://kevinponce.com/express-with-es6/</guid><pubDate>Sat, 07 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Express is a framework that easily provide http requests.&lt;/p&gt;
 &lt;p&gt;To get start you need to create new project by the following in a terminal:
 Make sure you change &lt;code class=&quot;language-text&quot;&gt;example-project&lt;/code&gt; to the name of your project.&lt;/p&gt;
@@ -287,7 +287,28 @@ export default class Address extends Component {
       &amp;lt;AutocompleteInput value={this.state.formattedAddress} onChange={this.addressChange} /&amp;gt;
     );
   }
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React Confetti]]></title><description><![CDATA[Now I am almost ready to launch my website.
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Deploy Gatsby to Github Pages]]></title><description><![CDATA[Github pages is great, free, and easy to deploy static websites. Here is a simple step my step guide on how I deployed my gatsby website to…]]></description><link>https://kevinponce.com/deploy-gatsby-to-github-pages/</link><guid isPermaLink="false">https://kevinponce.com/deploy-gatsby-to-github-pages/</guid><pubDate>Mon, 12 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Github pages is great, free, and easy to deploy static websites.&lt;/p&gt;
+&lt;p&gt;Here is a simple step my step guide on how I deployed my gatsby website to github pages.&lt;/p&gt;
+&lt;p&gt;First &lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt; needs to be installed:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install gh-pages --save-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now you need add configure to get gh-pages.
+All you need to do is add the your repo path from your github to &lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// gatsby-config.js&lt;/span&gt;
+module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  pathPrefix&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/reponame&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Add the following to your &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; file to easily deploy your site:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// package.json
+{
+  &amp;quot;scripts&amp;quot;: {
+    &amp;quot;deploy&amp;quot;: &amp;quot;gatsby build &amp;amp;&amp;amp; gh-pages -d public -b master&amp;quot;
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now all you need to do is run the following to deploy your gatsby website.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm run deploy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This would be great if it worked 100% of the time, but it failed for me…
+This was because i used &lt;code class=&quot;language-text&quot;&gt;window&lt;/code&gt; and this works when it run in the browser but fails during build.
+I fixed this issue but adding it to &lt;code class=&quot;language-text&quot;&gt;componentDidMount&lt;/code&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React Confetti]]></title><description><![CDATA[Now I am almost ready to launch my website.
 For me it is a celabration, because I have been talking about blogging and doing my site for…]]></description><link>https://kevinponce.com/react-confetti/</link><guid isPermaLink="false">https://kevinponce.com/react-confetti/</guid><pubDate>Mon, 12 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Now I am almost ready to launch my website.
 For me it is a celabration, because I have been talking about blogging and doing my site for 7 years…
 I have designed it several time during this time, but never launched them.
@@ -422,28 +443,7 @@ Confetti&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;propTypes 
 &lt;span class=&quot;token property-line&quot;&gt;  &lt;span class=&quot;token property&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 50&lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt;;&lt;/span&gt;
 &lt;span class=&quot;token property-line&quot;&gt;  &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 100&lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt;;&lt;/span&gt;
 &lt;span class=&quot;token property-line&quot;&gt;  &lt;span class=&quot;token property&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Open Sans&apos;&lt;/span&gt;&lt;span class=&quot;token selector&quot;&gt;, sans-serif;&lt;/span&gt;
-&lt;span class=&quot;token selector&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Deploy Gatsby to Github Pages]]></title><description><![CDATA[Github pages is great, free, and easy to deploy static websites. Here is a simple step my step guide on how I deployed my gatsby website to…]]></description><link>https://kevinponce.com/deploy-gatsby-to-github-pages/</link><guid isPermaLink="false">https://kevinponce.com/deploy-gatsby-to-github-pages/</guid><pubDate>Mon, 12 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Github pages is great, free, and easy to deploy static websites.&lt;/p&gt;
-&lt;p&gt;Here is a simple step my step guide on how I deployed my gatsby website to github pages.&lt;/p&gt;
-&lt;p&gt;First &lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt; needs to be installed:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install gh-pages --save-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now you need add configure to get gh-pages.
-All you need to do is add the your repo path from your github to &lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// gatsby-config.js&lt;/span&gt;
-module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  pathPrefix&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/reponame&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Add the following to your &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; file to easily deploy your site:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// package.json
-{
-  &amp;quot;scripts&amp;quot;: {
-    &amp;quot;deploy&amp;quot;: &amp;quot;gatsby build &amp;amp;&amp;amp; gh-pages -d public -b master&amp;quot;
-  }
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now all you need to do is run the following to deploy your gatsby website.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm run deploy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This would be great if it worked 100% of the time, but it failed for me…
-This was because i used &lt;code class=&quot;language-text&quot;&gt;window&lt;/code&gt; and this works when it run in the browser but fails during build.
-I fixed this issue but adding it to &lt;code class=&quot;language-text&quot;&gt;componentDidMount&lt;/code&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Twilio Video Chat]]></title><description><![CDATA[Twilio Video in react was a lot harder than it should have been…
+&lt;span class=&quot;token selector&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Twilio Video Chat]]></title><description><![CDATA[Twilio Video in react was a lot harder than it should have been…
 The tutorial they provided are out of date…
 Hopefully by the time you are…]]></description><link>https://kevinponce.com/twilio-video-chat/</link><guid isPermaLink="false">https://kevinponce.com/twilio-video-chat/</guid><pubDate>Thu, 08 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Twilio Video in react was a lot harder than it should have been…
 The tutorial they provided are out of date…
@@ -1167,26 +1167,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
   &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Image
     fixed&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;gatsbyIcon&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;childImageSharp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fixed&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Raspberry LAN OSX]]></title><description><![CDATA[Open System Prefrences Click Sharing check Thunderbold ethernet on right side
-Check Internet sharing on the right side
-Click start on popup…]]></description><link>https://kevinponce.com/raspberry-lan-osx/</link><guid isPermaLink="false">https://kevinponce.com/raspberry-lan-osx/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Open System Prefrences&lt;/p&gt;
-&lt;h3&gt;Click Sharing&lt;/h3&gt;
-&lt;p&gt;check Thunderbold ethernet on right side
-Check Internet sharing on the right side
-Click start on popup dialog
-Open System Prefrences
-Click Network
-Click Thunderbold ethernet
-Make sure using DHCP and make sure status status says connect.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew install nmap
-$ ifconfig&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Look for bridge100
-and find inet and copy ip into:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ nmap -n -sP Your-IP-Address/24&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;if that does not work change last number in ip to 0
-look for ip that is not current ip&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ ssh pi@ip-from-above&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Raspberry PI Tensorflow Image Recognition]]></title><description><![CDATA[Updated Raspberry p Getting tensorflow image recognition is an important building block
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Raspberry PI Tensorflow Image Recognition]]></title><description><![CDATA[Updated Raspberry p Getting tensorflow image recognition is an important building block
 Here are the step I had to do to get it to work…]]></description><link>https://kevinponce.com/raspberry-pi-tensorflow-image-recognition/</link><guid isPermaLink="false">https://kevinponce.com/raspberry-pi-tensorflow-image-recognition/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;h3&gt;Updated Raspberry p&lt;/h3&gt;
 &lt;p&gt;Getting tensorflow image recognition is an important building block
 Here are the step I had to do to get it to work:&lt;/p&gt;
@@ -1316,6 +1297,25 @@ $ python3 Object_detection_picamera.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;li&gt;Insert ip&lt;/li&gt;
 &lt;li&gt;Type user and password&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Raspberry LAN OSX]]></title><description><![CDATA[Open System Prefrences Click Sharing check Thunderbold ethernet on right side
+Check Internet sharing on the right side
+Click start on popup…]]></description><link>https://kevinponce.com/raspberry-lan-osx/</link><guid isPermaLink="false">https://kevinponce.com/raspberry-lan-osx/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Open System Prefrences&lt;/p&gt;
+&lt;h3&gt;Click Sharing&lt;/h3&gt;
+&lt;p&gt;check Thunderbold ethernet on right side
+Check Internet sharing on the right side
+Click start on popup dialog
+Open System Prefrences
+Click Network
+Click Thunderbold ethernet
+Make sure using DHCP and make sure status status says connect.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew install nmap
+$ ifconfig&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Look for bridge100
+and find inet and copy ip into:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ nmap -n -sP Your-IP-Address/24&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;if that does not work change last number in ip to 0
+look for ip that is not current ip&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ ssh pi@ip-from-above&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Ruby Matmul]]></title><description><![CDATA[So I just started playing around with machine learning, and keep seeing matmul.
 I wanted to play around remember the math on how to…]]></description><link>https://kevinponce.com/ruby-matmul/</link><guid isPermaLink="false">https://kevinponce.com/ruby-matmul/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;So I just started playing around with machine learning, and keep seeing matmul.
 I wanted to play around remember the math on how to calculate matmul, so I created my own matmul in ruby.&lt;/p&gt;
@@ -1348,7 +1348,33 @@ new_matrix &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; matmul&lt
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install --save node-sass gatsby-plugin-sass&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;add the following to gatsby-config.js&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;plugins: [`gatsby-plugin-sass`]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./src/index.scss&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Google maps draw polygon and change color on click]]></title><description><![CDATA[Repace  with your google api key. Next steps If your dealing with large polygons, it wil beter to load them through a api call.
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./src/index.scss&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Arduino servos]]></title><description><![CDATA[Servos on a arduino could not be any easier.
+They provided an amazing library to fully control servos. Here is the following code:]]></description><link>https://kevinponce.com/arduino-servos/</link><guid isPermaLink="false">https://kevinponce.com/arduino-servos/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Servos on a arduino could not be any easier.
+They provided an amazing library to fully control servos.&lt;/p&gt;
+&lt;p&gt;Here is the following code:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c&quot;&gt;&lt;pre class=&quot;language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token macro property&quot;&gt;#&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;Servo.h&gt;&lt;/span&gt;&lt;/span&gt;
+
+Servo myservo&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// create servo object to control a servo&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// twelve servo objects can be created on most boards&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; pos &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;token comment&quot;&gt;// variable to store the servo position&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  myservo&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;attach&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// attaches the servo on pin 9 to the servo object&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pos &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; pos &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;180&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; pos &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// goes from 0 degrees to 180 degrees&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// in steps of 1 degree&lt;/span&gt;
+    myservo&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pos&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;              &lt;span class=&quot;token comment&quot;&gt;// tell servo to go to position in variable &apos;pos&apos;&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;                       &lt;span class=&quot;token comment&quot;&gt;// waits 15ms for the servo to reach the position&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pos &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;180&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; pos &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; pos &lt;span class=&quot;token operator&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// goes from 180 degrees to 0 degrees&lt;/span&gt;
+    myservo&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pos&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;              &lt;span class=&quot;token comment&quot;&gt;// tell servo to go to position in variable &apos;pos&apos;&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;                       &lt;span class=&quot;token comment&quot;&gt;// waits 15ms for the servo to reach the position&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Google maps draw polygon and change color on click]]></title><description><![CDATA[Repace  with your google api key. Next steps If your dealing with large polygons, it wil beter to load them through a api call.
 All you need…]]></description><link>https://kevinponce.com/google-maps-draw-polygon-and-change-color-on-click/</link><guid isPermaLink="false">https://kevinponce.com/google-maps-draw-polygon-and-change-color-on-click/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;hmtl&quot;&gt;&lt;pre class=&quot;language-hmtl&quot;&gt;&lt;code class=&quot;language-hmtl&quot;&gt;&amp;lt;script&amp;gt;
   function initMap() {
     var map = new google.maps.Map(document.getElementById(&amp;#39;map&amp;#39;), {
@@ -1401,49 +1427,7 @@ All you need…]]></description><link>https://kevinponce.com/google-maps-draw-po
 &lt;p&gt;Repace &lt;code class=&quot;language-text&quot;&gt;GOOGLE_API_KEY&lt;/code&gt; with your google api key.&lt;/p&gt;
 &lt;h2&gt;Next steps&lt;/h2&gt;
 &lt;p&gt;If your dealing with large polygons, it wil beter to load them through a api call.
-All you need to do this is replace &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;loadGeoJson&lt;/code&gt;. The param for &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; is the a url which will return geo json.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Arduino servos]]></title><description><![CDATA[Servos on a arduino could not be any easier.
-They provided an amazing library to fully control servos. Here is the following code:]]></description><link>https://kevinponce.com/arduino-servos/</link><guid isPermaLink="false">https://kevinponce.com/arduino-servos/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Servos on a arduino could not be any easier.
-They provided an amazing library to fully control servos.&lt;/p&gt;
-&lt;p&gt;Here is the following code:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c&quot;&gt;&lt;pre class=&quot;language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token macro property&quot;&gt;#&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;Servo.h&gt;&lt;/span&gt;&lt;/span&gt;
-
-Servo myservo&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// create servo object to control a servo&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// twelve servo objects can be created on most boards&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; pos &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;token comment&quot;&gt;// variable to store the servo position&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  myservo&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;attach&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// attaches the servo on pin 9 to the servo object&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pos &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; pos &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;180&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; pos &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// goes from 0 degrees to 180 degrees&lt;/span&gt;
-    &lt;span class=&quot;token comment&quot;&gt;// in steps of 1 degree&lt;/span&gt;
-    myservo&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pos&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;              &lt;span class=&quot;token comment&quot;&gt;// tell servo to go to position in variable &apos;pos&apos;&lt;/span&gt;
-    &lt;span class=&quot;token function&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;                       &lt;span class=&quot;token comment&quot;&gt;// waits 15ms for the servo to reach the position&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pos &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;180&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; pos &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; pos &lt;span class=&quot;token operator&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// goes from 180 degrees to 0 degrees&lt;/span&gt;
-    myservo&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pos&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;              &lt;span class=&quot;token comment&quot;&gt;// tell servo to go to position in variable &apos;pos&apos;&lt;/span&gt;
-    &lt;span class=&quot;token function&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;                       &lt;span class=&quot;token comment&quot;&gt;// waits 15ms for the servo to reach the position&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Import Cenus data into Postgres]]></title><description><![CDATA[The cenus provides alot of useful data.
-To import it go to  and select . Depending on the time of year, not all of the current data is…]]></description><link>https://kevinponce.com/import-cenus-data-into-postgres/</link><guid isPermaLink="false">https://kevinponce.com/import-cenus-data-into-postgres/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;The cenus provides alot of useful data.
-To import it go to &lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/&lt;/code&gt; and select &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Depending on the time of year, not all of the current data is provided, so you might have to use previous year.
-&lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/TIGER2018/&lt;/code&gt; and selected &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;In this example, we are looking for zip codes. The zip codes are under ZCTA5, so click the folder and download the zip.&lt;/p&gt;
-&lt;p&gt;Once the file is download, unzip the file.
-Now you are ready to import the data into your postgres database.
-Run the following command:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;shp2pgsql -I -s 4269 -W Latin1 tl_2018_us_zcta510.shp table_name | psql -d your_data -U your_postgres_role&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Make sure you udpate the following params to your data:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;tl_2018_us_zcta510.shp&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;table_name&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_data&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_postgres_role&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[How capture webcam in python]]></title><description><![CDATA[Here is a simple tutorial on how to capture your webcam in python. First you need install cv2. Now create the following file: Voila.]]></description><link>https://kevinponce.com/how-capture-webcam-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-capture-webcam-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on how to capture your webcam in python.&lt;/p&gt;
+All you need to do this is replace &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;loadGeoJson&lt;/code&gt;. The param for &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; is the a url which will return geo json.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How capture webcam in python]]></title><description><![CDATA[Here is a simple tutorial on how to capture your webcam in python. First you need install cv2. Now create the following file: Voila.]]></description><link>https://kevinponce.com/how-capture-webcam-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-capture-webcam-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on how to capture your webcam in python.&lt;/p&gt;
 &lt;p&gt;First you need install cv2.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pip3 install cv2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now create the following file:&lt;/p&gt;
@@ -1517,7 +1501,23 @@ plt.plot(x_data, y_data)
 plt.show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Run script&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ python3 example.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Rails export/import users]]></title><description><![CDATA[Here is a simple script to export and import users in rails.
+&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Import Cenus data into Postgres]]></title><description><![CDATA[The cenus provides alot of useful data.
+To import it go to  and select . Depending on the time of year, not all of the current data is…]]></description><link>https://kevinponce.com/import-cenus-data-into-postgres/</link><guid isPermaLink="false">https://kevinponce.com/import-cenus-data-into-postgres/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;The cenus provides alot of useful data.
+To import it go to &lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/&lt;/code&gt; and select &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Depending on the time of year, not all of the current data is provided, so you might have to use previous year.
+&lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/TIGER2018/&lt;/code&gt; and selected &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In this example, we are looking for zip codes. The zip codes are under ZCTA5, so click the folder and download the zip.&lt;/p&gt;
+&lt;p&gt;Once the file is download, unzip the file.
+Now you are ready to import the data into your postgres database.
+Run the following command:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;shp2pgsql -I -s 4269 -W Latin1 tl_2018_us_zcta510.shp table_name | psql -d your_data -U your_postgres_role&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Make sure you udpate the following params to your data:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;tl_2018_us_zcta510.shp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;table_name&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_data&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_postgres_role&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Rails export/import users]]></title><description><![CDATA[Here is a simple script to export and import users in rails.
 Copy and past the following code to . To export users run: To import users run:]]></description><link>https://kevinponce.com/rails-export-import-users/</link><guid isPermaLink="false">https://kevinponce.com/rails-export-import-users/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple script to export and import users in rails.
 Copy and past the following code to &lt;code class=&quot;language-text&quot;&gt;lib/data.rake&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# lib/data.rake&lt;/span&gt;
