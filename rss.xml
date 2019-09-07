@@ -1,4 +1,133 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Thu, 29 Aug 2019 21:38:59 GMT</lastBuildDate><item><title><![CDATA[Checkbox Custom Style]]></title><description><![CDATA[Checkboxes are too hard to style, but designers always design them… I personally do not like to import a library to do them. So I created my…]]></description><link>https://kevinponce.com/checkbox-custom-style/</link><guid isPermaLink="false">https://kevinponce.com/checkbox-custom-style/</guid><pubDate>Thu, 29 Aug 2019 12:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Checkboxes are too hard to style, but designers always design them…&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Sat, 07 Sep 2019 07:31:09 GMT</lastBuildDate><item><title><![CDATA[Express with es6]]></title><description><![CDATA[Express is a framework that easily provide http requests. To get start you need to create new project by the following in a terminal:
+Make…]]></description><link>https://kevinponce.com/express-with-es6/</link><guid isPermaLink="false">https://kevinponce.com/express-with-es6/</guid><pubDate>Sat, 07 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Express is a framework that easily provide http requests.&lt;/p&gt;
+&lt;p&gt;To get start you need to create new project by the following in a terminal:
+Make sure you change &lt;code class=&quot;language-text&quot;&gt;example-project&lt;/code&gt; to the name of your project.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;mdkir example-project
+cd example-project
+npm init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In order to start using express, you need to install the dependencies by running the following in a terminal:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install --save express
+npm install babel-cli babel-preset-env babel-loader babel-core nodemon --save-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Create &lt;code class=&quot;language-text&quot;&gt;index.js&lt;/code&gt; and add the following the code to it:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; express &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;express&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; app &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;express&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;message&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Hello World&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;app running on port &apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Add the following under &lt;code class=&quot;language-text&quot;&gt;scripts&lt;/code&gt; in &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;scripts&amp;quot;: {
+  &amp;quot;start&amp;quot;: &amp;quot;nodemon index.js --exec babel-node --presets babel-preset-env&amp;quot;
+},&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Run the following command in the terminal to run the server:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm run start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Open your favorite browser and go to &lt;code class=&quot;language-text&quot;&gt;http://localhost:3000/&lt;/code&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React Phone Input]]></title><description><![CDATA[Phone Input with a country code is something designers love, and every time have to make one I grown. To make my life easier, I decided to…]]></description><link>https://kevinponce.com/react-phone-input/</link><guid isPermaLink="false">https://kevinponce.com/react-phone-input/</guid><pubDate>Thu, 05 Sep 2019 22:16:00 GMT</pubDate><content:encoded>&lt;p&gt;Phone Input with a country code is something designers love, and every time have to make one I grown.&lt;/p&gt;
+&lt;p&gt;To make my life easier, I decided to create a generic component I can use to make my life easier.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import React from &amp;#39;react&amp;#39;;
+import PropTypes from &amp;#39;prop-types&amp;#39;;
+import intlTelInput from &amp;#39;intl-tel-input&amp;#39;;
+import { get } from &amp;#39;lodash&amp;#39;;
+import &amp;#39;../../../../node_modules/intl-tel-input/build/css/intlTelInput.css&amp;#39;;
+import &amp;#39;../../../../node_modules/intl-tel-input/build/js/utils.js&amp;#39;;
+
+class PhoneInput extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.phoneInput = null;
+    this.phoneInputRef = React.createRef();
+
+    this.phoneChange = this.phoneChange.bind(this);
+  }
+
+  componentDidMount() {
+    const _this = this;
+    _this.phoneInput = intlTelInput(_this.phoneInputRef.current, {
+      preferredCountries: [&amp;#39;us&amp;#39;, &amp;#39;gb&amp;#39;, &amp;#39;ca&amp;#39;, &amp;#39;au&amp;#39;]
+    });
+
+    _this.phoneInputRef.current.addEventListener(&amp;quot;countrychange&amp;quot;, function() {
+      _this.phoneChange();
+    });
+
+    if (_this.props.phone) {
+      _this.phoneInput.setNumber(_this.props.phone);
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.phone !== nextProps.phone &amp;amp;&amp;amp; nextProps.phone) {
+      this.phoneInput.setNumber(nextProps.phone);
+      this.phoneChange();
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.phoneInput) {
+      this.phoneInput.destroy();
+    }
+  }
+
+  phoneChange (e) {
+    let error = this.phoneInput.getValidationError();
+    let phone = this.phoneInput.getNumber();
+    let isValidPhoneNumber = this.phoneInput.isValidNumber();
+    let countryCode = get(this.phoneInput.getSelectedCountryData(), &amp;#39;iso2&amp;#39;);
+
+    this.props.onPhoneNumberChange({ isValidPhoneNumber, phone, error, countryCode });
+  }
+
+  render() {
+    return (
+      &amp;lt;input type=&amp;quot;text&amp;quot;
+             ref={this.phoneInputRef}
+             onChange={this.phoneChange}
+             className={this.props.className}
+             placeholder={this.props.placeholder || &amp;quot;&amp;quot;} /&amp;gt;
+    );
+  }
+}
+
+PhoneInput.propTypes = {
+  onPhoneNumberChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
+  className: PropTypes.string,
+  phone: PropTypes.string,
+};
+
+export default PhoneInput;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Here is an example on how to use it:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;class Example extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.phoneInputChange = this.phoneInputChange.bind(this);
+
+    this.state = {
+      isValidPhoneNumber: false,
+      phone: &amp;#39;&amp;#39;,
+      countryCode: &amp;#39;&amp;#39;
+    };
+  }
+
+  phoneInputChange({ isValidPhoneNumber, phone, countryCode }){
+    this.setState({ isValidPhoneNumber, phone, countryCode });
+  }
+
+  render() {
+    return (
+      &amp;lt;PhoneInput onPhoneNumberChange={ this.phoneInputChange }
+                  className={`${this.state.isValidPhoneNumber ? &amp;#39;valid&amp;#39; : &amp;#39;invalid&amp;#39;}`}
+                  phone={this.state.phone} /&amp;gt;
+    );
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Checkbox Custom Style]]></title><description><![CDATA[Checkboxes are too hard to style, but designers always design them… I personally do not like to import a library to do them. So I created my…]]></description><link>https://kevinponce.com/checkbox-custom-style/</link><guid isPermaLink="false">https://kevinponce.com/checkbox-custom-style/</guid><pubDate>Thu, 29 Aug 2019 12:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Checkboxes are too hard to style, but designers always design them…&lt;/p&gt;
 &lt;p&gt;I personally do not like to import a library to do them.&lt;/p&gt;
 &lt;p&gt;So I created my own. Well with the help of the internet.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;label&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;checkboxWrapper&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
@@ -583,7 +712,18 @@ To do this you need to update `config/initializers/algolia.rb` to specify: `kami
 User.algolia_search(&amp;#39;kevin&amp;#39;, hitsPerPage: 2, page: 1)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;There you go.
 A simple crash course on alogia.
-If you need more details about alogia rails gem check it out &lt;a href=&quot;https://github.com/algolia/algoliasearch-rails&quot;&gt;https://github.com/algolia/algoliasearch-rails&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Algolia React]]></title><description><![CDATA[Algolia for ruby on rails was soo simple.
+If you need more details about alogia rails gem check it out &lt;a href=&quot;https://github.com/algolia/algoliasearch-rails&quot;&gt;https://github.com/algolia/algoliasearch-rails&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using routes in active record]]></title><description><![CDATA[Some times in rails you need to render the path in the model.
+Unfortunately calling , will not out of the box in the model. To accomplish…]]></description><link>https://kevinponce.com/using-routes-in-active-record/</link><guid isPermaLink="false">https://kevinponce.com/using-routes-in-active-record/</guid><pubDate>Wed, 07 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Some times in rails you need to render the path in the model.
+Unfortunately calling &lt;code class=&quot;language-text&quot;&gt;user_path(self)&lt;/code&gt;, will not out of the box in the model.&lt;/p&gt;
+&lt;p&gt;To accomplish this behavior, all you need to do is add the following to your model:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;include &lt;span class=&quot;token constant&quot;&gt;Rails&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;application&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;routes&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;url_helpers&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It is that simple.
+Now you can create methods that provide the url at a route.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;users_url&lt;/span&gt;&lt;/span&gt;
+  user_path&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This should not be abused, and should be used sparingly.
+I used this to provide a url to algolia for our admin.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Algolia React]]></title><description><![CDATA[Algolia for ruby on rails was soo simple.
 I wish react would have been just as easy… They did a great job teaching how to create a basic…]]></description><link>https://kevinponce.com/algolia-react/</link><guid isPermaLink="false">https://kevinponce.com/algolia-react/</guid><pubDate>Wed, 07 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Algolia for ruby on rails was soo simple.
 I wish react would have been just as easy…&lt;/p&gt;
 &lt;p&gt;They did a great job teaching how to create a basic search, but once you need to customize it falls apart.
@@ -682,18 +822,7 @@ Make sure you update &lt;code class=&quot;language-text&quot;&gt;algoliaSearchKe
 &lt;p&gt;Pretty simple once you know what you are doing.
 A good resource to help you is algolia widget documentation.
 &lt;code class=&quot;language-text&quot;&gt;https://www.algolia.com/doc/api-reference/widgets/search-box/react/&lt;/code&gt;
-&lt;code class=&quot;language-text&quot;&gt;https://www.algolia.com/doc/api-reference/widgets/instantsearch/react/&lt;/code&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using routes in active record]]></title><description><![CDATA[Some times in rails you need to render the path in the model.
-Unfortunately calling , will not out of the box in the model. To accomplish…]]></description><link>https://kevinponce.com/using-routes-in-active-record/</link><guid isPermaLink="false">https://kevinponce.com/using-routes-in-active-record/</guid><pubDate>Wed, 07 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Some times in rails you need to render the path in the model.
-Unfortunately calling &lt;code class=&quot;language-text&quot;&gt;user_path(self)&lt;/code&gt;, will not out of the box in the model.&lt;/p&gt;
-&lt;p&gt;To accomplish this behavior, all you need to do is add the following to your model:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;include &lt;span class=&quot;token constant&quot;&gt;Rails&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;application&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;routes&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;url_helpers&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;It is that simple.
-Now you can create methods that provide the url at a route.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;users_url&lt;/span&gt;&lt;/span&gt;
-  user_path&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This should not be abused, and should be used sparingly.
-I used this to provide a url to algolia for our admin.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Add Tags to Gatsby]]></title><description><![CDATA[Update graphql query that gets all of the blogs posts to get  under . First you need to gather all of the uniq tags and then iterate through…]]></description><link>https://kevinponce.com/add-tags-to-gatsby/</link><guid isPermaLink="false">https://kevinponce.com/add-tags-to-gatsby/</guid><pubDate>Tue, 06 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Update graphql query that gets all of the blogs posts to get &lt;code class=&quot;language-text&quot;&gt;tags&lt;/code&gt; under &lt;code class=&quot;language-text&quot;&gt;edges.node.frontmatter&lt;/code&gt;.&lt;/p&gt;
+&lt;code class=&quot;language-text&quot;&gt;https://www.algolia.com/doc/api-reference/widgets/instantsearch/react/&lt;/code&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Add Tags to Gatsby]]></title><description><![CDATA[Update graphql query that gets all of the blogs posts to get  under . First you need to gather all of the uniq tags and then iterate through…]]></description><link>https://kevinponce.com/add-tags-to-gatsby/</link><guid isPermaLink="false">https://kevinponce.com/add-tags-to-gatsby/</guid><pubDate>Tue, 06 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Update graphql query that gets all of the blogs posts to get &lt;code class=&quot;language-text&quot;&gt;tags&lt;/code&gt; under &lt;code class=&quot;language-text&quot;&gt;edges.node.frontmatter&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;graphql&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;
     {
