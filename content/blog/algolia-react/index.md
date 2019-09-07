@@ -17,6 +17,8 @@ After playing around with it, I was happy with the following component I created
 It has a custom form, and hits.
 If the use did not type anything, it will not display the hits.
 The hit is also rendering the first_name, which might need to be changed if your response does not have a first_name.
+
+
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
