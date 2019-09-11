@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Wed, 11 Sep 2019 21:54:40 GMT</lastBuildDate><item><title><![CDATA[Express with es6]]></title><description><![CDATA[Adding Bluetooth to Arduino using HM-10 is really easy. It can be achieve by uploading the following to an arduino. Once the Arduino is…]]></description><link>https://kevinponce.com/arduino-bluetooth/</link><guid isPermaLink="false">https://kevinponce.com/arduino-bluetooth/</guid><pubDate>Sat, 07 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Adding Bluetooth to Arduino using HM-10 is really easy.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Wed, 11 Sep 2019 21:56:58 GMT</lastBuildDate><item><title><![CDATA[Express with es6]]></title><description><![CDATA[Adding Bluetooth to Arduino using HM-10 is really easy. It can be achieve by uploading the following to an arduino. Once the Arduino is…]]></description><link>https://kevinponce.com/arduino-bluetooth/</link><guid isPermaLink="false">https://kevinponce.com/arduino-bluetooth/</guid><pubDate>Sat, 07 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Adding Bluetooth to Arduino using HM-10 is really easy.&lt;/p&gt;
 &lt;p&gt;It can be achieve by uploading the following to an arduino.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Bluetooth vcc to Arduino 3.3V
 # Bluetooth gnd to Arduino gnd
@@ -1226,7 +1226,76 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
   &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Image
     fixed&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;gatsbyIcon&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;childImageSharp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fixed&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Raspberry LAN OSX]]></title><description><![CDATA[Open System Prefrences Click Sharing check Thunderbold ethernet on right side
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Raspberry PI Tensorflow Image Recognition]]></title><description><![CDATA[Updated Raspberry p Getting tensorflow image recognition is an important building block
+Here are the step I had to do to get it to work…]]></description><link>https://kevinponce.com/raspberry-pi-tensorflow-image-recognition/</link><guid isPermaLink="false">https://kevinponce.com/raspberry-pi-tensorflow-image-recognition/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;h3&gt;Updated Raspberry p&lt;/h3&gt;
+&lt;p&gt;Getting tensorflow image recognition is an important building block
+Here are the step I had to do to get it to work:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo apt-get update
+$ sudo apt-get dist-upgrade
+$ mkdir tf
+$ cd tf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Install Tensorflow&lt;/h3&gt;
+&lt;p&gt;go to:
+&lt;code class=&quot;language-text&quot;&gt;https://github.com/lhelontra/tensorflow-on-arm/releases&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If the realses are out of date, you will have to manually compile tensorflow.
+copy url for:
+tensorflow-X.XX.X-cp35-none-linux_armv7l.whl&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ wget tensorflow-wheel-url-from-above
+$ sudo pip3 install file-download-from-wget
+$ sudo apt-get install libatlas-base-dev
+$ sudo pip3 install pillow lxml jupyter matplotlib cython
+$ sudo apt-get install python-tk&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Install OpenCV&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+$ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+$ sudo apt-get install libxvidcore-dev libx264-dev
+$ sudo apt-get install qt4-dev-tools
+$ pip3 install opencv-python&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Compile and Install Protobuf&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo apt-get install autoconf automake libtool curl&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Go to:
+&lt;code class=&quot;language-text&quot;&gt;https://github.com/protocolbuffers/protobuf/releases&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;copy url for:
+protobuf-all-X.X.X.tar.gz&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ wget url-from-protobuf-releases
+$ tar -zxvf protobuf-all-X.x.X.tar.gz
+$ cd protobuf-X.X.X/
+$ ./configure
+$ make
+$ make check
+$ sudo make install
+$ cd python
+$ export LD_LIBRARY_PATH=../src/.libs
+$ python3 setup.py build --cpp_implementation
+$ python3 setup.py test --cpp_implementation
+$ sudo python3 setup.py install --cpp_implementation
+$ export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=cpp
+$ export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION_VERSION=3
+$ sudo ldconfig&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now protobuf is installed, you can test it be entering the following command:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ protoc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To get tenorflow working, reboot Raspberry pi&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo reboot now&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Setup tensorflow&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ mkdir tensorflow1
+$ cd tensorflow1
+$ git clone --recurse-submodules https://github.com/tensorflow/models.git
+$ sudo apt-get install vim
+$ sudo vim ~/.bashrc
+# add the following to the end of the file ~/.bashrc
+export PYTHONPATH=$PYTHONPATH:/home/pi/tensorflow1/models/research:/home/pi/tensorflow1/models/research/slim&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ cd tensorflow1/models/research/object_detection/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Go to: &lt;code class=&quot;language-text&quot;&gt;https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;copy the link to &lt;code class=&quot;language-text&quot;&gt;ssdlite_mobilenet_v2_coco&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ wget link-from-about
+$ tar -xzvf file-download-above
+$ cd ~/tensorflow1/models/research
+$ protoc object_detection/protos/*.proto --python_out=.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Test object detector&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ cd ~/tensorflow1/models/research/object_detection
+$ wget https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py
+$ python3 Object_detection_picamera.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Raspberry LAN OSX]]></title><description><![CDATA[Open System Prefrences Click Sharing check Thunderbold ethernet on right side
 Check Internet sharing on the right side
 Click start on popup…]]></description><link>https://kevinponce.com/raspberry-lan-osx/</link><guid isPermaLink="false">https://kevinponce.com/raspberry-lan-osx/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Open System Prefrences&lt;/p&gt;
 &lt;h3&gt;Click Sharing&lt;/h3&gt;
@@ -1306,75 +1375,6 @@ look for ip that is not current ip&lt;/p&gt;
 &lt;li&gt;Insert ip&lt;/li&gt;
 &lt;li&gt;Type user and password&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Raspberry PI Tensorflow Image Recognition]]></title><description><![CDATA[Updated Raspberry p Getting tensorflow image recognition is an important building block
-Here are the step I had to do to get it to work…]]></description><link>https://kevinponce.com/raspberry-pi-tensorflow-image-recognition/</link><guid isPermaLink="false">https://kevinponce.com/raspberry-pi-tensorflow-image-recognition/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;h3&gt;Updated Raspberry p&lt;/h3&gt;
-&lt;p&gt;Getting tensorflow image recognition is an important building block
-Here are the step I had to do to get it to work:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo apt-get update
-$ sudo apt-get dist-upgrade
-$ mkdir tf
-$ cd tf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Install Tensorflow&lt;/h3&gt;
-&lt;p&gt;go to:
-&lt;code class=&quot;language-text&quot;&gt;https://github.com/lhelontra/tensorflow-on-arm/releases&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;If the realses are out of date, you will have to manually compile tensorflow.
-copy url for:
-tensorflow-X.XX.X-cp35-none-linux_armv7l.whl&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ wget tensorflow-wheel-url-from-above
-$ sudo pip3 install file-download-from-wget
-$ sudo apt-get install libatlas-base-dev
-$ sudo pip3 install pillow lxml jupyter matplotlib cython
-$ sudo apt-get install python-tk&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Install OpenCV&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
-$ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
-$ sudo apt-get install libxvidcore-dev libx264-dev
-$ sudo apt-get install qt4-dev-tools
-$ pip3 install opencv-python&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Compile and Install Protobuf&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo apt-get install autoconf automake libtool curl&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Go to:
-&lt;code class=&quot;language-text&quot;&gt;https://github.com/protocolbuffers/protobuf/releases&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;copy url for:
-protobuf-all-X.X.X.tar.gz&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ wget url-from-protobuf-releases
-$ tar -zxvf protobuf-all-X.x.X.tar.gz
-$ cd protobuf-X.X.X/
-$ ./configure
-$ make
-$ make check
-$ sudo make install
-$ cd python
-$ export LD_LIBRARY_PATH=../src/.libs
-$ python3 setup.py build --cpp_implementation
-$ python3 setup.py test --cpp_implementation
-$ sudo python3 setup.py install --cpp_implementation
-$ export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=cpp
-$ export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION_VERSION=3
-$ sudo ldconfig&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now protobuf is installed, you can test it be entering the following command:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ protoc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;To get tenorflow working, reboot Raspberry pi&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo reboot now&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Setup tensorflow&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ mkdir tensorflow1
-$ cd tensorflow1
-$ git clone --recurse-submodules https://github.com/tensorflow/models.git
-$ sudo apt-get install vim
-$ sudo vim ~/.bashrc
-# add the following to the end of the file ~/.bashrc
-export PYTHONPATH=$PYTHONPATH:/home/pi/tensorflow1/models/research:/home/pi/tensorflow1/models/research/slim&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ cd tensorflow1/models/research/object_detection/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Go to: &lt;code class=&quot;language-text&quot;&gt;https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;copy the link to &lt;code class=&quot;language-text&quot;&gt;ssdlite_mobilenet_v2_coco&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ wget link-from-about
-$ tar -xzvf file-download-above
-$ cd ~/tensorflow1/models/research
-$ protoc object_detection/protos/*.proto --python_out=.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Test object detector&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ cd ~/tensorflow1/models/research/object_detection
-$ wget https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py
-$ python3 Object_detection_picamera.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Ruby Matmul]]></title><description><![CDATA[So I just started playing around with machine learning, and keep seeing matmul.
 I wanted to play around remember the math on how to…]]></description><link>https://kevinponce.com/ruby-matmul/</link><guid isPermaLink="false">https://kevinponce.com/ruby-matmul/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;So I just started playing around with machine learning, and keep seeing matmul.
 I wanted to play around remember the math on how to calculate matmul, so I created my own matmul in ruby.&lt;/p&gt;
@@ -1433,48 +1433,7 @@ Servo myservo&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  &lt
     myservo&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pos&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;              &lt;span class=&quot;token comment&quot;&gt;// tell servo to go to position in variable &apos;pos&apos;&lt;/span&gt;
     &lt;span class=&quot;token function&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;                       &lt;span class=&quot;token comment&quot;&gt;// waits 15ms for the servo to reach the position&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[How capture webcam in python]]></title><description><![CDATA[Here is a simple tutorial on how to capture your webcam in python. First you need install cv2. Now create the following file: Voila.]]></description><link>https://kevinponce.com/how-capture-webcam-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-capture-webcam-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on how to capture your webcam in python.&lt;/p&gt;
-&lt;p&gt;First you need install cv2.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pip3 install cv2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now create the following file:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; cv2
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; numpy &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; np
-
-cap &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;VideoCapture&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-fourcc &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;VideoWriter_fourcc&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;M&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;J&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;P&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;G&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-out &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;VideoWriter&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-succes &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;output.avi&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;fourcc&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;15.0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1280&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;720&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-  ret&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; frame &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;read&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-  cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imshow&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;frame&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; frame&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-  out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;write&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;frame&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;waitKey&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0xff&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;q&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;
-
-cap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;destroyAllWindows&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Import Cenus data into Postgres]]></title><description><![CDATA[The cenus provides alot of useful data.
-To import it go to  and select . Depending on the time of year, not all of the current data is…]]></description><link>https://kevinponce.com/import-cenus-data-into-postgres/</link><guid isPermaLink="false">https://kevinponce.com/import-cenus-data-into-postgres/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;The cenus provides alot of useful data.
-To import it go to &lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/&lt;/code&gt; and select &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Depending on the time of year, not all of the current data is provided, so you might have to use previous year.
-&lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/TIGER2018/&lt;/code&gt; and selected &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;In this example, we are looking for zip codes. The zip codes are under ZCTA5, so click the folder and download the zip.&lt;/p&gt;
-&lt;p&gt;Once the file is download, unzip the file.
-Now you are ready to import the data into your postgres database.
-Run the following command:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;shp2pgsql -I -s 4269 -W Latin1 tl_2018_us_zcta510.shp table_name | psql -d your_data -U your_postgres_role&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Make sure you udpate the following params to your data:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;tl_2018_us_zcta510.shp&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;table_name&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_data&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_postgres_role&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Google maps draw polygon and change color on click]]></title><description><![CDATA[Repace  with your google api key. Next steps If your dealing with large polygons, it wil beter to load them through a api call.
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Google maps draw polygon and change color on click]]></title><description><![CDATA[Repace  with your google api key. Next steps If your dealing with large polygons, it wil beter to load them through a api call.
 All you need…]]></description><link>https://kevinponce.com/google-maps-draw-polygon-and-change-color-on-click/</link><guid isPermaLink="false">https://kevinponce.com/google-maps-draw-polygon-and-change-color-on-click/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;hmtl&quot;&gt;&lt;pre class=&quot;language-hmtl&quot;&gt;&lt;code class=&quot;language-hmtl&quot;&gt;&amp;lt;script&amp;gt;
   function initMap() {
     var map = new google.maps.Map(document.getElementById(&amp;#39;map&amp;#39;), {
@@ -1527,7 +1486,80 @@ All you need…]]></description><link>https://kevinponce.com/google-maps-draw-po
 &lt;p&gt;Repace &lt;code class=&quot;language-text&quot;&gt;GOOGLE_API_KEY&lt;/code&gt; with your google api key.&lt;/p&gt;
 &lt;h2&gt;Next steps&lt;/h2&gt;
 &lt;p&gt;If your dealing with large polygons, it wil beter to load them through a api call.
-All you need to do this is replace &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;loadGeoJson&lt;/code&gt;. The param for &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; is the a url which will return geo json.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Rails export/import users]]></title><description><![CDATA[Here is a simple script to export and import users in rails.
+All you need to do this is replace &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;loadGeoJson&lt;/code&gt;. The param for &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; is the a url which will return geo json.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How capture webcam in python]]></title><description><![CDATA[Here is a simple tutorial on how to capture your webcam in python. First you need install cv2. Now create the following file: Voila.]]></description><link>https://kevinponce.com/how-capture-webcam-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-capture-webcam-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on how to capture your webcam in python.&lt;/p&gt;
+&lt;p&gt;First you need install cv2.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pip3 install cv2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now create the following file:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; cv2
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; numpy &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; np
+
+cap &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;VideoCapture&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+fourcc &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;VideoWriter_fourcc&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;M&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;J&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;P&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;G&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+out &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;VideoWriter&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+succes &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;output.avi&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;fourcc&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;15.0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1280&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;720&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  ret&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; frame &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;read&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imshow&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;frame&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; frame&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;write&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;frame&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;waitKey&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0xff&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;q&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;
+
+cap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;destroyAllWindows&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Import Cenus data into Postgres]]></title><description><![CDATA[The cenus provides alot of useful data.
+To import it go to  and select . Depending on the time of year, not all of the current data is…]]></description><link>https://kevinponce.com/import-cenus-data-into-postgres/</link><guid isPermaLink="false">https://kevinponce.com/import-cenus-data-into-postgres/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;The cenus provides alot of useful data.
+To import it go to &lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/&lt;/code&gt; and select &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Depending on the time of year, not all of the current data is provided, so you might have to use previous year.
+&lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/TIGER2018/&lt;/code&gt; and selected &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In this example, we are looking for zip codes. The zip codes are under ZCTA5, so click the folder and download the zip.&lt;/p&gt;
+&lt;p&gt;Once the file is download, unzip the file.
+Now you are ready to import the data into your postgres database.
+Run the following command:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;shp2pgsql -I -s 4269 -W Latin1 tl_2018_us_zcta510.shp table_name | psql -d your_data -U your_postgres_role&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Make sure you udpate the following params to your data:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;tl_2018_us_zcta510.shp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;table_name&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_data&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_postgres_role&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[OSX install matplotlib without anaconda]]></title><description><![CDATA[If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.
+After destroying my python…]]></description><link>https://kevinponce.com/osx-install-matplotlib-without-anaconda/</link><guid isPermaLink="false">https://kevinponce.com/osx-install-matplotlib-without-anaconda/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.
+After destroying my python environment several times, I finally figured it out.
+This solution only works for Mac, so sorry Linux and Windows users.&lt;/p&gt;
+&lt;p&gt;I recommend using pipenv to manage python version, because downloading python from brew was a pain in the ass when you need more than one version of python.
+I needed to use python 3.6, because at the time tensorflow did not support python 3.7.&lt;/p&gt;
+&lt;h2&gt;First update brew and install pyenv pipenv&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew update
+$ brew install pyenv pipenv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Create project directory&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ mkdir ~/project
+$ cd ~/project
+$ pyenv init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Install desired python version.&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ PYTHON_CONFIGURE_OPTS=\&amp;quot;--enable-framework\&amp;quot; CFLAGS=\&amp;quot;-I$(brew --prefix openssl)/include\&amp;quot; LDFLAGS=\&amp;quot;-L$(brew --prefix openssl)/lib\&amp;quot; pyenv install 3.6.5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Access installed version of python&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;$ pyenv local &lt;span class=&quot;token number&quot;&gt;3.6&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.5&lt;/span&gt;
+$ pipenv shell
+$ python &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Install dependencies&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pip3 install numpy
+$ pip3 install matplotlib&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Create file example.py and add the following in it:&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import numpy as np
+import matplotlib.pyplot as plt
+
+x_data = np.linspace(0, 10, 10) + np.random.uniform(-1.5, 1.5, 10)
+y_data = np.linspace(0, 10, 10) + np.random.uniform(-1.5, 1.5, 10)
+plt.plot(x_data, y_data)
+plt.show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Run script&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ python3 example.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Rails export/import users]]></title><description><![CDATA[Here is a simple script to export and import users in rails.
 Copy and past the following code to . To export users run: To import users run:]]></description><link>https://kevinponce.com/rails-export-import-users/</link><guid isPermaLink="false">https://kevinponce.com/rails-export-import-users/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple script to export and import users in rails.
 Copy and past the following code to &lt;code class=&quot;language-text&quot;&gt;lib/data.rake&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# lib/data.rake&lt;/span&gt;
@@ -1568,56 +1600,7 @@ namespace &lt;span class=&quot;token symbol&quot;&gt;:data&lt;/span&gt; &lt;span
 &lt;p&gt;To export users run:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;rails data:export:users&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;To import users run:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;rails data:import:users&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[How crop an image in python]]></title><description><![CDATA[Here is a snipet of code how to parse an image in pythond]]></description><link>https://kevinponce.com/how-crop-an-image-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-crop-an-image-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a snipet of code how to parse an image in pythond&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; cv2
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; os
-dir_path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;dirname&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;realpath&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;__file__&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-example &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dir_path&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; \&quot;example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpeg\&quot;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imread&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-crop_img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; img&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;77&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imshow&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;\&quot;cropped\&quot;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; crop_img&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;waitKey&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;destroyAllWindows&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;#img[y:y+h, x:x+w]&lt;/span&gt;
-front_top_center_img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; img&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;67&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;87&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-example_croped &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; \&quot;example_croped&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpeg\&quot;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imwrite&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example_croped&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[OSX install matplotlib without anaconda]]></title><description><![CDATA[If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.
-After destroying my python…]]></description><link>https://kevinponce.com/osx-install-matplotlib-without-anaconda/</link><guid isPermaLink="false">https://kevinponce.com/osx-install-matplotlib-without-anaconda/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.
-After destroying my python environment several times, I finally figured it out.
-This solution only works for Mac, so sorry Linux and Windows users.&lt;/p&gt;
-&lt;p&gt;I recommend using pipenv to manage python version, because downloading python from brew was a pain in the ass when you need more than one version of python.
-I needed to use python 3.6, because at the time tensorflow did not support python 3.7.&lt;/p&gt;
-&lt;h2&gt;First update brew and install pyenv pipenv&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew update
-$ brew install pyenv pipenv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Create project directory&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ mkdir ~/project
-$ cd ~/project
-$ pyenv init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Install desired python version.&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ PYTHON_CONFIGURE_OPTS=\&amp;quot;--enable-framework\&amp;quot; CFLAGS=\&amp;quot;-I$(brew --prefix openssl)/include\&amp;quot; LDFLAGS=\&amp;quot;-L$(brew --prefix openssl)/lib\&amp;quot; pyenv install 3.6.5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Access installed version of python&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;$ pyenv local &lt;span class=&quot;token number&quot;&gt;3.6&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.5&lt;/span&gt;
-$ pipenv shell
-$ python &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Install dependencies&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pip3 install numpy
-$ pip3 install matplotlib&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Create file example.py and add the following in it:&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import numpy as np
-import matplotlib.pyplot as plt
-
-x_data = np.linspace(0, 10, 10) + np.random.uniform(-1.5, 1.5, 10)
-y_data = np.linspace(0, 10, 10) + np.random.uniform(-1.5, 1.5, 10)
-plt.plot(x_data, y_data)
-plt.show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Run script&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ python3 example.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Tensorflow image recognition on mac]]></title><description><![CDATA[Here is a simple tutorial on getting tensorflow zoo models image recognition. Install Tensorflow I had a hard time setting up tensorflow-gpu…]]></description><link>https://kevinponce.com/tensorflow-image-recognition-on-mac/</link><guid isPermaLink="false">https://kevinponce.com/tensorflow-image-recognition-on-mac/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on getting tensorflow zoo models image recognition.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;rails data:import:users&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Tensorflow image recognition on mac]]></title><description><![CDATA[Here is a simple tutorial on getting tensorflow zoo models image recognition. Install Tensorflow I had a hard time setting up tensorflow-gpu…]]></description><link>https://kevinponce.com/tensorflow-image-recognition-on-mac/</link><guid isPermaLink="false">https://kevinponce.com/tensorflow-image-recognition-on-mac/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on getting tensorflow zoo models image recognition.&lt;/p&gt;
 &lt;h3&gt;Install Tensorflow&lt;/h3&gt;
 &lt;p&gt;I had a hard time setting up tensorflow-gpu.
 If you are using a mac, I would recomend using tensorflow cpu instead.&lt;/p&gt;
@@ -1771,7 +1754,24 @@ cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;destroyAllWindo
 &lt;p&gt;Now run the script!&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ python3 play_object_detection.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Press q when you are complete&lt;/p&gt;
-&lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Creating blog with Gatsby]]></title><description><![CDATA[Before we start, we must download gatsby cli to create our blog. Run the following to create start blog gatsby has provided. To run the blog…]]></description><link>https://kevinponce.com/creating-blog-with-gatsby/</link><guid isPermaLink="false">https://kevinponce.com/creating-blog-with-gatsby/</guid><pubDate>Fri, 02 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Before we start, we must download gatsby cli to create our blog.&lt;/p&gt;
+&lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How crop an image in python]]></title><description><![CDATA[Here is a snipet of code how to parse an image in pythond]]></description><link>https://kevinponce.com/how-crop-an-image-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-crop-an-image-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a snipet of code how to parse an image in pythond&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; cv2
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; os
+dir_path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;dirname&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;realpath&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;__file__&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+example &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dir_path&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; \&quot;example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpeg\&quot;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imread&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+crop_img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; img&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;77&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imshow&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;\&quot;cropped\&quot;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; crop_img&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;waitKey&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;destroyAllWindows&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;#img[y:y+h, x:x+w]&lt;/span&gt;
+front_top_center_img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; img&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;67&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;87&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+example_croped &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; \&quot;example_croped&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpeg\&quot;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imwrite&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example_croped&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Creating blog with Gatsby]]></title><description><![CDATA[Before we start, we must download gatsby cli to create our blog. Run the following to create start blog gatsby has provided. To run the blog…]]></description><link>https://kevinponce.com/creating-blog-with-gatsby/</link><guid isPermaLink="false">https://kevinponce.com/creating-blog-with-gatsby/</guid><pubDate>Fri, 02 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Before we start, we must download gatsby cli to create our blog.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install -g gatsby-cli&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Run the following to create start blog gatsby has provided.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
