@@ -115,7 +115,7 @@ class Blogs extends React.Component {
                 { 
                   tags.map((tag) => {
                     return(
-                      <Link style={{ boxShadow: `none` }} to={`/tags/${tag}`} key={`${node.fields.slug}-${tag}`}>
+                      <Link style={{ boxShadow: `none` }} to={`/${tag}`} key={`${node.fields.slug}-${tag}`}>
                         {_.startCase(_.toLower(tag.split('-').join(' ')))}
                       </Link>
                     )

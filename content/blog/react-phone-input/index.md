@@ -1,7 +1,7 @@
 ---
 title: React Phone Input
 date: "2019-09-05T22:16:00.121Z"
-tags: ["javascript"]
+tags: ["javascript", "react"]
 header: { type: 'icon', bgColor: '#E6CE33', icon: 'js' }
 ---
 

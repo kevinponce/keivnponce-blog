@@ -27,7 +27,7 @@ class BlogIndex extends React.Component {
         <SEO title="All posts" />
         <Blogs posts={posts}
                pageContext={pageContext}
-               prefixUrl={`/tags/${pageContext.tag}/`}
+               prefixUrl={`/${pageContext.tag}/`}
                arduinoIcon={arduinoIcon}
                gatsbyIcon={gatsbyIcon}
                googleMapsIcon={googleMapsIcon}
