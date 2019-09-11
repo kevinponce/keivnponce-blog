@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Wed, 11 Sep 2019 21:57:32 GMT</lastBuildDate><item><title><![CDATA[Express with es6]]></title><description><![CDATA[Adding Bluetooth to Arduino using HM-10 is really easy. It can be achieve by uploading the following to an arduino. Once the Arduino is…]]></description><link>https://kevinponce.com/arduino-bluetooth/</link><guid isPermaLink="false">https://kevinponce.com/arduino-bluetooth/</guid><pubDate>Sat, 07 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Adding Bluetooth to Arduino using HM-10 is really easy.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Wed, 11 Sep 2019 21:58:53 GMT</lastBuildDate><item><title><![CDATA[Express with es6]]></title><description><![CDATA[Adding Bluetooth to Arduino using HM-10 is really easy. It can be achieve by uploading the following to an arduino. Once the Arduino is…]]></description><link>https://kevinponce.com/arduino-bluetooth/</link><guid isPermaLink="false">https://kevinponce.com/arduino-bluetooth/</guid><pubDate>Sat, 07 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Adding Bluetooth to Arduino using HM-10 is really easy.&lt;/p&gt;
 &lt;p&gt;It can be achieve by uploading the following to an arduino.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Bluetooth vcc to Arduino 3.3V
 # Bluetooth gnd to Arduino gnd
@@ -724,54 +724,7 @@ VideoComponent&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;prop
                     token&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;XXXXXXXX&quot;&lt;/span&gt;
                     room&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;XXXXXXX&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Adding Algolia to Rails]]></title><description><![CDATA[Only twice in my career, I was amazed with how simple integrating with a third party library.
-Algolia has done an amazing job with their gem…]]></description><link>https://kevinponce.com/adding-algolia-to-rails/</link><guid isPermaLink="false">https://kevinponce.com/adding-algolia-to-rails/</guid><pubDate>Wed, 07 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Only twice in my career, I was amazed with how simple integrating with a third party library.
-Algolia has done an amazing job with their gem.&lt;/p&gt;
-&lt;p&gt;To get started run:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;gem install algoliasearch-rails&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;I personal use &lt;code class=&quot;language-text&quot;&gt;dotenv&lt;/code&gt; gem to store my secrets.
-Add algolia app id and api key to &lt;code class=&quot;language-text&quot;&gt;.env&lt;/code&gt; file:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ALGOLIA_SEARCH_APP_ID=XXXXXXXXXX
-ALGOLIA_SEARCH_API_KEY=XXXXXXXXX&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Add the following file to &lt;code class=&quot;language-text&quot;&gt;config/initializers/algolia.rb&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# config/initializers/algolia.rb&lt;/span&gt;
-&lt;span class=&quot;token constant&quot;&gt;AlgoliaSearch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;configuration &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  application_id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;ALGOLIA_SEARCH_APP_ID&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  api_key&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;ALGOLIA_SEARCH_API_KEY&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  connect_timeout&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  receive_timeout&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  send_timeout&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  batch_timeout&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;120&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  search_timeout&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;I personally am not a fan of sending all of your data to algolia, so recommend sending the attributes you need.
-To add algolia to your user model do the following:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ApplicationRecord&lt;/span&gt;
-  include &lt;span class=&quot;token constant&quot;&gt;AlgoliaSearch&lt;/span&gt;
-
-  algoliasearch &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
-    attributes &lt;span class=&quot;token symbol&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token symbol&quot;&gt;:first_name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token symbol&quot;&gt;:last_name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token symbol&quot;&gt;:email&lt;/span&gt;
-    searchableAttributes &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token symbol&quot;&gt;:first_name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token symbol&quot;&gt;:last_name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token symbol&quot;&gt;:email&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Run the following command in rails console to reindex all of your users in algolia.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token constant&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;reindex&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Run the following command to search:
-&lt;code class=&quot;language-text&quot;&gt;&lt;/code&gt;ruby
-User.algolia_search(‘kevin’)&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;If you have a lot of data, you will need paginate.
-To do this you need to update `config/initializers/algolia.rb` to specify: `kaminari` or `will_paginate`&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;config/initializers/algolia.rb&lt;/h1&gt;
-&lt;p&gt;pagination_backend: :kaminari,&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;OR&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;config/initializers/algolia.rb&lt;/h1&gt;
-&lt;p&gt;pagination&lt;em&gt;backend: :will&lt;/em&gt;paginate,&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Now add pagination to your search, change your algolia search to include `hitsPerPage` and `page`.
-```ruby
-User.algolia_search(&amp;#39;kevin&amp;#39;, hitsPerPage: 2, page: 1)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;There you go.
-A simple crash course on alogia.
-If you need more details about alogia rails gem check it out &lt;a href=&quot;https://github.com/algolia/algoliasearch-rails&quot;&gt;https://github.com/algolia/algoliasearch-rails&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Algolia React]]></title><description><![CDATA[Algolia for ruby on rails was soo simple.
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Algolia React]]></title><description><![CDATA[Algolia for ruby on rails was soo simple.
 I wish react would have been just as easy… They did a great job teaching how to create a basic…]]></description><link>https://kevinponce.com/algolia-react/</link><guid isPermaLink="false">https://kevinponce.com/algolia-react/</guid><pubDate>Wed, 07 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Algolia for ruby on rails was soo simple.
 I wish react would have been just as easy…&lt;/p&gt;
 &lt;p&gt;They did a great job teaching how to create a basic search, but once you need to customize it falls apart.
@@ -870,7 +823,54 @@ Make sure you update &lt;code class=&quot;language-text&quot;&gt;algoliaSearchKe
 &lt;p&gt;Pretty simple once you know what you are doing.
 A good resource to help you is algolia widget documentation.
 &lt;code class=&quot;language-text&quot;&gt;https://www.algolia.com/doc/api-reference/widgets/search-box/react/&lt;/code&gt;
-&lt;code class=&quot;language-text&quot;&gt;https://www.algolia.com/doc/api-reference/widgets/instantsearch/react/&lt;/code&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using routes in active record]]></title><description><![CDATA[Some times in rails you need to render the path in the model.
+&lt;code class=&quot;language-text&quot;&gt;https://www.algolia.com/doc/api-reference/widgets/instantsearch/react/&lt;/code&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Adding Algolia to Rails]]></title><description><![CDATA[Only twice in my career, I was amazed with how simple integrating with a third party library.
+Algolia has done an amazing job with their gem…]]></description><link>https://kevinponce.com/adding-algolia-to-rails/</link><guid isPermaLink="false">https://kevinponce.com/adding-algolia-to-rails/</guid><pubDate>Wed, 07 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Only twice in my career, I was amazed with how simple integrating with a third party library.
+Algolia has done an amazing job with their gem.&lt;/p&gt;
+&lt;p&gt;To get started run:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;gem install algoliasearch-rails&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I personal use &lt;code class=&quot;language-text&quot;&gt;dotenv&lt;/code&gt; gem to store my secrets.
+Add algolia app id and api key to &lt;code class=&quot;language-text&quot;&gt;.env&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ALGOLIA_SEARCH_APP_ID=XXXXXXXXXX
+ALGOLIA_SEARCH_API_KEY=XXXXXXXXX&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Add the following file to &lt;code class=&quot;language-text&quot;&gt;config/initializers/algolia.rb&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# config/initializers/algolia.rb&lt;/span&gt;
+&lt;span class=&quot;token constant&quot;&gt;AlgoliaSearch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;configuration &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  application_id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;ALGOLIA_SEARCH_APP_ID&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  api_key&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;ALGOLIA_SEARCH_API_KEY&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  connect_timeout&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  receive_timeout&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  send_timeout&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  batch_timeout&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;120&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  search_timeout&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I personally am not a fan of sending all of your data to algolia, so recommend sending the attributes you need.
+To add algolia to your user model do the following:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ApplicationRecord&lt;/span&gt;
+  include &lt;span class=&quot;token constant&quot;&gt;AlgoliaSearch&lt;/span&gt;
+
+  algoliasearch &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+    attributes &lt;span class=&quot;token symbol&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token symbol&quot;&gt;:first_name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token symbol&quot;&gt;:last_name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token symbol&quot;&gt;:email&lt;/span&gt;
+    searchableAttributes &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token symbol&quot;&gt;:first_name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token symbol&quot;&gt;:last_name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token symbol&quot;&gt;:email&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Run the following command in rails console to reindex all of your users in algolia.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token constant&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;reindex&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Run the following command to search:
+&lt;code class=&quot;language-text&quot;&gt;&lt;/code&gt;ruby
+User.algolia_search(‘kevin’)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;If you have a lot of data, you will need paginate.
+To do this you need to update `config/initializers/algolia.rb` to specify: `kaminari` or `will_paginate`&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;config/initializers/algolia.rb&lt;/h1&gt;
+&lt;p&gt;pagination_backend: :kaminari,&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;OR&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;config/initializers/algolia.rb&lt;/h1&gt;
+&lt;p&gt;pagination&lt;em&gt;backend: :will&lt;/em&gt;paginate,&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Now add pagination to your search, change your algolia search to include `hitsPerPage` and `page`.
+```ruby
+User.algolia_search(&amp;#39;kevin&amp;#39;, hitsPerPage: 2, page: 1)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;There you go.
+A simple crash course on alogia.
+If you need more details about alogia rails gem check it out &lt;a href=&quot;https://github.com/algolia/algoliasearch-rails&quot;&gt;https://github.com/algolia/algoliasearch-rails&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using routes in active record]]></title><description><![CDATA[Some times in rails you need to render the path in the model.
 Unfortunately calling , will not out of the box in the model. To accomplish…]]></description><link>https://kevinponce.com/using-routes-in-active-record/</link><guid isPermaLink="false">https://kevinponce.com/using-routes-in-active-record/</guid><pubDate>Wed, 07 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Some times in rails you need to render the path in the model.
 Unfortunately calling &lt;code class=&quot;language-text&quot;&gt;user_path(self)&lt;/code&gt;, will not out of the box in the model.&lt;/p&gt;
 &lt;p&gt;To accomplish this behavior, all you need to do is add the following to your model:&lt;/p&gt;
@@ -1433,7 +1433,60 @@ Servo myservo&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  &lt
     myservo&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pos&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;              &lt;span class=&quot;token comment&quot;&gt;// tell servo to go to position in variable &apos;pos&apos;&lt;/span&gt;
     &lt;span class=&quot;token function&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;                       &lt;span class=&quot;token comment&quot;&gt;// waits 15ms for the servo to reach the position&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[How capture webcam in python]]></title><description><![CDATA[Here is a simple tutorial on how to capture your webcam in python. First you need install cv2. Now create the following file: Voila.]]></description><link>https://kevinponce.com/how-capture-webcam-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-capture-webcam-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on how to capture your webcam in python.&lt;/p&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Google maps draw polygon and change color on click]]></title><description><![CDATA[Repace  with your google api key. Next steps If your dealing with large polygons, it wil beter to load them through a api call.
+All you need…]]></description><link>https://kevinponce.com/google-maps-draw-polygon-and-change-color-on-click/</link><guid isPermaLink="false">https://kevinponce.com/google-maps-draw-polygon-and-change-color-on-click/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;hmtl&quot;&gt;&lt;pre class=&quot;language-hmtl&quot;&gt;&lt;code class=&quot;language-hmtl&quot;&gt;&amp;lt;script&amp;gt;
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById(&amp;#39;map&amp;#39;), {
+      zoom: 9,
+      center: {
+        lat: 25.774,
+        lng: -80.190
+      }
+    });
+
+    map.data.addGeoJson({
+      &amp;quot;type&amp;quot;: &amp;quot;FeatureCollection&amp;quot;,
+      &amp;quot;features&amp;quot;: [
+        {
+          &amp;quot;type&amp;quot;: &amp;quot;Feature&amp;quot;,
+          &amp;quot;properties&amp;quot;: {
+            &amp;quot;letter&amp;quot;: &amp;quot;G&amp;quot;,
+            &amp;quot;color&amp;quot;: &amp;quot;blue&amp;quot;,
+            &amp;quot;rank&amp;quot;: &amp;quot;7&amp;quot;,
+            &amp;quot;ascii&amp;quot;: &amp;quot;71&amp;quot;
+          },
+          &amp;quot;geometry&amp;quot;: {
+            &amp;quot;type&amp;quot;: &amp;quot;Polygon&amp;quot;,
+            &amp;quot;coordinates&amp;quot;: [[
+              [-80.190, 25.774],
+              [-66.118, 18.466],
+              [-64.757, 32.321],
+              [-80.190, 25.774],
+            ]]
+          }
+        }
+      ]
+    });
+
+    map.data.setStyle(function(feature) {
+      return ({
+        fillColor: feature.getProperty(&amp;#39;color&amp;#39;),
+        strokeColor: feature.getProperty(&amp;#39;color&amp;#39;),
+        strokeWeight: 1
+      });
+    });
+
+    map.data.addListener(&amp;#39;click&amp;#39;, function(event) {
+      event.feature.setProperty(&amp;#39;color&amp;#39;, &amp;#39;red&amp;#39;);
+    });
+  }
+&amp;lt;/script&amp;gt;
+&amp;lt;script async defer src=&amp;quot;https://maps.googleapis.com/maps/api/js?key=GOOGLE_API_KEY&amp;amp;callback=initMap&amp;quot;&amp;gt;
+&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Repace &lt;code class=&quot;language-text&quot;&gt;GOOGLE_API_KEY&lt;/code&gt; with your google api key.&lt;/p&gt;
+&lt;h2&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;If your dealing with large polygons, it wil beter to load them through a api call.
+All you need to do this is replace &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;loadGeoJson&lt;/code&gt;. The param for &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; is the a url which will return geo json.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How capture webcam in python]]></title><description><![CDATA[Here is a simple tutorial on how to capture your webcam in python. First you need install cv2. Now create the following file: Voila.]]></description><link>https://kevinponce.com/how-capture-webcam-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-capture-webcam-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on how to capture your webcam in python.&lt;/p&gt;
 &lt;p&gt;First you need install cv2.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pip3 install cv2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now create the following file:&lt;/p&gt;
@@ -1458,23 +1511,7 @@ cap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;release&lt;span
 out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;destroyAllWindows&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Import Cenus data into Postgres]]></title><description><![CDATA[The cenus provides alot of useful data.
-To import it go to  and select . Depending on the time of year, not all of the current data is…]]></description><link>https://kevinponce.com/import-cenus-data-into-postgres/</link><guid isPermaLink="false">https://kevinponce.com/import-cenus-data-into-postgres/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;The cenus provides alot of useful data.
-To import it go to &lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/&lt;/code&gt; and select &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Depending on the time of year, not all of the current data is provided, so you might have to use previous year.
-&lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/TIGER2018/&lt;/code&gt; and selected &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;In this example, we are looking for zip codes. The zip codes are under ZCTA5, so click the folder and download the zip.&lt;/p&gt;
-&lt;p&gt;Once the file is download, unzip the file.
-Now you are ready to import the data into your postgres database.
-Run the following command:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;shp2pgsql -I -s 4269 -W Latin1 tl_2018_us_zcta510.shp table_name | psql -d your_data -U your_postgres_role&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Make sure you udpate the following params to your data:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;tl_2018_us_zcta510.shp&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;table_name&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_data&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_postgres_role&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[How crop an image in python]]></title><description><![CDATA[Here is a snipet of code how to parse an image in pythond]]></description><link>https://kevinponce.com/how-crop-an-image-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-crop-an-image-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a snipet of code how to parse an image in pythond&lt;/p&gt;
+&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How crop an image in python]]></title><description><![CDATA[Here is a snipet of code how to parse an image in pythond]]></description><link>https://kevinponce.com/how-crop-an-image-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-crop-an-image-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a snipet of code how to parse an image in pythond&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; cv2
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; os
 dir_path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;dirname&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;realpath&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;__file__&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
@@ -1491,39 +1528,23 @@ cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;destroyAllWindo
 &lt;span class=&quot;token comment&quot;&gt;#img[y:y+h, x:x+w]&lt;/span&gt;
 front_top_center_img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; img&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;67&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;87&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
 example_croped &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; \&quot;example_croped&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpeg\&quot;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imwrite&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example_croped&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[OSX install matplotlib without anaconda]]></title><description><![CDATA[If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.
-After destroying my python…]]></description><link>https://kevinponce.com/osx-install-matplotlib-without-anaconda/</link><guid isPermaLink="false">https://kevinponce.com/osx-install-matplotlib-without-anaconda/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.
-After destroying my python environment several times, I finally figured it out.
-This solution only works for Mac, so sorry Linux and Windows users.&lt;/p&gt;
-&lt;p&gt;I recommend using pipenv to manage python version, because downloading python from brew was a pain in the ass when you need more than one version of python.
-I needed to use python 3.6, because at the time tensorflow did not support python 3.7.&lt;/p&gt;
-&lt;h2&gt;First update brew and install pyenv pipenv&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew update
-$ brew install pyenv pipenv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Create project directory&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ mkdir ~/project
-$ cd ~/project
-$ pyenv init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Install desired python version.&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ PYTHON_CONFIGURE_OPTS=\&amp;quot;--enable-framework\&amp;quot; CFLAGS=\&amp;quot;-I$(brew --prefix openssl)/include\&amp;quot; LDFLAGS=\&amp;quot;-L$(brew --prefix openssl)/lib\&amp;quot; pyenv install 3.6.5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Access installed version of python&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;$ pyenv local &lt;span class=&quot;token number&quot;&gt;3.6&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.5&lt;/span&gt;
-$ pipenv shell
-$ python &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Install dependencies&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pip3 install numpy
-$ pip3 install matplotlib&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Create file example.py and add the following in it:&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import numpy as np
-import matplotlib.pyplot as plt
-
-x_data = np.linspace(0, 10, 10) + np.random.uniform(-1.5, 1.5, 10)
-y_data = np.linspace(0, 10, 10) + np.random.uniform(-1.5, 1.5, 10)
-plt.plot(x_data, y_data)
-plt.show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Run script&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ python3 example.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Rails export/import users]]></title><description><![CDATA[Here is a simple script to export and import users in rails.
+cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imwrite&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example_croped&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Import Cenus data into Postgres]]></title><description><![CDATA[The cenus provides alot of useful data.
+To import it go to  and select . Depending on the time of year, not all of the current data is…]]></description><link>https://kevinponce.com/import-cenus-data-into-postgres/</link><guid isPermaLink="false">https://kevinponce.com/import-cenus-data-into-postgres/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;The cenus provides alot of useful data.
+To import it go to &lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/&lt;/code&gt; and select &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Depending on the time of year, not all of the current data is provided, so you might have to use previous year.
+&lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/TIGER2018/&lt;/code&gt; and selected &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In this example, we are looking for zip codes. The zip codes are under ZCTA5, so click the folder and download the zip.&lt;/p&gt;
+&lt;p&gt;Once the file is download, unzip the file.
+Now you are ready to import the data into your postgres database.
+Run the following command:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;shp2pgsql -I -s 4269 -W Latin1 tl_2018_us_zcta510.shp table_name | psql -d your_data -U your_postgres_role&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Make sure you udpate the following params to your data:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;tl_2018_us_zcta510.shp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;table_name&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_data&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_postgres_role&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Rails export/import users]]></title><description><![CDATA[Here is a simple script to export and import users in rails.
 Copy and past the following code to . To export users run: To import users run:]]></description><link>https://kevinponce.com/rails-export-import-users/</link><guid isPermaLink="false">https://kevinponce.com/rails-export-import-users/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple script to export and import users in rails.
 Copy and past the following code to &lt;code class=&quot;language-text&quot;&gt;lib/data.rake&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# lib/data.rake&lt;/span&gt;
@@ -1564,7 +1585,39 @@ namespace &lt;span class=&quot;token symbol&quot;&gt;:data&lt;/span&gt; &lt;span
 &lt;p&gt;To export users run:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;rails data:export:users&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;To import users run:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;rails data:import:users&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Tensorflow image recognition on mac]]></title><description><![CDATA[Here is a simple tutorial on getting tensorflow zoo models image recognition. Install Tensorflow I had a hard time setting up tensorflow-gpu…]]></description><link>https://kevinponce.com/tensorflow-image-recognition-on-mac/</link><guid isPermaLink="false">https://kevinponce.com/tensorflow-image-recognition-on-mac/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on getting tensorflow zoo models image recognition.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;rails data:import:users&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[OSX install matplotlib without anaconda]]></title><description><![CDATA[If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.
+After destroying my python…]]></description><link>https://kevinponce.com/osx-install-matplotlib-without-anaconda/</link><guid isPermaLink="false">https://kevinponce.com/osx-install-matplotlib-without-anaconda/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.
+After destroying my python environment several times, I finally figured it out.
+This solution only works for Mac, so sorry Linux and Windows users.&lt;/p&gt;
+&lt;p&gt;I recommend using pipenv to manage python version, because downloading python from brew was a pain in the ass when you need more than one version of python.
+I needed to use python 3.6, because at the time tensorflow did not support python 3.7.&lt;/p&gt;
+&lt;h2&gt;First update brew and install pyenv pipenv&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew update
+$ brew install pyenv pipenv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Create project directory&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ mkdir ~/project
+$ cd ~/project
+$ pyenv init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Install desired python version.&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ PYTHON_CONFIGURE_OPTS=\&amp;quot;--enable-framework\&amp;quot; CFLAGS=\&amp;quot;-I$(brew --prefix openssl)/include\&amp;quot; LDFLAGS=\&amp;quot;-L$(brew --prefix openssl)/lib\&amp;quot; pyenv install 3.6.5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Access installed version of python&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;$ pyenv local &lt;span class=&quot;token number&quot;&gt;3.6&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.5&lt;/span&gt;
+$ pipenv shell
+$ python &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Install dependencies&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pip3 install numpy
+$ pip3 install matplotlib&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Create file example.py and add the following in it:&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import numpy as np
+import matplotlib.pyplot as plt
+
+x_data = np.linspace(0, 10, 10) + np.random.uniform(-1.5, 1.5, 10)
+y_data = np.linspace(0, 10, 10) + np.random.uniform(-1.5, 1.5, 10)
+plt.plot(x_data, y_data)
+plt.show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Run script&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ python3 example.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Tensorflow image recognition on mac]]></title><description><![CDATA[Here is a simple tutorial on getting tensorflow zoo models image recognition. Install Tensorflow I had a hard time setting up tensorflow-gpu…]]></description><link>https://kevinponce.com/tensorflow-image-recognition-on-mac/</link><guid isPermaLink="false">https://kevinponce.com/tensorflow-image-recognition-on-mac/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on getting tensorflow zoo models image recognition.&lt;/p&gt;
 &lt;h3&gt;Install Tensorflow&lt;/h3&gt;
 &lt;p&gt;I had a hard time setting up tensorflow-gpu.
 If you are using a mac, I would recomend using tensorflow cpu instead.&lt;/p&gt;
@@ -1718,60 +1771,7 @@ cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;destroyAllWindo
 &lt;p&gt;Now run the script!&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ python3 play_object_detection.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Press q when you are complete&lt;/p&gt;
-&lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Google maps draw polygon and change color on click]]></title><description><![CDATA[Repace  with your google api key. Next steps If your dealing with large polygons, it wil beter to load them through a api call.
-All you need…]]></description><link>https://kevinponce.com/google-maps-draw-polygon-and-change-color-on-click/</link><guid isPermaLink="false">https://kevinponce.com/google-maps-draw-polygon-and-change-color-on-click/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;hmtl&quot;&gt;&lt;pre class=&quot;language-hmtl&quot;&gt;&lt;code class=&quot;language-hmtl&quot;&gt;&amp;lt;script&amp;gt;
-  function initMap() {
-    var map = new google.maps.Map(document.getElementById(&amp;#39;map&amp;#39;), {
-      zoom: 9,
-      center: {
-        lat: 25.774,
-        lng: -80.190
-      }
-    });
-
-    map.data.addGeoJson({
-      &amp;quot;type&amp;quot;: &amp;quot;FeatureCollection&amp;quot;,
-      &amp;quot;features&amp;quot;: [
-        {
-          &amp;quot;type&amp;quot;: &amp;quot;Feature&amp;quot;,
-          &amp;quot;properties&amp;quot;: {
-            &amp;quot;letter&amp;quot;: &amp;quot;G&amp;quot;,
-            &amp;quot;color&amp;quot;: &amp;quot;blue&amp;quot;,
-            &amp;quot;rank&amp;quot;: &amp;quot;7&amp;quot;,
-            &amp;quot;ascii&amp;quot;: &amp;quot;71&amp;quot;
-          },
-          &amp;quot;geometry&amp;quot;: {
-            &amp;quot;type&amp;quot;: &amp;quot;Polygon&amp;quot;,
-            &amp;quot;coordinates&amp;quot;: [[
-              [-80.190, 25.774],
-              [-66.118, 18.466],
-              [-64.757, 32.321],
-              [-80.190, 25.774],
-            ]]
-          }
-        }
-      ]
-    });
-
-    map.data.setStyle(function(feature) {
-      return ({
-        fillColor: feature.getProperty(&amp;#39;color&amp;#39;),
-        strokeColor: feature.getProperty(&amp;#39;color&amp;#39;),
-        strokeWeight: 1
-      });
-    });
-
-    map.data.addListener(&amp;#39;click&amp;#39;, function(event) {
-      event.feature.setProperty(&amp;#39;color&amp;#39;, &amp;#39;red&amp;#39;);
-    });
-  }
-&amp;lt;/script&amp;gt;
-&amp;lt;script async defer src=&amp;quot;https://maps.googleapis.com/maps/api/js?key=GOOGLE_API_KEY&amp;amp;callback=initMap&amp;quot;&amp;gt;
-&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Repace &lt;code class=&quot;language-text&quot;&gt;GOOGLE_API_KEY&lt;/code&gt; with your google api key.&lt;/p&gt;
-&lt;h2&gt;Next steps&lt;/h2&gt;
-&lt;p&gt;If your dealing with large polygons, it wil beter to load them through a api call.
-All you need to do this is replace &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;loadGeoJson&lt;/code&gt;. The param for &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; is the a url which will return geo json.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Creating blog with Gatsby]]></title><description><![CDATA[Before we start, we must download gatsby cli to create our blog. Run the following to create start blog gatsby has provided. To run the blog…]]></description><link>https://kevinponce.com/creating-blog-with-gatsby/</link><guid isPermaLink="false">https://kevinponce.com/creating-blog-with-gatsby/</guid><pubDate>Fri, 02 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Before we start, we must download gatsby cli to create our blog.&lt;/p&gt;
+&lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Creating blog with Gatsby]]></title><description><![CDATA[Before we start, we must download gatsby cli to create our blog. Run the following to create start blog gatsby has provided. To run the blog…]]></description><link>https://kevinponce.com/creating-blog-with-gatsby/</link><guid isPermaLink="false">https://kevinponce.com/creating-blog-with-gatsby/</guid><pubDate>Fri, 02 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Before we start, we must download gatsby cli to create our blog.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install -g gatsby-cli&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Run the following to create start blog gatsby has provided.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
