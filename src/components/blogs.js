@@ -32,7 +32,8 @@ class Blogs extends React.Component {
       pythonIcon,
       raspberryIcon,
       rubyIcon,
-      htmlIcon
+      htmlIcon,
+      appleIcon
     } = this.props
     const { header } = node.frontmatter;
     let iconImage;
@@ -78,6 +79,10 @@ class Blogs extends React.Component {
       } else if (icon === 'html') {
         iconImage = (<Image
           fixed={htmlIcon.childImageSharp.fixed}
+        />)
+      } else if (icon === 'apple') {
+        iconImage = (<Image
+          fixed={appleIcon.childImageSharp.fixed}
         />)
       }
 
@@ -136,7 +141,7 @@ class Blogs extends React.Component {
     const prevPage = this.props.prefixUrl + (currentPage - 1 === 1 ? '' : (currentPage - 1).toString())
     const nextPage = this.props.prefixUrl + (currentPage + 1).toString()
 
-    if (numPages <= 1) {
+    if (numPages <= 1 || isNaN(parseInt(numPages))) {
       return(<div></div>)
     }
 
@@ -216,6 +221,7 @@ Blogs.propTypes = {
   raspberryIcon: PropTypes.object,
   rubyIcon: PropTypes.object,
   htmlIcon: PropTypes.object,
+  appleIcon: PropTypes.object,
 }
 
 export default Blogs

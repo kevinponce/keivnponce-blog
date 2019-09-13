@@ -22,6 +22,7 @@ class BlogIndex extends React.Component {
       raspberryIcon,
       rubyIcon,
       htmlIcon,
+      appleIcon,
     } = data;
 
     return (
@@ -58,6 +59,7 @@ class BlogIndex extends React.Component {
                    rubyIcon={rubyIcon} 
                    htmlIcon={htmlIcon}
                    jsIcon={jsIcon}
+                   appleIcon={appleIcon}
                 />
                 <div className="read-more-wrapper">
                   <Link to='/blogs'>Read More</Link>
@@ -171,6 +173,14 @@ export const pageQuery = graphql`
     }
 
     jsIcon: file(absolutePath: { regex: "/js-icon.png/" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
+    appleIcon: file(absolutePath: { regex: "/apple-icon.png/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed
