@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Fri, 13 Sep 2019 17:18:26 GMT</lastBuildDate><item><title><![CDATA[Arduino Do X Every Y Seconds]]></title><link>https://kevinponce.com/arduino-do-x-every-y-seconds/</link><guid isPermaLink="false">https://kevinponce.com/arduino-do-x-every-y-seconds/</guid><pubDate>Thu, 12 Sep 2019 20:12:00 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;long previousMillis = 0;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Tue, 17 Sep 2019 23:54:50 GMT</lastBuildDate><item><title><![CDATA[Arduino Do X Every Y Seconds]]></title><link>https://kevinponce.com/arduino-do-x-every-y-seconds/</link><guid isPermaLink="false">https://kevinponce.com/arduino-do-x-every-y-seconds/</guid><pubDate>Thu, 12 Sep 2019 20:12:00 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;long previousMillis = 0;
 long interval = 1000;  
 int tftrefresh = 0;
 
@@ -150,36 +150,7 @@ git commit -m &amp;quot;create static website&amp;quot;
 heroku login
 heroku create
 git push heroku master
-heroku open&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Express with es6]]></title><description><![CDATA[Express is a framework that easily provide http requests. To get start you need to create new project by the following in a terminal:
-Make…]]></description><link>https://kevinponce.com/express-with-es6/</link><guid isPermaLink="false">https://kevinponce.com/express-with-es6/</guid><pubDate>Sat, 07 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Express is a framework that easily provide http requests.&lt;/p&gt;
-&lt;p&gt;To get start you need to create new project by the following in a terminal:
-Make sure you change &lt;code class=&quot;language-text&quot;&gt;example-project&lt;/code&gt; to the name of your project.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;mdkir example-project
-cd example-project
-npm init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;In order to start using express, you need to install the dependencies by running the following in a terminal:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install --save express
-npm install babel-cli babel-preset-env babel-loader babel-core nodemon --save-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Create &lt;code class=&quot;language-text&quot;&gt;index.js&lt;/code&gt; and add the following the code to it:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; express &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;express&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; app &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;express&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;message&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Hello World&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;app running on port &apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Add the following under &lt;code class=&quot;language-text&quot;&gt;scripts&lt;/code&gt; in &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;scripts&amp;quot;: {
-  &amp;quot;start&amp;quot;: &amp;quot;nodemon index.js --exec babel-node --presets babel-preset-env&amp;quot;
-},&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Run the following command in the terminal to run the server:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm run start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Open your favorite browser and go to &lt;code class=&quot;language-text&quot;&gt;http://localhost:3000/&lt;/code&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Arduino Bluetooth]]></title><description><![CDATA[Adding Bluetooth to Arduino using HM-10 is really easy. It can be achieve by uploading the following to an arduino. Once the Arduino is…]]></description><link>https://kevinponce.com/arduino-bluetooth/</link><guid isPermaLink="false">https://kevinponce.com/arduino-bluetooth/</guid><pubDate>Sat, 07 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Adding Bluetooth to Arduino using HM-10 is really easy.&lt;/p&gt;
+heroku open&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Arduino Bluetooth]]></title><description><![CDATA[Adding Bluetooth to Arduino using HM-10 is really easy. It can be achieve by uploading the following to an arduino. Once the Arduino is…]]></description><link>https://kevinponce.com/arduino-bluetooth/</link><guid isPermaLink="false">https://kevinponce.com/arduino-bluetooth/</guid><pubDate>Sat, 07 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Adding Bluetooth to Arduino using HM-10 is really easy.&lt;/p&gt;
 &lt;p&gt;It can be achieve by uploading the following to an arduino.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Bluetooth vcc to Arduino 3.3V
 # Bluetooth gnd to Arduino gnd
@@ -238,7 +209,36 @@ AT+BAUD9600          # set baud rate to 9600
 AT+CON0017EA0943AE   # connect to address 0017EA0943AE
 AT+MODE?             # Query module working mode 
 AT+MODE1             # Set mode to 1
-AT+SLEEP             # Set the device in sleep mode.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React Phone Input]]></title><description><![CDATA[Phone Input with a country code is something designers love, and every time have to make one I grown. To make my life easier, I decided to…]]></description><link>https://kevinponce.com/react-phone-input/</link><guid isPermaLink="false">https://kevinponce.com/react-phone-input/</guid><pubDate>Thu, 05 Sep 2019 22:16:00 GMT</pubDate><content:encoded>&lt;p&gt;Phone Input with a country code is something designers love, and every time have to make one I grown.&lt;/p&gt;
+AT+SLEEP             # Set the device in sleep mode.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Express with es6]]></title><description><![CDATA[Express is a framework that easily provide http requests. To get start you need to create new project by the following in a terminal:
+Make…]]></description><link>https://kevinponce.com/express-with-es6/</link><guid isPermaLink="false">https://kevinponce.com/express-with-es6/</guid><pubDate>Sat, 07 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Express is a framework that easily provide http requests.&lt;/p&gt;
+&lt;p&gt;To get start you need to create new project by the following in a terminal:
+Make sure you change &lt;code class=&quot;language-text&quot;&gt;example-project&lt;/code&gt; to the name of your project.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;mdkir example-project
+cd example-project
+npm init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In order to start using express, you need to install the dependencies by running the following in a terminal:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install --save express
+npm install babel-cli babel-preset-env babel-loader babel-core nodemon --save-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Create &lt;code class=&quot;language-text&quot;&gt;index.js&lt;/code&gt; and add the following the code to it:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; express &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;express&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; app &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;express&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;message&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Hello World&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;app running on port &apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Add the following under &lt;code class=&quot;language-text&quot;&gt;scripts&lt;/code&gt; in &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;scripts&amp;quot;: {
+  &amp;quot;start&amp;quot;: &amp;quot;nodemon index.js --exec babel-node --presets babel-preset-env&amp;quot;
+},&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Run the following command in the terminal to run the server:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm run start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Open your favorite browser and go to &lt;code class=&quot;language-text&quot;&gt;http://localhost:3000/&lt;/code&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React Phone Input]]></title><description><![CDATA[Phone Input with a country code is something designers love, and every time have to make one I grown. To make my life easier, I decided to…]]></description><link>https://kevinponce.com/react-phone-input/</link><guid isPermaLink="false">https://kevinponce.com/react-phone-input/</guid><pubDate>Thu, 05 Sep 2019 22:16:00 GMT</pubDate><content:encoded>&lt;p&gt;Phone Input with a country code is something designers love, and every time have to make one I grown.&lt;/p&gt;
 &lt;p&gt;To make my life easier, I decided to create a generic component I can use to make my life easier.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import React from &amp;#39;react&amp;#39;;
 import PropTypes from &amp;#39;prop-types&amp;#39;;
@@ -1378,26 +1378,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
   &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Image
     fixed&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;gatsbyIcon&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;childImageSharp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fixed&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Raspberry LAN OSX]]></title><description><![CDATA[Open System Prefrences Click Sharing check Thunderbold ethernet on right side
-Check Internet sharing on the right side
-Click start on popup…]]></description><link>https://kevinponce.com/raspberry-lan-osx/</link><guid isPermaLink="false">https://kevinponce.com/raspberry-lan-osx/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Open System Prefrences&lt;/p&gt;
-&lt;h3&gt;Click Sharing&lt;/h3&gt;
-&lt;p&gt;check Thunderbold ethernet on right side
-Check Internet sharing on the right side
-Click start on popup dialog
-Open System Prefrences
-Click Network
-Click Thunderbold ethernet
-Make sure using DHCP and make sure status status says connect.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew install nmap
-$ ifconfig&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Look for bridge100
-and find inet and copy ip into:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ nmap -n -sP Your-IP-Address/24&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;if that does not work change last number in ip to 0
-look for ip that is not current ip&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ ssh pi@ip-from-above&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Raspberry PI Tensorflow Image Recognition]]></title><description><![CDATA[Updated Raspberry p Getting tensorflow image recognition is an important building block
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Raspberry PI Tensorflow Image Recognition]]></title><description><![CDATA[Updated Raspberry p Getting tensorflow image recognition is an important building block
 Here are the step I had to do to get it to work…]]></description><link>https://kevinponce.com/raspberry-pi-tensorflow-image-recognition/</link><guid isPermaLink="false">https://kevinponce.com/raspberry-pi-tensorflow-image-recognition/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;h3&gt;Updated Raspberry p&lt;/h3&gt;
 &lt;p&gt;Getting tensorflow image recognition is an important building block
 Here are the step I had to do to get it to work:&lt;/p&gt;
@@ -1466,6 +1447,25 @@ $ protoc object_detection/protos/*.proto --python_out=.&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ cd ~/tensorflow1/models/research/object_detection
 $ wget https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py
 $ python3 Object_detection_picamera.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Raspberry LAN OSX]]></title><description><![CDATA[Open System Prefrences Click Sharing check Thunderbold ethernet on right side
+Check Internet sharing on the right side
+Click start on popup…]]></description><link>https://kevinponce.com/raspberry-lan-osx/</link><guid isPermaLink="false">https://kevinponce.com/raspberry-lan-osx/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Open System Prefrences&lt;/p&gt;
+&lt;h3&gt;Click Sharing&lt;/h3&gt;
+&lt;p&gt;check Thunderbold ethernet on right side
+Check Internet sharing on the right side
+Click start on popup dialog
+Open System Prefrences
+Click Network
+Click Thunderbold ethernet
+Make sure using DHCP and make sure status status says connect.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew install nmap
+$ ifconfig&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Look for bridge100
+and find inet and copy ip into:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ nmap -n -sP Your-IP-Address/24&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;if that does not work change last number in ip to 0
+look for ip that is not current ip&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ ssh pi@ip-from-above&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Raspberry Setup]]></title><description><![CDATA[Download Raspberry pi OS First go to the following site and download noobs zip:
  Format SD Card This step is only needed if this a new SD…]]></description><link>https://kevinponce.com/raspberry-setup/</link><guid isPermaLink="false">https://kevinponce.com/raspberry-setup/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;h2&gt;Download Raspberry pi OS&lt;/h2&gt;
 &lt;p&gt;First go to the following site and download noobs zip:
@@ -1663,24 +1663,7 @@ cap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;release&lt;span
 out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;destroyAllWindows&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How crop an image in python]]></title><description><![CDATA[Here is a snipet of code how to parse an image in pythond]]></description><link>https://kevinponce.com/how-crop-an-image-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-crop-an-image-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a snipet of code how to parse an image in pythond&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; cv2
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; os
-dir_path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;dirname&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;realpath&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;__file__&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-example &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dir_path&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; \&quot;example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpeg\&quot;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imread&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-crop_img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; img&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;77&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imshow&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;\&quot;cropped\&quot;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; crop_img&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;waitKey&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;destroyAllWindows&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;#img[y:y+h, x:x+w]&lt;/span&gt;
-front_top_center_img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; img&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;67&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;87&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-example_croped &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; \&quot;example_croped&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpeg\&quot;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imwrite&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example_croped&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[OSX install matplotlib without anaconda]]></title><description><![CDATA[If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.
+&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[OSX install matplotlib without anaconda]]></title><description><![CDATA[If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.
 After destroying my python…]]></description><link>https://kevinponce.com/osx-install-matplotlib-without-anaconda/</link><guid isPermaLink="false">https://kevinponce.com/osx-install-matplotlib-without-anaconda/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.
 After destroying my python environment several times, I finally figured it out.
 This solution only works for Mac, so sorry Linux and Windows users.&lt;/p&gt;
@@ -1712,7 +1695,40 @@ plt.plot(x_data, y_data)
 plt.show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Run script&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ python3 example.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Rails export/import users]]></title><description><![CDATA[Here is a simple script to export and import users in rails.
+&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Import Cenus data into Postgres]]></title><description><![CDATA[The cenus provides alot of useful data.
+To import it go to  and select . Depending on the time of year, not all of the current data is…]]></description><link>https://kevinponce.com/import-cenus-data-into-postgres/</link><guid isPermaLink="false">https://kevinponce.com/import-cenus-data-into-postgres/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;The cenus provides alot of useful data.
+To import it go to &lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/&lt;/code&gt; and select &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Depending on the time of year, not all of the current data is provided, so you might have to use previous year.
+&lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/TIGER2018/&lt;/code&gt; and selected &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In this example, we are looking for zip codes. The zip codes are under ZCTA5, so click the folder and download the zip.&lt;/p&gt;
+&lt;p&gt;Once the file is download, unzip the file.
+Now you are ready to import the data into your postgres database.
+Run the following command:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;shp2pgsql -I -s 4269 -W Latin1 tl_2018_us_zcta510.shp table_name | psql -d your_data -U your_postgres_role&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Make sure you udpate the following params to your data:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;tl_2018_us_zcta510.shp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;table_name&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_data&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_postgres_role&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[How crop an image in python]]></title><description><![CDATA[Here is a snipet of code how to parse an image in pythond]]></description><link>https://kevinponce.com/how-crop-an-image-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-crop-an-image-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a snipet of code how to parse an image in pythond&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; cv2
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; os
+dir_path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;dirname&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;realpath&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;__file__&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+example &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dir_path&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; \&quot;example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpeg\&quot;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imread&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+crop_img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; img&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;77&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imshow&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;\&quot;cropped\&quot;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; crop_img&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;waitKey&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;destroyAllWindows&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;#img[y:y+h, x:x+w]&lt;/span&gt;
+front_top_center_img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; img&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;67&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;87&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+example_croped &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; \&quot;example_croped&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpeg\&quot;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imwrite&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example_croped&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Rails export/import users]]></title><description><![CDATA[Here is a simple script to export and import users in rails.
 Copy and past the following code to . To export users run: To import users run:]]></description><link>https://kevinponce.com/rails-export-import-users/</link><guid isPermaLink="false">https://kevinponce.com/rails-export-import-users/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple script to export and import users in rails.
 Copy and past the following code to &lt;code class=&quot;language-text&quot;&gt;lib/data.rake&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# lib/data.rake&lt;/span&gt;
@@ -1753,23 +1769,7 @@ namespace &lt;span class=&quot;token symbol&quot;&gt;:data&lt;/span&gt; &lt;span
 &lt;p&gt;To export users run:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;rails data:export:users&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;To import users run:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;rails data:import:users&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Import Cenus data into Postgres]]></title><description><![CDATA[The cenus provides alot of useful data.
-To import it go to  and select . Depending on the time of year, not all of the current data is…]]></description><link>https://kevinponce.com/import-cenus-data-into-postgres/</link><guid isPermaLink="false">https://kevinponce.com/import-cenus-data-into-postgres/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;The cenus provides alot of useful data.
-To import it go to &lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/&lt;/code&gt; and select &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Depending on the time of year, not all of the current data is provided, so you might have to use previous year.
-&lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/TIGER2018/&lt;/code&gt; and selected &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;In this example, we are looking for zip codes. The zip codes are under ZCTA5, so click the folder and download the zip.&lt;/p&gt;
-&lt;p&gt;Once the file is download, unzip the file.
-Now you are ready to import the data into your postgres database.
-Run the following command:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;shp2pgsql -I -s 4269 -W Latin1 tl_2018_us_zcta510.shp table_name | psql -d your_data -U your_postgres_role&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Make sure you udpate the following params to your data:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;tl_2018_us_zcta510.shp&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;table_name&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_data&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_postgres_role&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Tensorflow image recognition on mac]]></title><description><![CDATA[Here is a simple tutorial on getting tensorflow zoo models image recognition. Install Tensorflow I had a hard time setting up tensorflow-gpu…]]></description><link>https://kevinponce.com/tensorflow-image-recognition-on-mac/</link><guid isPermaLink="false">https://kevinponce.com/tensorflow-image-recognition-on-mac/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on getting tensorflow zoo models image recognition.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;rails data:import:users&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Tensorflow image recognition on mac]]></title><description><![CDATA[Here is a simple tutorial on getting tensorflow zoo models image recognition. Install Tensorflow I had a hard time setting up tensorflow-gpu…]]></description><link>https://kevinponce.com/tensorflow-image-recognition-on-mac/</link><guid isPermaLink="false">https://kevinponce.com/tensorflow-image-recognition-on-mac/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on getting tensorflow zoo models image recognition.&lt;/p&gt;
 &lt;h3&gt;Install Tensorflow&lt;/h3&gt;
 &lt;p&gt;I had a hard time setting up tensorflow-gpu.
 If you are using a mac, I would recomend using tensorflow cpu instead.&lt;/p&gt;
@@ -1977,7 +1977,7 @@ firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsbyjs-blog/static/8058f3f26913fea3b6a89a73344fe94a/2b40c/salty_egg.jpg&quot;
+    href=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/2b40c/salty_egg.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1990,13 +1990,13 @@ firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Chinese Salty Egg&quot;
         title=&quot;Chinese Salty Egg&quot;
-        src=&quot;/gatsbyjs-blog/static/8058f3f26913fea3b6a89a73344fe94a/c739e/salty_egg.jpg&quot;
-        srcset=&quot;/gatsbyjs-blog/static/8058f3f26913fea3b6a89a73344fe94a/8ee9c/salty_egg.jpg 148w,
-/gatsbyjs-blog/static/8058f3f26913fea3b6a89a73344fe94a/ebbe7/salty_egg.jpg 295w,
-/gatsbyjs-blog/static/8058f3f26913fea3b6a89a73344fe94a/c739e/salty_egg.jpg 590w,
-/gatsbyjs-blog/static/8058f3f26913fea3b6a89a73344fe94a/5413e/salty_egg.jpg 885w,
-/gatsbyjs-blog/static/8058f3f26913fea3b6a89a73344fe94a/4efde/salty_egg.jpg 1180w,
-/gatsbyjs-blog/static/8058f3f26913fea3b6a89a73344fe94a/2b40c/salty_egg.jpg 2048w&quot;
+        src=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/c739e/salty_egg.jpg&quot;
+        srcset=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/8ee9c/salty_egg.jpg 148w,
+/static/8058f3f26913fea3b6a89a73344fe94a/ebbe7/salty_egg.jpg 295w,
+/static/8058f3f26913fea3b6a89a73344fe94a/c739e/salty_egg.jpg 590w,
+/static/8058f3f26913fea3b6a89a73344fe94a/5413e/salty_egg.jpg 885w,
+/static/8058f3f26913fea3b6a89a73344fe94a/4efde/salty_egg.jpg 1180w,
+/static/8058f3f26913fea3b6a89a73344fe94a/2b40c/salty_egg.jpg 2048w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
   &lt;/a&gt;
