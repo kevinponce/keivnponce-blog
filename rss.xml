@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Sat, 21 Sep 2019 18:53:26 GMT</lastBuildDate><item><title><![CDATA[Arduino Servo]]></title><description><![CDATA[Before you start using servos with an arduino, you need to download drivers. The servo driver I used was:
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Wed, 23 Oct 2019 21:26:12 GMT</lastBuildDate><item><title><![CDATA[Build Object with Dynamic Key]]></title><description><![CDATA[I love es6! Today I just learned how to build an object with an dynamic key.]]></description><link>https://kevinponce.com/build-object-with-dynamic-key/</link><guid isPermaLink="false">https://kevinponce.com/build-object-with-dynamic-key/</guid><pubDate>Mon, 21 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;I love es6!&lt;/p&gt;
+&lt;p&gt;Today I just learned how to build an object with an dynamic key.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function dynamicKey() {
+  return &amp;#39;example&amp;#39;;
+}
+
+const example = {
+  [dynamicKey()]: &amp;#39;value&amp;#39;,
+};&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React Print Pretty Object]]></title><description><![CDATA[Debugging in react is super easy. I personally use React Developer Tools. But sometimes you might be debugging in a differnt browser, lazy…]]></description><link>https://kevinponce.com/react-print-pretty-object/</link><guid isPermaLink="false">https://kevinponce.com/react-print-pretty-object/</guid><pubDate>Mon, 21 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Debugging in react is super easy. I personally use React Developer Tools.&lt;/p&gt;
+&lt;p&gt;But sometimes you might be debugging in a differnt browser, lazy, or might want objects print pretty in the view.&lt;/p&gt;
+&lt;p&gt;Here is a simple snippet of code that will help you accomplish it.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import React from &amp;#39;react&amp;#39;;
+import ReactDOM from &amp;#39;react-dom&amp;#39;;
+
+export default class PrintPrettyObject extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      exampleArray: [{
+        name: &amp;#39;kevin&amp;#39;
+      }],
+    };
+  }
+
+  render() {
+    return (
+      &amp;lt;pre&amp;gt;{JSON.stringify(this.state, null, 2)}&amp;lt;/pre&amp;gt;
+    )
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Arduino Servo]]></title><description><![CDATA[Before you start using servos with an arduino, you need to download drivers. The servo driver I used was:
  I added it the arduino library…]]></description><link>https://kevinponce.com/arduino-servo/</link><guid isPermaLink="false">https://kevinponce.com/arduino-servo/</guid><pubDate>Sat, 21 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Before you start using servos with an arduino, you need to download drivers.&lt;/p&gt;
 &lt;p&gt;The servo driver I used was:
 &lt;code class=&quot;language-text&quot;&gt;https://github.com/adafruit/Adafruit-PWM-Servo-Driver-Library&lt;/code&gt;&lt;/p&gt;
@@ -222,11 +252,11 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm run start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Open your favorite browser and go to &lt;code class=&quot;language-text&quot;&gt;http://localhost:3000/&lt;/code&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Arduino Bluetooth]]></title><description><![CDATA[Adding Bluetooth to Arduino using HM-10 is really easy. It can be achieve by uploading the following to an arduino. Once the Arduino is…]]></description><link>https://kevinponce.com/arduino-bluetooth/</link><guid isPermaLink="false">https://kevinponce.com/arduino-bluetooth/</guid><pubDate>Sat, 07 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Adding Bluetooth to Arduino using HM-10 is really easy.&lt;/p&gt;
 &lt;p&gt;It can be achieve by uploading the following to an arduino.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Bluetooth vcc to Arduino 3.3V
-# Bluetooth gnd to Arduino gnd
-# Bluetooth gnd to Arduino gnd
-# Bluetooth RX to Arduino 2
-# Bluetooth TX to Arduino 3
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// Bluetooth vcc to Arduino 3.3V
+// Bluetooth gnd to Arduino gnd
+// Bluetooth gnd to Arduino gnd
+// Bluetooth RX to Arduino 3
+// Bluetooth TX to Arduino 2
 
 #include &amp;lt;SoftwareSerial.h&amp;gt;
 
