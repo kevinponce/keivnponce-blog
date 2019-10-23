@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Wed, 23 Oct 2019 21:26:12 GMT</lastBuildDate><item><title><![CDATA[Build Object with Dynamic Key]]></title><description><![CDATA[I love es6! Today I just learned how to build an object with an dynamic key.]]></description><link>https://kevinponce.com/build-object-with-dynamic-key/</link><guid isPermaLink="false">https://kevinponce.com/build-object-with-dynamic-key/</guid><pubDate>Mon, 21 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;I love es6!&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Wed, 23 Oct 2019 21:37:37 GMT</lastBuildDate><item><title><![CDATA[Build Object with Dynamic Key]]></title><description><![CDATA[I love es6! Today I just learned how to build an object with an dynamic key.]]></description><link>https://kevinponce.com/build-object-with-dynamic-key/</link><guid isPermaLink="false">https://kevinponce.com/build-object-with-dynamic-key/</guid><pubDate>Mon, 21 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;I love es6!&lt;/p&gt;
 &lt;p&gt;Today I just learned how to build an object with an dynamic key.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function dynamicKey() {
   return &amp;#39;example&amp;#39;;
@@ -309,7 +309,103 @@ AT+BAUD9600          # set baud rate to 9600
 AT+CON0017EA0943AE   # connect to address 0017EA0943AE
 AT+MODE?             # Query module working mode 
 AT+MODE1             # Set mode to 1
-AT+SLEEP             # Set the device in sleep mode.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React Phone Input]]></title><description><![CDATA[Phone Input with a country code is something designers love, and every time have to make one I grown. To make my life easier, I decided to…]]></description><link>https://kevinponce.com/react-phone-input/</link><guid isPermaLink="false">https://kevinponce.com/react-phone-input/</guid><pubDate>Thu, 05 Sep 2019 22:16:00 GMT</pubDate><content:encoded>&lt;p&gt;Phone Input with a country code is something designers love, and every time have to make one I grown.&lt;/p&gt;
+AT+SLEEP             # Set the device in sleep mode.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React Loading Component]]></title><description><![CDATA[Sometimes in react your view is dependent on a api call, and need to display a loading icon as you wait for the api. Here is a snippet of…]]></description><link>https://kevinponce.com/react-loading-component/</link><guid isPermaLink="false">https://kevinponce.com/react-loading-component/</guid><pubDate>Thu, 05 Sep 2019 23:16:00 GMT</pubDate><content:encoded>&lt;p&gt;Sometimes in react your view is dependent on a api call, and need to display a loading icon as you wait for the api.&lt;/p&gt;
+&lt;p&gt;Here is a snippet of code I use to accoplish this:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// example
+import React, { Component } from &amp;#39;react&amp;#39;;
+import PropTypes from &amp;#39;prop-types&amp;#39;;
+import Loading from &amp;#39;./loading&amp;#39;;
+
+export default class Example extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loading: true,
+    }
+  }
+
+  componentDidMount() {
+    setTimeout(() =&amp;gt; {
+      this.setState({ loading: false });
+    }, 5000);
+  }
+
+  render() {
+    return (
+      &amp;lt;Loading&amp;gt;
+        example
+      &amp;lt;/Loading&amp;gt;
+    );
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// loading.js
+import React, { Component } from &amp;#39;react&amp;#39;;
+import PropTypes from &amp;#39;prop-types&amp;#39;;
+import &amp;#39;./loading.scss&amp;#39;
+
+class Loading extends Component {
+  constructor(props) {
+    super(props);
+
+    this.spinner = this.spinner.bind(this);
+  }
+
+  spinner() {
+    if (this.props.loading) {
+      return (
+        &amp;lt;div className=&amp;quot;loading&amp;quot;&amp;gt;
+          &amp;lt;svg version=&amp;quot;1.1&amp;quot; id=&amp;quot;loader-1&amp;quot; xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; x=&amp;quot;0px&amp;quot; y=&amp;quot;0px&amp;quot;
+           width=&amp;quot;100px&amp;quot; height=&amp;quot;100px&amp;quot; viewBox=&amp;quot;0 0 40 40&amp;quot; enableBackground=&amp;quot;new 0 0 40 40&amp;quot;&amp;gt;
+          &amp;lt;path opacity=&amp;quot;0.2&amp;quot; fill=&amp;quot;#000&amp;quot; d=&amp;quot;M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+            s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+            c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z&amp;quot;/&amp;gt;
+          &amp;lt;path fill=&amp;quot;#000&amp;quot; d=&amp;quot;M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+            C22.32,8.481,24.301,9.057,26.013,10.047z&amp;quot;&amp;gt;
+            &amp;lt;animateTransform attributeType=&amp;quot;xml&amp;quot;
+              attributeName=&amp;quot;transform&amp;quot;
+              type=&amp;quot;rotate&amp;quot;
+              from=&amp;quot;0 20 20&amp;quot;
+              to=&amp;quot;360 20 20&amp;quot;
+              dur=&amp;quot;0.5s&amp;quot;
+              repeatCount=&amp;quot;indefinite&amp;quot;/&amp;gt;
+            &amp;lt;/path&amp;gt;
+          &amp;lt;/svg&amp;gt;
+        &amp;lt;/div&amp;gt;
+      )
+    }
+  }
+
+  render() {
+    if (this.props.loading) {
+      return this.spinner();
+    }
+
+    return this.props.children;
+  }
+}
+
+Loading.propTypes = {
+  loading: PropTypes.bool.isRequired,
+};
+
+export default Loading;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;loading.css&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0px;
+
+  svg {
+    margin: 6px 10px;
+
+    path,
+    rect{
+      fill: #8ad7dd;
+    }
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React Phone Input]]></title><description><![CDATA[Phone Input with a country code is something designers love, and every time have to make one I grown. To make my life easier, I decided to…]]></description><link>https://kevinponce.com/react-phone-input/</link><guid isPermaLink="false">https://kevinponce.com/react-phone-input/</guid><pubDate>Thu, 05 Sep 2019 22:16:00 GMT</pubDate><content:encoded>&lt;p&gt;Phone Input with a country code is something designers love, and every time have to make one I grown.&lt;/p&gt;
 &lt;p&gt;To make my life easier, I decided to create a generic component I can use to make my life easier.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import React from &amp;#39;react&amp;#39;;
 import PropTypes from &amp;#39;prop-types&amp;#39;;
