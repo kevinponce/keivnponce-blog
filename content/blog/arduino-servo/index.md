@@ -13,10 +13,12 @@ The servo driver I used was:
 I added it the arduino library folder.
 
 # Wired
+```
 PC9685 VCC -> Arduino 5V
 PC9685 SDA -> Arduino A4
 PC9685 SCW -> Arduino A5
 PC9685 GND -> Arduino GND
+```
 
 Also do not forget to connect PC9685 to a 5V power supply to the green connection.
 

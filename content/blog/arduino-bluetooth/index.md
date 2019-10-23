@@ -8,11 +8,11 @@ Adding Bluetooth to Arduino using HM-10 is really easy.
 
 It can be achieve by uploading the following to an arduino.
 ```
-# Bluetooth vcc to Arduino 3.3V
-# Bluetooth gnd to Arduino gnd
-# Bluetooth gnd to Arduino gnd
-# Bluetooth RX to Arduino 2
-# Bluetooth TX to Arduino 3
+// Bluetooth vcc to Arduino 3.3V
+// Bluetooth gnd to Arduino gnd
+// Bluetooth gnd to Arduino gnd
+// Bluetooth RX to Arduino 3
+// Bluetooth TX to Arduino 2
 
 #include <SoftwareSerial.h>
 

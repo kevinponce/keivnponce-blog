@@ -1,18 +1,50 @@
 ---
 title: React Loading Button
-date: "2019-09-12T22:16:00.121Z"
-tags: ["javascript"]
+date: "2019-10-23T22:12:00.121Z"
+tags: ["javascript", "react"]
 header: { type: 'icon', bgColor: '#E6CE33', icon: 'js' }
 ---
 
-A good user expires gives users fast response, but sometimes forms take a longs time to load.
+In order to provide a good user experience, user should recieve fast feedback when they click a button.
 
-It is best to provide a user with a feature to let them know it is loading, so I created a react loading button.
+Sometimes network calls can take too long, so we have to display a something to tell user that something is happening.
 
-```javascript
+
+Here is a simple react component that will accomplish this, and is easily reusable.
+
+```
+// example.js
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './index.scss'
+import LoadingButton from './loadingButton';
+
+export default class Example extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loading: false,
+    }
+
+    this.spinner = this.spinner.bind(this);
+    this.onClick = this.onClick.bind(this);
+  }
+
+  render() {
+    return (
+      <LoadingButton loading={this.state.loading}
+                     onClick={() => this.setState({ loading: !this.state.loading }) }
+      />
+    )
+  }
+}
+```
+
+```
+// loadingButton.js
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import './loadingButton.scss'
 
 class LoadingButton extends Component {
   constructor(props) {
@@ -52,15 +84,9 @@ class LoadingButton extends Component {
   }
 
   render() {
-    let className = 'loading-button';
-
-    if (this.props.className) {
-      className += ` ${this.props.className}`;
-    }
-
     if (this.props.onClick) {
       return (
-        <button className={className} onClick={this.onClick}>
+        <button className="loading-button" onClick={this.onClick}>
           {this.spinner()}
           {this.props.children}
         </button>
@@ -68,7 +94,7 @@ class LoadingButton extends Component {
     }
 
     return (
-      <button type="submit" className={className}>
+      <button type="submit" className="loading-button">
         {this.spinner()}
         {this.props.children}
       </button>
@@ -79,13 +105,13 @@ class LoadingButton extends Component {
 LoadingButton.propTypes = {
   loading: PropTypes.bool.isRequired,
   onClick: PropTypes.func,
-  className: PropTypes.string,
 };
 
 export default LoadingButton;
 ```
 
-```css
+```
+// loadingButton.scss
 .loading-button {
   margin: 0 0 2em;
   height: 100px;
@@ -96,18 +122,18 @@ export default LoadingButton;
   display: inline-block;
   vertical-align: top;
   position: relative;
-}
 
-.loading-button svg {
-  margin: 6px 10px;
-  vertical-align: bottom;
-  position: absolute;
-  left: 0px;
-}
+  svg {
+    margin: 6px 10px;
+    vertical-align: bottom;
+    position: absolute;
+    left: 0px;
 
-.loading-button svg path,
-.loading-button svg rect{
-  fill: #8ad7dd;
+    path,
+    rect{
+      fill: #8ad7dd;
+    }
+  }
 }
 
 ```
