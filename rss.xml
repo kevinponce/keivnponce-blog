@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Sat, 26 Oct 2019 05:04:58 GMT</lastBuildDate><item><title><![CDATA[Arduino Relay]]></title><description><![CDATA[Here is a snippet of code to use relay. Do not forget to connect the circuit you wish to connect and discount to the relay.]]></description><link>https://kevinponce.com/arduino-relay/</link><guid isPermaLink="false">https://kevinponce.com/arduino-relay/</guid><pubDate>Fri, 25 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a snippet of code to use relay.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Sat, 26 Oct 2019 19:50:07 GMT</lastBuildDate><item><title><![CDATA[Arduino 3 Axis Accelerometer]]></title><description><![CDATA[Here is a snippet of code to use ADXL345 a  Axis accelerometer.]]></description><link>https://kevinponce.com/arduino-3-axis-accelerometer/</link><guid isPermaLink="false">https://kevinponce.com/arduino-3-axis-accelerometer/</guid><pubDate>Sat, 26 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a snippet of code to use ADXL345 a  Axis accelerometer.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// Click sketch
+// Select Include Librart
+// Select Manage Libraies...
+// Install Adafruit ADXL345
+// Install Adafruit Unified Sensor
+
+// classic Arduino
+// ADXL345 VIN to Arduino 5V
+// ADXL345 GND to Arduino GND
+// ADXL345 SDA to Arduino A4
+// ADXL345 SCL to Arduino A5
+
+// newer Arduino
+// ADXL345 VIN to Arduino 5V
+// ADXL345 GND to Arduino GND
+// ADXL345 SDA to Arduino SDA
+// ADXL345 SCL to Arduino SCL
+
+#include &amp;lt;Wire.h&amp;gt;
+#include &amp;lt;Adafruit_Sensor.h&amp;gt;
+#include &amp;lt;Adafruit_ADXL345_U.h&amp;gt;
+
+Adafruit_ADXL345_Unified accel = Adafruit_ADXL345_Unified();
+
+void setup(void) 
+{
+   Serial.begin(9600);  
+
+   if(!accel.begin())
+   {
+      Serial.println(&amp;quot;No ADXL345 sensor detected.&amp;quot;);
+      while(1);
+   }
+}
+
+void loop(void) 
+{
+   sensors_event_t event; 
+   accel.getEvent(&amp;amp;event);
+   Serial.print(&amp;quot;X: &amp;quot;); Serial.print(event.acceleration.x); Serial.print(&amp;quot;  &amp;quot;);
+   Serial.print(&amp;quot;Y: &amp;quot;); Serial.print(event.acceleration.y); Serial.print(&amp;quot;  &amp;quot;);
+   Serial.print(&amp;quot;Z: &amp;quot;); Serial.print(event.acceleration.z); Serial.print(&amp;quot;  &amp;quot;);
+   Serial.println(&amp;quot;m/s^2 &amp;quot;);
+   delay(500);
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Arduino Relay]]></title><description><![CDATA[Here is a snippet of code to use relay. Do not forget to connect the circuit you wish to connect and discount to the relay.]]></description><link>https://kevinponce.com/arduino-relay/</link><guid isPermaLink="false">https://kevinponce.com/arduino-relay/</guid><pubDate>Fri, 25 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a snippet of code to use relay.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// Relay VCC to Arduino 5V
 // Relay GND to Arduino GND
 // Relay IN1 to Arduino 7
