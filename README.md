@@ -4,4 +4,3 @@ npm run deploy
 TODO 
 
 rails doc api two different apis one project
-soap
