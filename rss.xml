@@ -1,19 +1,262 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Mon, 28 Oct 2019 21:39:13 GMT</lastBuildDate><item><title><![CDATA[Ruby use Yaml]]></title><description><![CDATA[Sometimes I need to create a ruby project as a proof of concept, and it is good practive to secrets in a yaml file not checked into git…]]></description><link>https://kevinponce.com/ruby-use-yaml/</link><guid isPermaLink="false">https://kevinponce.com/ruby-use-yaml/</guid><pubDate>Mon, 28 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Sometimes I need to create a ruby project as a proof of concept, and it is good practive to secrets in a yaml file not checked into git.&lt;/p&gt;
-&lt;p&gt;Here is a snippet of code that easily allows you import yaml:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;require &amp;#39;yaml&amp;#39;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Ponce Blog]]></title><description><![CDATA[Kevin Ponce Blog]]></description><link>https://kevinponce.com</link><generator>RSS for Node</generator><lastBuildDate>Tue, 12 Nov 2019 01:19:12 GMT</lastBuildDate><item><title><![CDATA[ASDF Extendable version manager]]></title><description><![CDATA[I have been using rvm, nvm, and pyenv for so long. It has always annoys me that I had to use different version managers. I recently had to…]]></description><link>https://kevinponce.com/asdf/</link><guid isPermaLink="false">https://kevinponce.com/asdf/</guid><pubDate>Mon, 11 Nov 2019 20:12:00 GMT</pubDate><content:encoded>&lt;p&gt;I have been using rvm, nvm, and pyenv for so long. It has always annoys me that I had to use different version managers.&lt;/p&gt;
+&lt;p&gt;I recently had to set up my laptop and wanted to use a bash script to do so. I created one for Soothe when I was working there, but never created one for my personal computer. So I did a quick google search and stumbled upon thoughtbot’s laptop repo. As I was looking through their bash script, I noticed asdf. After doing a quick search, I fell in love.&lt;/p&gt;
+&lt;p&gt;Asdf is a version manager for all!&lt;/p&gt;
+&lt;p&gt;First you need to install the desired plugin.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;asdf plugin-add &amp;lt;name&amp;gt;
 
-cnf = YAML::load(File.open(&amp;#39;config.yml&amp;#39;))
+# examples:
+asdf plugin-add clojure https://github.com/vic/asdf-clojure.git
+asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+asdf plugin-add python https://github.com/tuvistavie/asdf-python.git
+asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Once you have the plugin installed you need to install a version:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;asdf install &amp;lt;language&amp;gt; &amp;lt;versio&amp;gt;
 
-secret = cnf[&amp;#39;example&amp;#39;][&amp;#39;secret&amp;#39;]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now create a &lt;code class=&quot;language-text&quot;&gt;config.yml&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;example:
-  secret: &amp;#39;abc123&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Just make sure to update your &lt;code class=&quot;language-text&quot;&gt;.gitingnore&lt;/code&gt; file to have the following”&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;config.yml&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Ruby use Soap with Savon]]></title><description><![CDATA[So recently had to play around with a soap api. It was a little confusing, but after a while it was easy to use. Soap uses the same url…]]></description><link>https://kevinponce.com/ruby-use-soap-with-savon/</link><guid isPermaLink="false">https://kevinponce.com/ruby-use-soap-with-savon/</guid><pubDate>Mon, 28 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;So recently had to play around with a soap api. It was a little confusing, but after a while it was easy to use. Soap uses the same url endpoint for all operations, and you pass the operation in the header.&lt;/p&gt;
-&lt;p&gt;Before you start working with anything new, it is always best to look at the documentation. In the following examples we are going to use a simple calculator soap api:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.dneonline.com/calculator.asmx&quot;&gt;http://www.dneonline.com/calculator.asmx&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Soap sends and receives xml, which is not fun in ruby. &lt;code class=&quot;language-text&quot;&gt;Savon&lt;/code&gt; makes soap ruby like, and makes it really easy to use.&lt;/p&gt;
-&lt;p&gt;Here is how you can list operations in &lt;code class=&quot;language-text&quot;&gt;Savon&lt;/code&gt;:&lt;/p&gt;
+# example
+asdf instsall ruby 2.6.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you do not know which version to install, you can list all of the versions for the language:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;asdf list-all&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To use it in the active terminal screen:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;asdf local ruby 2.6.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To use it in all terminal screens:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;asdf global ruby 2.6.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you are wondering what asdf is current, the a command for that:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;asdf current&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[S3 Presigned Upload Rails]]></title><description><![CDATA[Before you start playing around with rails, it is important to setup AWS to support presigned upload. Create S3 bucket When you are creating…]]></description><link>https://kevinponce.com/s3-presigned-upload-rails/</link><guid isPermaLink="false">https://kevinponce.com/s3-presigned-upload-rails/</guid><pubDate>Tue, 29 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Before you start playing around with rails, it is important to setup AWS to support presigned upload.&lt;/p&gt;
+&lt;h2&gt;Create S3 bucket&lt;/h2&gt;
+&lt;p&gt;When you are creating you S3 bucket, make sure you configureyour CORS:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;CORSConfiguration xmlns=&amp;quot;http://s3.amazonaws.com/doc/2006-03-01/&amp;quot;&amp;gt;
+&amp;lt;CORSRule&amp;gt;
+    &amp;lt;AllowedOrigin&amp;gt;*&amp;lt;/AllowedOrigin&amp;gt;
+    &amp;lt;AllowedMethod&amp;gt;POST&amp;lt;/AllowedMethod&amp;gt;
+    &amp;lt;AllowedHeader&amp;gt;*&amp;lt;/AllowedHeader&amp;gt;
+&amp;lt;/CORSRule&amp;gt;
+&amp;lt;/CORSConfiguration&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you need the files in the bucket to be public, make sure you make sure under block access is disabled.&lt;/p&gt;
+&lt;h2&gt;Create IAM&lt;/h2&gt;
+&lt;p&gt;When you are granting access to the SDK, you do not want to use your primary account for security purposes. Incase it is compromised, you can restrict it to only have desired actions. Do not make it an admin!
+Also when you are creating your new IAM make sure you select &lt;code class=&quot;language-text&quot;&gt;Programmatic access&lt;/code&gt;. This will allow you have to API access through the sdk.
+You will also need to set the permissions policies. I recomend creating a custom one like this:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{
+    &amp;quot;Version&amp;quot;: &amp;quot;2012-10-17&amp;quot;,
+    &amp;quot;Statement&amp;quot;: [
+        {
+            &amp;quot;Effect&amp;quot;: &amp;quot;Allow&amp;quot;,
+            &amp;quot;Action&amp;quot;: [
+                &amp;quot;s3:Post*&amp;quot;
+            ],
+            &amp;quot;Resource&amp;quot;: [
+                &amp;quot;arn:aws:s3:::example-avatars/*&amp;quot;
+            ]
+        }
+    ]
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Make sure you change &lt;code class=&quot;language-text&quot;&gt;example-avatars&lt;/code&gt; to match your s3 bucket name.&lt;/p&gt;
+&lt;p&gt;When you are create the new IAM copy they &lt;code class=&quot;language-text&quot;&gt;key&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;secret&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;gem &amp;#39;aws-sdk-s3&amp;#39;
+gem &amp;#39;dotenv-rails&amp;#39;, groups: [:development, :test]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;.env&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;AWS_KEY=XXXXXXXXXXX
+AWS_SECRET=XXXXXXXX&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;config/initializers/aws.rb&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;require &amp;#39;aws-sdk-s3&amp;#39;
+
+Aws.config.update({
+  region: &amp;#39;us-west-1&amp;#39;,
+  credentials: Aws::Credentials.new(ENV[&amp;#39;AWS_KEY&amp;#39;], ENV[&amp;#39;AWS_SECRET&amp;#39;])
+})&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;app/controllers/avatar_s3_presign_controller.rb&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;class AvatarS3PresignController &amp;lt; ApplicationController
+  skip_before_action :verify_authenticity_token, raise: false
+
+  def create
+    render json: {
+      &amp;#39;form-data&amp;#39; =&amp;gt; s3_direct_post.fields,
+      key: key,
+      presigned_post: s3_direct_post,
+      url: s3_direct_post.url,
+    }
+  end
+
+  private
+
+  def key
+    @key ||= &amp;quot;user/#{client.id}/avatar-#{SecureRandom.uuid}&amp;quot;
+  end
+
+  def s3_direct_post
+    @s3_direct_post ||= begin
+      s3 = Aws::S3::Resource.new
+      bucket = s3.bucket(&amp;#39;example_bucket&amp;#39;)
+      bucket.presigned_post(key: key, success_action_status: &amp;#39;201&amp;#39;, acl: &amp;#39;public-read&amp;#39;)
+    end
+  end
+
+  def client
+    Client.last # todo make sure you change this not to be the last client
+  end
+end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;app/controllers/avatar_controller.rb&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;class AvatarController &amp;lt; ApplicationController
+  skip_before_action :verify_authenticity_token, raise: false
+  before_action :fetch_client
+
+  def create
+    if @client.update(avatar_params)
+      render json: { message: &amp;#39;Uploaded&amp;#39; }
+    else
+      render json: { message: @client.errors.full_messages.to_sentence }
+    end
+  end
+
+  def edit;end
+
+  private
+
+  def avatar_params
+    params.require(:client).permit(:avatar_url)
+  end
+
+  def fetch_client
+    @client = Client.last # todo make sure you change this not to be the last client
+  end
+end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;app/assets/javascripts/avatar.js&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function readURL(input) {
+  if (input.files &amp;amp;&amp;amp; input.files[0]) {
+    const file = input.files[0];
+
+    $.post(&amp;#39;/avatar_s3_presign&amp;#39;, {}, function (resp) {
+      var image = resp.url + &amp;#39;/&amp;#39; + resp.key;
+
+      var formData = new FormData();
+      for (let key in resp.form_data) {
+        formData.append(key, resp.form_data[key]);
+      }
+      formData.append(&amp;#39;file&amp;#39;, input.files[0]);
+
+      $.ajax({
+        type: &amp;quot;POST&amp;quot;,
+        url: resp.url,
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(uploadResp) {
+          $.post(&amp;#39;/avatar&amp;#39;, {
+            client: {
+              avatar_url: image,
+            }
+          }, function (resp) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+              $(&amp;#39;#imagePreview&amp;#39;).css(&amp;#39;background-image&amp;#39;, &amp;#39;url(&amp;#39;+e.target.result +&amp;#39;)&amp;#39;);
+              $(&amp;#39;#imagePreview&amp;#39;).hide();
+              $(&amp;#39;#imagePreview&amp;#39;).fadeIn(650);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+          }).fail(function(response) {
+            var message = response.responseJSON.message || &amp;#39;On no something went wrong&amp;#39;;
+            alert(message);
+          });
+        }
+      })
+    });
+  }
+}
+
+$(&amp;quot;#imageUpload&amp;quot;).change(function() {
+  readURL(this);
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;app/views/avatar/edit.html.erb&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;%= javascript_include_tag &amp;#39;avatar&amp;#39; %&amp;gt;
+&amp;lt;%= stylesheet_link_tag &amp;#39;avatar&amp;#39; %&amp;gt;
+&amp;lt;div class=&amp;quot;avatar-upload&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;avatar-edit&amp;quot;&amp;gt;
+    &amp;lt;input type=&amp;#39;file&amp;#39; id=&amp;quot;imageUpload&amp;quot; accept=&amp;quot;.png, .jpg, .jpeg&amp;quot; /&amp;gt;
+    &amp;lt;label for=&amp;quot;imageUpload&amp;quot;&amp;gt;&amp;lt;/label&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;avatar-preview&amp;quot;&amp;gt;
+    &amp;lt;div id=&amp;quot;imagePreview&amp;quot; style=&amp;quot;background-image: url(&amp;lt;%= @client.avatar_url || &amp;#39;http://i.pravatar.cc/500?img=7&amp;#39; %&amp;gt;);&amp;quot;&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;app/stylesheets/edit.scss&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;.avatar-upload {
+  position: relative;
+  max-width: 205px;
+  margin: 50px auto;
+
+  .avatar-edit {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
+
+    input {
+      display: none;
+      + label {
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        margin-bottom: 0;
+        border-radius: 100%;
+        background: #FFFFFF;
+        border: 1px solid transparent;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        font-weight: normal;
+        transition: all .2s ease-in-out;
+
+        &amp;amp;:hover {
+          background: #f1f1f1;
+          border-color: #d6d6d6;
+        }
+
+        &amp;amp;:after {
+          content: &amp;quot;\f040&amp;quot;;
+          font-family: &amp;#39;FontAwesome&amp;#39;;
+          color: #757575;
+          position: absolute;
+          top: 10px;
+          left: 0;
+          right: 0;
+          text-align: center;
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+
+    &amp;gt; div {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;config/routes.rb&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Rails.application.routes.draw do
+  resources :avatar, only: [:create]
+  resources :avatar_s3_presign, only: [:create]
+end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Ruby use Soap with Savon]]></title><description><![CDATA[So recently had to play around with a soap api. It was a little confusing, but after a while it was easy to use. Soap uses the same url…]]></description><link>https://kevinponce.com/ruby-use-soap-with-savon/</link><guid isPermaLink="false">https://kevinponce.com/ruby-use-soap-with-savon/</guid><pubDate>Mon, 28 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;So recently had to play around with a soap api. It was a little confusing, but after a while it was easy to use. Soap uses the same url endpoint for all operations, and you pass the operation in the header.&lt;/p&gt;
+&lt;p&gt;Before you start working with anything new, it is always best to look at the documentation. In the following examples we are going to use a simple calculator soap api:
+&lt;a href=&quot;http://www.dneonline.com/calculator.asmx&quot;&gt;http://www.dneonline.com/calculator.asmx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Soap sends and receives xml, which is not fun in ruby. &lt;code class=&quot;language-text&quot;&gt;Savon&lt;/code&gt; makes soap ruby like, and makes it really easy to use.
+Here is how you can list operations in &lt;code class=&quot;language-text&quot;&gt;Savon&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;require &amp;#39;savon&amp;#39;
 
 client = Savon.client(
@@ -43,7 +286,18 @@ client = Savon.client(
   headers: {
     &amp;#39;Authorization&amp;#39; =&amp;gt; &amp;#39;your toke would go here&amp;#39;
   }
-)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Arduino 3 Axis Accelerometer]]></title><description><![CDATA[Here is a snippet of code to use ADXL345 a  Axis accelerometer.]]></description><link>https://kevinponce.com/arduino-3-axis-accelerometer/</link><guid isPermaLink="false">https://kevinponce.com/arduino-3-axis-accelerometer/</guid><pubDate>Sat, 26 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a snippet of code to use ADXL345 a  Axis accelerometer.&lt;/p&gt;
+)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Ruby use Yaml]]></title><description><![CDATA[Sometimes I need to create a ruby project as a proof of concept, and it is good practive to secrets in a yaml file not checked into git…]]></description><link>https://kevinponce.com/ruby-use-yaml/</link><guid isPermaLink="false">https://kevinponce.com/ruby-use-yaml/</guid><pubDate>Mon, 28 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Sometimes I need to create a ruby project as a proof of concept, and it is good practive to secrets in a yaml file not checked into git.&lt;/p&gt;
+&lt;p&gt;Here is a snippet of code that easily allows you import yaml:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;require &amp;#39;yaml&amp;#39;
+
+cnf = YAML::load(File.open(&amp;#39;config.yml&amp;#39;))
+
+secret = cnf[&amp;#39;example&amp;#39;][&amp;#39;secret&amp;#39;]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now create a &lt;code class=&quot;language-text&quot;&gt;config.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;example:
+  secret: &amp;#39;abc123&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Just make sure to update your &lt;code class=&quot;language-text&quot;&gt;.gitingnore&lt;/code&gt; file to have the following”&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;config.yml&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Arduino 3 Axis Accelerometer]]></title><description><![CDATA[Here is a snippet of code to use ADXL345 a  Axis accelerometer.]]></description><link>https://kevinponce.com/arduino-3-axis-accelerometer/</link><guid isPermaLink="false">https://kevinponce.com/arduino-3-axis-accelerometer/</guid><pubDate>Sat, 26 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a snippet of code to use ADXL345 a  Axis accelerometer.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// Click sketch
 // Select Include Librart
 // Select Manage Libraies...
@@ -117,102 +371,6 @@ void setup() {
 void loop() {
   int resval = analogRead(5);
   Serial.println(resval);
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React Loading Component]]></title><description><![CDATA[Sometimes in react your view is dependent on a api call, and need to display a loading icon as you wait for the api. Here is a snippet of…]]></description><link>https://kevinponce.com/react-loading-component/</link><guid isPermaLink="false">https://kevinponce.com/react-loading-component/</guid><pubDate>Wed, 23 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Sometimes in react your view is dependent on a api call, and need to display a loading icon as you wait for the api.&lt;/p&gt;
-&lt;p&gt;Here is a snippet of code I use to accoplish this:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// example
-import React, { Component } from &amp;#39;react&amp;#39;;
-import PropTypes from &amp;#39;prop-types&amp;#39;;
-import Loading from &amp;#39;./loading&amp;#39;;
-
-export default class Example extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loading: true,
-    }
-  }
-
-  componentDidMount() {
-    setTimeout(() =&amp;gt; {
-      this.setState({ loading: false });
-    }, 5000);
-  }
-
-  render() {
-    return (
-      &amp;lt;Loading&amp;gt;
-        example
-      &amp;lt;/Loading&amp;gt;
-    );
-  }
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// loading.js
-import React, { Component } from &amp;#39;react&amp;#39;;
-import PropTypes from &amp;#39;prop-types&amp;#39;;
-import &amp;#39;./loading.scss&amp;#39;
-
-class Loading extends Component {
-  constructor(props) {
-    super(props);
-
-    this.spinner = this.spinner.bind(this);
-  }
-
-  spinner() {
-    if (this.props.loading) {
-      return (
-        &amp;lt;div className=&amp;quot;loading&amp;quot;&amp;gt;
-          &amp;lt;svg version=&amp;quot;1.1&amp;quot; id=&amp;quot;loader-1&amp;quot; xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; x=&amp;quot;0px&amp;quot; y=&amp;quot;0px&amp;quot;
-           width=&amp;quot;100px&amp;quot; height=&amp;quot;100px&amp;quot; viewBox=&amp;quot;0 0 40 40&amp;quot; enableBackground=&amp;quot;new 0 0 40 40&amp;quot;&amp;gt;
-          &amp;lt;path opacity=&amp;quot;0.2&amp;quot; fill=&amp;quot;#000&amp;quot; d=&amp;quot;M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
-            s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
-            c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z&amp;quot;/&amp;gt;
-          &amp;lt;path fill=&amp;quot;#000&amp;quot; d=&amp;quot;M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
-            C22.32,8.481,24.301,9.057,26.013,10.047z&amp;quot;&amp;gt;
-            &amp;lt;animateTransform attributeType=&amp;quot;xml&amp;quot;
-              attributeName=&amp;quot;transform&amp;quot;
-              type=&amp;quot;rotate&amp;quot;
-              from=&amp;quot;0 20 20&amp;quot;
-              to=&amp;quot;360 20 20&amp;quot;
-              dur=&amp;quot;0.5s&amp;quot;
-              repeatCount=&amp;quot;indefinite&amp;quot;/&amp;gt;
-            &amp;lt;/path&amp;gt;
-          &amp;lt;/svg&amp;gt;
-        &amp;lt;/div&amp;gt;
-      )
-    }
-  }
-
-  render() {
-    if (this.props.loading) {
-      return this.spinner();
-    }
-
-    return this.props.children;
-  }
-}
-
-Loading.propTypes = {
-  loading: PropTypes.bool.isRequired,
-};
-
-export default Loading;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;loading.css&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;.loading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 100px 0px;
-
-  svg {
-    margin: 6px 10px;
-
-    path,
-    rect{
-      fill: #8ad7dd;
-    }
-  }
 }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React Loading Button]]></title><description><![CDATA[In order to provide a good user experience, user should recieve fast feedback when they click a button. Sometimes network calls can take too…]]></description><link>https://kevinponce.com/react-loading-button/</link><guid isPermaLink="false">https://kevinponce.com/react-loading-button/</guid><pubDate>Wed, 23 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;In order to provide a good user experience, user should recieve fast feedback when they click a button.&lt;/p&gt;
 &lt;p&gt;Sometimes network calls can take too long, so we have to display a something to tell user that something is happening.&lt;/p&gt;
 &lt;p&gt;Here is a simple react component that will accomplish this, and is easily reusable.&lt;/p&gt;
@@ -331,6 +489,102 @@ export default LoadingButton;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       fill: #8ad7dd;
     }
   }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React Loading Component]]></title><description><![CDATA[Sometimes in react your view is dependent on a api call, and need to display a loading icon as you wait for the api. Here is a snippet of…]]></description><link>https://kevinponce.com/react-loading-component/</link><guid isPermaLink="false">https://kevinponce.com/react-loading-component/</guid><pubDate>Wed, 23 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Sometimes in react your view is dependent on a api call, and need to display a loading icon as you wait for the api.&lt;/p&gt;
+&lt;p&gt;Here is a snippet of code I use to accoplish this:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// example
+import React, { Component } from &amp;#39;react&amp;#39;;
+import PropTypes from &amp;#39;prop-types&amp;#39;;
+import Loading from &amp;#39;./loading&amp;#39;;
+
+export default class Example extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loading: true,
+    }
+  }
+
+  componentDidMount() {
+    setTimeout(() =&amp;gt; {
+      this.setState({ loading: false });
+    }, 5000);
+  }
+
+  render() {
+    return (
+      &amp;lt;Loading&amp;gt;
+        example
+      &amp;lt;/Loading&amp;gt;
+    );
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// loading.js
+import React, { Component } from &amp;#39;react&amp;#39;;
+import PropTypes from &amp;#39;prop-types&amp;#39;;
+import &amp;#39;./loading.scss&amp;#39;
+
+class Loading extends Component {
+  constructor(props) {
+    super(props);
+
+    this.spinner = this.spinner.bind(this);
+  }
+
+  spinner() {
+    if (this.props.loading) {
+      return (
+        &amp;lt;div className=&amp;quot;loading&amp;quot;&amp;gt;
+          &amp;lt;svg version=&amp;quot;1.1&amp;quot; id=&amp;quot;loader-1&amp;quot; xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; x=&amp;quot;0px&amp;quot; y=&amp;quot;0px&amp;quot;
+           width=&amp;quot;100px&amp;quot; height=&amp;quot;100px&amp;quot; viewBox=&amp;quot;0 0 40 40&amp;quot; enableBackground=&amp;quot;new 0 0 40 40&amp;quot;&amp;gt;
+          &amp;lt;path opacity=&amp;quot;0.2&amp;quot; fill=&amp;quot;#000&amp;quot; d=&amp;quot;M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+            s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+            c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z&amp;quot;/&amp;gt;
+          &amp;lt;path fill=&amp;quot;#000&amp;quot; d=&amp;quot;M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+            C22.32,8.481,24.301,9.057,26.013,10.047z&amp;quot;&amp;gt;
+            &amp;lt;animateTransform attributeType=&amp;quot;xml&amp;quot;
+              attributeName=&amp;quot;transform&amp;quot;
+              type=&amp;quot;rotate&amp;quot;
+              from=&amp;quot;0 20 20&amp;quot;
+              to=&amp;quot;360 20 20&amp;quot;
+              dur=&amp;quot;0.5s&amp;quot;
+              repeatCount=&amp;quot;indefinite&amp;quot;/&amp;gt;
+            &amp;lt;/path&amp;gt;
+          &amp;lt;/svg&amp;gt;
+        &amp;lt;/div&amp;gt;
+      )
+    }
+  }
+
+  render() {
+    if (this.props.loading) {
+      return this.spinner();
+    }
+
+    return this.props.children;
+  }
+}
+
+Loading.propTypes = {
+  loading: PropTypes.bool.isRequired,
+};
+
+export default Loading;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;loading.css&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0px;
+
+  svg {
+    margin: 6px 10px;
+
+    path,
+    rect{
+      fill: #8ad7dd;
+    }
+  }
 }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Build Object with Dynamic Key]]></title><description><![CDATA[I love es6! Today I just learned how to build an object with an dynamic key.]]></description><link>https://kevinponce.com/build-object-with-dynamic-key/</link><guid isPermaLink="false">https://kevinponce.com/build-object-with-dynamic-key/</guid><pubDate>Mon, 21 Oct 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;I love es6!&lt;/p&gt;
 &lt;p&gt;Today I just learned how to build an object with an dynamic key.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function dynamicKey() {
@@ -428,7 +682,12 @@ void loop() {
     tftrefresh = 0;
   }
   //*********************end of delay 1s*******************
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Swift Bluetooth Low Energy]]></title><description><![CDATA[I was recently working on a project and need to connect my cell phone to and android controller. Here is a snippet of swift code that I used…]]></description><link>https://kevinponce.com/swift-bluetooth-low-energy/</link><guid isPermaLink="false">https://kevinponce.com/swift-bluetooth-low-energy/</guid><pubDate>Thu, 12 Sep 2019 20:12:00 GMT</pubDate><content:encoded>&lt;p&gt;I was recently working on a project and need to connect my cell phone to and android controller.&lt;/p&gt;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[End and Beginning of File iTerm]]></title><description><![CDATA[One small I change I always need to make to iterm is a shortcut to end of line and begining of line. Do add this shortcut do the following…]]></description><link>https://kevinponce.com/end-and-beginning-of-file-iterm/</link><guid isPermaLink="false">https://kevinponce.com/end-and-beginning-of-file-iterm/</guid><pubDate>Thu, 12 Sep 2019 20:12:00 GMT</pubDate><content:encoded>&lt;p&gt;One small I change I always need to make to iterm is a shortcut to end of line and begining of line.&lt;/p&gt;
+&lt;p&gt;Do add this shortcut do the following:&lt;/p&gt;
+&lt;p&gt;Go to: &lt;code class=&quot;language-text&quot;&gt;Iterm2&lt;/code&gt; -&gt; &lt;code class=&quot;language-text&quot;&gt;Preferences&lt;/code&gt; -&gt; &lt;code class=&quot;language-text&quot;&gt;Keys&lt;/code&gt; -&gt; &lt;code class=&quot;language-text&quot;&gt;Key Bindings&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Edit the following commands to be:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;⌘←  &amp;quot;SEND HEX CODE&amp;quot;      0x01 
+⌘→  &amp;quot;SEND HEX CODE&amp;quot;      0x05&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Swift Bluetooth Low Energy]]></title><description><![CDATA[I was recently working on a project and need to connect my cell phone to and android controller. Here is a snippet of swift code that I used…]]></description><link>https://kevinponce.com/swift-bluetooth-low-energy/</link><guid isPermaLink="false">https://kevinponce.com/swift-bluetooth-low-energy/</guid><pubDate>Thu, 12 Sep 2019 20:12:00 GMT</pubDate><content:encoded>&lt;p&gt;I was recently working on a project and need to connect my cell phone to and android controller.&lt;/p&gt;
 &lt;p&gt;Here is a snippet of swift code that I used to achieve this.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;swift&quot;&gt;&lt;pre class=&quot;language-swift&quot;&gt;&lt;code class=&quot;language-swift&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;UIKit&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;CoreBluetooth&lt;/span&gt;
@@ -554,36 +813,7 @@ git commit -m &amp;quot;create static website&amp;quot;
 heroku login
 heroku create
 git push heroku master
-heroku open&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Express with es6]]></title><description><![CDATA[Express is a framework that easily provide http requests. To get start you need to create new project by the following in a terminal:
-Make…]]></description><link>https://kevinponce.com/express-with-es6/</link><guid isPermaLink="false">https://kevinponce.com/express-with-es6/</guid><pubDate>Sat, 07 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Express is a framework that easily provide http requests.&lt;/p&gt;
-&lt;p&gt;To get start you need to create new project by the following in a terminal:
-Make sure you change &lt;code class=&quot;language-text&quot;&gt;example-project&lt;/code&gt; to the name of your project.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;mdkir example-project
-cd example-project
-npm init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;In order to start using express, you need to install the dependencies by running the following in a terminal:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install --save express
-npm install babel-cli babel-preset-env babel-loader babel-core nodemon --save-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Create &lt;code class=&quot;language-text&quot;&gt;index.js&lt;/code&gt; and add the following the code to it:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; express &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;express&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; app &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;express&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;message&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Hello World&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;app running on port &apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Add the following under &lt;code class=&quot;language-text&quot;&gt;scripts&lt;/code&gt; in &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;scripts&amp;quot;: {
-  &amp;quot;start&amp;quot;: &amp;quot;nodemon index.js --exec babel-node --presets babel-preset-env&amp;quot;
-},&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Run the following command in the terminal to run the server:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm run start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Open your favorite browser and go to &lt;code class=&quot;language-text&quot;&gt;http://localhost:3000/&lt;/code&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Arduino Bluetooth]]></title><description><![CDATA[Adding Bluetooth to Arduino using HM-10 is really easy. It can be achieve by uploading the following to an arduino. Once the Arduino is…]]></description><link>https://kevinponce.com/arduino-bluetooth/</link><guid isPermaLink="false">https://kevinponce.com/arduino-bluetooth/</guid><pubDate>Sat, 07 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Adding Bluetooth to Arduino using HM-10 is really easy.&lt;/p&gt;
+heroku open&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Arduino Bluetooth]]></title><description><![CDATA[Adding Bluetooth to Arduino using HM-10 is really easy. It can be achieve by uploading the following to an arduino. Once the Arduino is…]]></description><link>https://kevinponce.com/arduino-bluetooth/</link><guid isPermaLink="false">https://kevinponce.com/arduino-bluetooth/</guid><pubDate>Sat, 07 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Adding Bluetooth to Arduino using HM-10 is really easy.&lt;/p&gt;
 &lt;p&gt;It can be achieve by uploading the following to an arduino.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// Bluetooth vcc to Arduino 3.3V
 // Bluetooth gnd to Arduino gnd
@@ -642,7 +872,36 @@ AT+BAUD9600          # set baud rate to 9600
 AT+CON0017EA0943AE   # connect to address 0017EA0943AE
 AT+MODE?             # Query module working mode 
 AT+MODE1             # Set mode to 1
-AT+SLEEP             # Set the device in sleep mode.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React Phone Input]]></title><description><![CDATA[Phone Input with a country code is something designers love, and every time have to make one I grown. To make my life easier, I decided to…]]></description><link>https://kevinponce.com/react-phone-input/</link><guid isPermaLink="false">https://kevinponce.com/react-phone-input/</guid><pubDate>Thu, 05 Sep 2019 22:16:00 GMT</pubDate><content:encoded>&lt;p&gt;Phone Input with a country code is something designers love, and every time have to make one I grown.&lt;/p&gt;
+AT+SLEEP             # Set the device in sleep mode.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Express with es6]]></title><description><![CDATA[Express is a framework that easily provide http requests. To get start you need to create new project by the following in a terminal:
+Make…]]></description><link>https://kevinponce.com/express-with-es6/</link><guid isPermaLink="false">https://kevinponce.com/express-with-es6/</guid><pubDate>Sat, 07 Sep 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Express is a framework that easily provide http requests.&lt;/p&gt;
+&lt;p&gt;To get start you need to create new project by the following in a terminal:
+Make sure you change &lt;code class=&quot;language-text&quot;&gt;example-project&lt;/code&gt; to the name of your project.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;mdkir example-project
+cd example-project
+npm init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In order to start using express, you need to install the dependencies by running the following in a terminal:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install --save express
+npm install babel-cli babel-preset-env babel-loader babel-core nodemon --save-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Create &lt;code class=&quot;language-text&quot;&gt;index.js&lt;/code&gt; and add the following the code to it:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; express &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;express&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; app &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;express&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;message&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Hello World&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;app running on port &apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Add the following under &lt;code class=&quot;language-text&quot;&gt;scripts&lt;/code&gt; in &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;scripts&amp;quot;: {
+  &amp;quot;start&amp;quot;: &amp;quot;nodemon index.js --exec babel-node --presets babel-preset-env&amp;quot;
+},&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Run the following command in the terminal to run the server:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm run start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Open your favorite browser and go to &lt;code class=&quot;language-text&quot;&gt;http://localhost:3000/&lt;/code&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React Phone Input]]></title><description><![CDATA[Phone Input with a country code is something designers love, and every time have to make one I grown. To make my life easier, I decided to…]]></description><link>https://kevinponce.com/react-phone-input/</link><guid isPermaLink="false">https://kevinponce.com/react-phone-input/</guid><pubDate>Thu, 05 Sep 2019 22:16:00 GMT</pubDate><content:encoded>&lt;p&gt;Phone Input with a country code is something designers love, and every time have to make one I grown.&lt;/p&gt;
 &lt;p&gt;To make my life easier, I decided to create a generic component I can use to make my life easier.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import React from &amp;#39;react&amp;#39;;
 import PropTypes from &amp;#39;prop-types&amp;#39;;
@@ -1801,67 +2060,6 @@ and find inet and copy ip into:&lt;/p&gt;
 &lt;p&gt;if that does not work change last number in ip to 0
 look for ip that is not current ip&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ ssh pi@ip-from-above&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Raspberry Setup]]></title><description><![CDATA[Download Raspberry pi OS First go to the following site and download noobs zip:
- Format SD Card This step is only needed if this a new SD…]]></description><link>https://kevinponce.com/raspberry-setup/</link><guid isPermaLink="false">https://kevinponce.com/raspberry-setup/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;h2&gt;Download Raspberry pi OS&lt;/h2&gt;
-&lt;p&gt;First go to the following site and download noobs zip:
-&lt;code class=&quot;language-text&quot;&gt;https://www.raspberrypi.org/downloads/noobs/&lt;/code&gt;&lt;/p&gt;
-&lt;h2&gt;Format SD Card&lt;/h2&gt;
-&lt;p&gt;This step is only needed if this a new SD card&lt;/p&gt;
-&lt;p&gt;For mac:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Open Disk Utility&lt;/li&gt;
-&lt;li&gt;Select the SD card on left nav&lt;/li&gt;
-&lt;li&gt;Click Erase&lt;/li&gt;
-&lt;li&gt;Select MS-DOS&lt;/li&gt;
-&lt;li&gt;Click Erase&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Copy files&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Once download is complete, extract zip&lt;/li&gt;
-&lt;li&gt;Copy the zip contents to SD card&lt;/li&gt;
-&lt;li&gt;Eject SD card&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Connect Peripheral&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Insert micro USB into Raspberry pi&lt;/li&gt;
-&lt;li&gt;Plug-in USB keyboard and mouse to Raspberry pi&lt;/li&gt;
-&lt;li&gt;Plug-in HDMI to Raspberry pi&lt;/li&gt;
-&lt;li&gt;Plug-in 5V power supply&lt;/li&gt;
-&lt;li&gt;As soon as you plug it in, it will power up.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Install OS&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Select your language at the bottom of the screen&lt;/li&gt;
-&lt;li&gt;Check raspbian&lt;/li&gt;
-&lt;li&gt;Click install. This part will take a while.&lt;/li&gt;
-&lt;li&gt;When it is done, go through setup and then reboot&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Configuration&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Click Raspberry in top left&lt;/li&gt;
-&lt;li&gt;Click Preferences&lt;/li&gt;
-&lt;li&gt;Click Raspberry PI Configuration&lt;/li&gt;
-&lt;li&gt;Change Hostname&lt;/li&gt;
-&lt;li&gt;Click Interfaces&lt;/li&gt;
-&lt;li&gt;Enable SSH and VNC&lt;/li&gt;
-&lt;li&gt;Click on and reboot&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;SSH into&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Open terminal on Raspberry and run hostname -I&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Open terminal on Mac and run:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ssh pi@raspberry-ip&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;VNC into&lt;/h2&gt;
-&lt;p&gt;download real vnc from:
-&lt;code class=&quot;language-text&quot;&gt;https://www.realvnc.com/en/connect/download/viewer/macos&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Open VNC Viewer&lt;/li&gt;
-&lt;li&gt;Insert ip&lt;/li&gt;
-&lt;li&gt;Type user and password&lt;/li&gt;
-&lt;/ul&gt;
 &lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Raspberry PI Tensorflow Image Recognition]]></title><description><![CDATA[Updated Raspberry p Getting tensorflow image recognition is an important building block
 Here are the step I had to do to get it to work…]]></description><link>https://kevinponce.com/raspberry-pi-tensorflow-image-recognition/</link><guid isPermaLink="false">https://kevinponce.com/raspberry-pi-tensorflow-image-recognition/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;h3&gt;Updated Raspberry p&lt;/h3&gt;
 &lt;p&gt;Getting tensorflow image recognition is an important building block
@@ -1931,6 +2129,67 @@ $ protoc object_detection/protos/*.proto --python_out=.&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ cd ~/tensorflow1/models/research/object_detection
 $ wget https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/blob/master/Object_detection_picamera.py
 $ python3 Object_detection_picamera.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Raspberry Setup]]></title><description><![CDATA[Download Raspberry pi OS First go to the following site and download noobs zip:
+ Format SD Card This step is only needed if this a new SD…]]></description><link>https://kevinponce.com/raspberry-setup/</link><guid isPermaLink="false">https://kevinponce.com/raspberry-setup/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;h2&gt;Download Raspberry pi OS&lt;/h2&gt;
+&lt;p&gt;First go to the following site and download noobs zip:
+&lt;code class=&quot;language-text&quot;&gt;https://www.raspberrypi.org/downloads/noobs/&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Format SD Card&lt;/h2&gt;
+&lt;p&gt;This step is only needed if this a new SD card&lt;/p&gt;
+&lt;p&gt;For mac:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open Disk Utility&lt;/li&gt;
+&lt;li&gt;Select the SD card on left nav&lt;/li&gt;
+&lt;li&gt;Click Erase&lt;/li&gt;
+&lt;li&gt;Select MS-DOS&lt;/li&gt;
+&lt;li&gt;Click Erase&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Copy files&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Once download is complete, extract zip&lt;/li&gt;
+&lt;li&gt;Copy the zip contents to SD card&lt;/li&gt;
+&lt;li&gt;Eject SD card&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Connect Peripheral&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Insert micro USB into Raspberry pi&lt;/li&gt;
+&lt;li&gt;Plug-in USB keyboard and mouse to Raspberry pi&lt;/li&gt;
+&lt;li&gt;Plug-in HDMI to Raspberry pi&lt;/li&gt;
+&lt;li&gt;Plug-in 5V power supply&lt;/li&gt;
+&lt;li&gt;As soon as you plug it in, it will power up.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Install OS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Select your language at the bottom of the screen&lt;/li&gt;
+&lt;li&gt;Check raspbian&lt;/li&gt;
+&lt;li&gt;Click install. This part will take a while.&lt;/li&gt;
+&lt;li&gt;When it is done, go through setup and then reboot&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Configuration&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Click Raspberry in top left&lt;/li&gt;
+&lt;li&gt;Click Preferences&lt;/li&gt;
+&lt;li&gt;Click Raspberry PI Configuration&lt;/li&gt;
+&lt;li&gt;Change Hostname&lt;/li&gt;
+&lt;li&gt;Click Interfaces&lt;/li&gt;
+&lt;li&gt;Enable SSH and VNC&lt;/li&gt;
+&lt;li&gt;Click on and reboot&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;SSH into&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Open terminal on Raspberry and run hostname -I&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open terminal on Mac and run:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ssh pi@raspberry-ip&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;VNC into&lt;/h2&gt;
+&lt;p&gt;download real vnc from:
+&lt;code class=&quot;language-text&quot;&gt;https://www.realvnc.com/en/connect/download/viewer/macos&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open VNC Viewer&lt;/li&gt;
+&lt;li&gt;Insert ip&lt;/li&gt;
+&lt;li&gt;Type user and password&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Voila&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Ruby Matmul]]></title><description><![CDATA[So I just started playing around with machine learning, and keep seeing matmul.
 I wanted to play around remember the math on how to…]]></description><link>https://kevinponce.com/ruby-matmul/</link><guid isPermaLink="false">https://kevinponce.com/ruby-matmul/</guid><pubDate>Sun, 04 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;So I just started playing around with machine learning, and keep seeing matmul.
 I wanted to play around remember the math on how to calculate matmul, so I created my own matmul in ruby.&lt;/p&gt;
@@ -1989,7 +2248,65 @@ Servo myservo&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  &lt
     myservo&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pos&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;              &lt;span class=&quot;token comment&quot;&gt;// tell servo to go to position in variable &apos;pos&apos;&lt;/span&gt;
     &lt;span class=&quot;token function&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;                       &lt;span class=&quot;token comment&quot;&gt;// waits 15ms for the servo to reach the position&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Google maps draw polygon and change color on click]]></title><description><![CDATA[Repace  with your google api key. Next steps If your dealing with large polygons, it wil beter to load them through a api call.
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[How capture webcam in python]]></title><description><![CDATA[Here is a simple tutorial on how to capture your webcam in python. First you need install cv2. Now create the following file: Voila.]]></description><link>https://kevinponce.com/how-capture-webcam-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-capture-webcam-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on how to capture your webcam in python.&lt;/p&gt;
+&lt;p&gt;First you need install cv2.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pip3 install cv2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now create the following file:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; cv2
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; numpy &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; np
+
+cap &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;VideoCapture&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+fourcc &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;VideoWriter_fourcc&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;M&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;J&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;P&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;G&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+out &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;VideoWriter&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+succes &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;output.avi&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;fourcc&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;15.0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1280&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;720&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  ret&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; frame &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;read&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imshow&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;frame&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; frame&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;write&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;frame&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;waitKey&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0xff&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;q&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;
+
+cap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;destroyAllWindows&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How crop an image in python]]></title><description><![CDATA[Here is a snipet of code how to parse an image in pythond]]></description><link>https://kevinponce.com/how-crop-an-image-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-crop-an-image-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a snipet of code how to parse an image in pythond&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; cv2
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; os
+dir_path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;dirname&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;realpath&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;__file__&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+example &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dir_path&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; \&quot;example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpeg\&quot;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imread&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+crop_img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; img&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;77&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imshow&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;\&quot;cropped\&quot;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; crop_img&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;waitKey&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;destroyAllWindows&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;#img[y:y+h, x:x+w]&lt;/span&gt;
+front_top_center_img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; img&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;67&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;87&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+example_croped &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; \&quot;example_croped&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpeg\&quot;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imwrite&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example_croped&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Import Cenus data into Postgres]]></title><description><![CDATA[The cenus provides alot of useful data.
+To import it go to  and select . Depending on the time of year, not all of the current data is…]]></description><link>https://kevinponce.com/import-cenus-data-into-postgres/</link><guid isPermaLink="false">https://kevinponce.com/import-cenus-data-into-postgres/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;The cenus provides alot of useful data.
+To import it go to &lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/&lt;/code&gt; and select &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Depending on the time of year, not all of the current data is provided, so you might have to use previous year.
+&lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/TIGER2018/&lt;/code&gt; and selected &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In this example, we are looking for zip codes. The zip codes are under ZCTA5, so click the folder and download the zip.&lt;/p&gt;
+&lt;p&gt;Once the file is download, unzip the file.
+Now you are ready to import the data into your postgres database.
+Run the following command:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;shp2pgsql -I -s 4269 -W Latin1 tl_2018_us_zcta510.shp table_name | psql -d your_data -U your_postgres_role&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Make sure you udpate the following params to your data:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;tl_2018_us_zcta510.shp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;table_name&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_data&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_postgres_role&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Google maps draw polygon and change color on click]]></title><description><![CDATA[Repace  with your google api key. Next steps If your dealing with large polygons, it wil beter to load them through a api call.
 All you need…]]></description><link>https://kevinponce.com/google-maps-draw-polygon-and-change-color-on-click/</link><guid isPermaLink="false">https://kevinponce.com/google-maps-draw-polygon-and-change-color-on-click/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;hmtl&quot;&gt;&lt;pre class=&quot;language-hmtl&quot;&gt;&lt;code class=&quot;language-hmtl&quot;&gt;&amp;lt;script&amp;gt;
   function initMap() {
     var map = new google.maps.Map(document.getElementById(&amp;#39;map&amp;#39;), {
@@ -2042,65 +2359,39 @@ All you need…]]></description><link>https://kevinponce.com/google-maps-draw-po
 &lt;p&gt;Repace &lt;code class=&quot;language-text&quot;&gt;GOOGLE_API_KEY&lt;/code&gt; with your google api key.&lt;/p&gt;
 &lt;h2&gt;Next steps&lt;/h2&gt;
 &lt;p&gt;If your dealing with large polygons, it wil beter to load them through a api call.
-All you need to do this is replace &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;loadGeoJson&lt;/code&gt;. The param for &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; is the a url which will return geo json.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How capture webcam in python]]></title><description><![CDATA[Here is a simple tutorial on how to capture your webcam in python. First you need install cv2. Now create the following file: Voila.]]></description><link>https://kevinponce.com/how-capture-webcam-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-capture-webcam-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on how to capture your webcam in python.&lt;/p&gt;
-&lt;p&gt;First you need install cv2.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pip3 install cv2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now create the following file:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; cv2
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; numpy &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; np
+All you need to do this is replace &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;loadGeoJson&lt;/code&gt;. The param for &lt;code class=&quot;language-text&quot;&gt;addGeoJson&lt;/code&gt; is the a url which will return geo json.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[OSX install matplotlib without anaconda]]></title><description><![CDATA[If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.
+After destroying my python…]]></description><link>https://kevinponce.com/osx-install-matplotlib-without-anaconda/</link><guid isPermaLink="false">https://kevinponce.com/osx-install-matplotlib-without-anaconda/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.
+After destroying my python environment several times, I finally figured it out.
+This solution only works for Mac, so sorry Linux and Windows users.&lt;/p&gt;
+&lt;p&gt;I recommend using pipenv to manage python version, because downloading python from brew was a pain in the ass when you need more than one version of python.
+I needed to use python 3.6, because at the time tensorflow did not support python 3.7.&lt;/p&gt;
+&lt;h2&gt;First update brew and install pyenv pipenv&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew update
+$ brew install pyenv pipenv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Create project directory&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ mkdir ~/project
+$ cd ~/project
+$ pyenv init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Install desired python version.&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ PYTHON_CONFIGURE_OPTS=\&amp;quot;--enable-framework\&amp;quot; CFLAGS=\&amp;quot;-I$(brew --prefix openssl)/include\&amp;quot; LDFLAGS=\&amp;quot;-L$(brew --prefix openssl)/lib\&amp;quot; pyenv install 3.6.5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Access installed version of python&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;$ pyenv local &lt;span class=&quot;token number&quot;&gt;3.6&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.5&lt;/span&gt;
+$ pipenv shell
+$ python &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Install dependencies&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pip3 install numpy
+$ pip3 install matplotlib&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Create file example.py and add the following in it:&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import numpy as np
+import matplotlib.pyplot as plt
 
-cap &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;VideoCapture&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-fourcc &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;VideoWriter_fourcc&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;M&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;J&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;P&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;G&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-out &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;VideoWriter&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-succes &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;output.avi&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;fourcc&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;15.0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1280&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;720&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-  ret&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; frame &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;read&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-  cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imshow&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;frame&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; frame&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-  out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;write&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;frame&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;waitKey&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0xff&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;q&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;
-
-cap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;destroyAllWindows&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Import Cenus data into Postgres]]></title><description><![CDATA[The cenus provides alot of useful data.
-To import it go to  and select . Depending on the time of year, not all of the current data is…]]></description><link>https://kevinponce.com/import-cenus-data-into-postgres/</link><guid isPermaLink="false">https://kevinponce.com/import-cenus-data-into-postgres/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;The cenus provides alot of useful data.
-To import it go to &lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/&lt;/code&gt; and select &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Depending on the time of year, not all of the current data is provided, so you might have to use previous year.
-&lt;code class=&quot;language-text&quot;&gt;https://www2.census.gov/geo/tiger/TIGER2018/&lt;/code&gt; and selected &lt;code class=&quot;language-text&quot;&gt;Directory_Contents_ReadMe.pdf&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;In this example, we are looking for zip codes. The zip codes are under ZCTA5, so click the folder and download the zip.&lt;/p&gt;
-&lt;p&gt;Once the file is download, unzip the file.
-Now you are ready to import the data into your postgres database.
-Run the following command:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;shp2pgsql -I -s 4269 -W Latin1 tl_2018_us_zcta510.shp table_name | psql -d your_data -U your_postgres_role&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Make sure you udpate the following params to your data:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;tl_2018_us_zcta510.shp&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;table_name&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_data&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;your_postgres_role&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[How crop an image in python]]></title><description><![CDATA[Here is a snipet of code how to parse an image in pythond]]></description><link>https://kevinponce.com/how-crop-an-image-in-python/</link><guid isPermaLink="false">https://kevinponce.com/how-crop-an-image-in-python/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a snipet of code how to parse an image in pythond&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; cv2
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; os
-dir_path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;dirname&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;realpath&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;__file__&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-example &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dir_path&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; \&quot;example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpeg\&quot;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imread&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-crop_img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; img&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;77&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imshow&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;\&quot;cropped\&quot;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; crop_img&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;waitKey&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;destroyAllWindows&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;#img[y:y+h, x:x+w]&lt;/span&gt;
-front_top_center_img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; img&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;67&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;87&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-example_croped &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; \&quot;example_croped&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpeg\&quot;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-cv2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;imwrite&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;example_croped&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; example&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Rails export/import users]]></title><description><![CDATA[Here is a simple script to export and import users in rails.
+x_data = np.linspace(0, 10, 10) + np.random.uniform(-1.5, 1.5, 10)
+y_data = np.linspace(0, 10, 10) + np.random.uniform(-1.5, 1.5, 10)
+plt.plot(x_data, y_data)
+plt.show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Run script&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ python3 example.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Rails export/import users]]></title><description><![CDATA[Here is a simple script to export and import users in rails.
 Copy and past the following code to . To export users run: To import users run:]]></description><link>https://kevinponce.com/rails-export-import-users/</link><guid isPermaLink="false">https://kevinponce.com/rails-export-import-users/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple script to export and import users in rails.
 Copy and past the following code to &lt;code class=&quot;language-text&quot;&gt;lib/data.rake&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# lib/data.rake&lt;/span&gt;
@@ -2141,39 +2432,7 @@ namespace &lt;span class=&quot;token symbol&quot;&gt;:data&lt;/span&gt; &lt;span
 &lt;p&gt;To export users run:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;rails data:export:users&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;To import users run:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;rails data:import:users&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[OSX install matplotlib without anaconda]]></title><description><![CDATA[If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.
-After destroying my python…]]></description><link>https://kevinponce.com/osx-install-matplotlib-without-anaconda/</link><guid isPermaLink="false">https://kevinponce.com/osx-install-matplotlib-without-anaconda/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.
-After destroying my python environment several times, I finally figured it out.
-This solution only works for Mac, so sorry Linux and Windows users.&lt;/p&gt;
-&lt;p&gt;I recommend using pipenv to manage python version, because downloading python from brew was a pain in the ass when you need more than one version of python.
-I needed to use python 3.6, because at the time tensorflow did not support python 3.7.&lt;/p&gt;
-&lt;h2&gt;First update brew and install pyenv pipenv&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew update
-$ brew install pyenv pipenv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Create project directory&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ mkdir ~/project
-$ cd ~/project
-$ pyenv init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Install desired python version.&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ PYTHON_CONFIGURE_OPTS=\&amp;quot;--enable-framework\&amp;quot; CFLAGS=\&amp;quot;-I$(brew --prefix openssl)/include\&amp;quot; LDFLAGS=\&amp;quot;-L$(brew --prefix openssl)/lib\&amp;quot; pyenv install 3.6.5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Access installed version of python&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;$ pyenv local &lt;span class=&quot;token number&quot;&gt;3.6&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.5&lt;/span&gt;
-$ pipenv shell
-$ python &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Install dependencies&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pip3 install numpy
-$ pip3 install matplotlib&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Create file example.py and add the following in it:&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import numpy as np
-import matplotlib.pyplot as plt
-
-x_data = np.linspace(0, 10, 10) + np.random.uniform(-1.5, 1.5, 10)
-y_data = np.linspace(0, 10, 10) + np.random.uniform(-1.5, 1.5, 10)
-plt.plot(x_data, y_data)
-plt.show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Run script&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ python3 example.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Voila.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Tensorflow image recognition on mac]]></title><description><![CDATA[Here is a simple tutorial on getting tensorflow zoo models image recognition. Install Tensorflow I had a hard time setting up tensorflow-gpu…]]></description><link>https://kevinponce.com/tensorflow-image-recognition-on-mac/</link><guid isPermaLink="false">https://kevinponce.com/tensorflow-image-recognition-on-mac/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on getting tensorflow zoo models image recognition.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;rails data:import:users&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Tensorflow image recognition on mac]]></title><description><![CDATA[Here is a simple tutorial on getting tensorflow zoo models image recognition. Install Tensorflow I had a hard time setting up tensorflow-gpu…]]></description><link>https://kevinponce.com/tensorflow-image-recognition-on-mac/</link><guid isPermaLink="false">https://kevinponce.com/tensorflow-image-recognition-on-mac/</guid><pubDate>Sat, 03 Aug 2019 22:12:00 GMT</pubDate><content:encoded>&lt;p&gt;Here is a simple tutorial on getting tensorflow zoo models image recognition.&lt;/p&gt;
 &lt;h3&gt;Install Tensorflow&lt;/h3&gt;
 &lt;p&gt;I had a hard time setting up tensorflow-gpu.
 If you are using a mac, I would recomend using tensorflow cpu instead.&lt;/p&gt;
