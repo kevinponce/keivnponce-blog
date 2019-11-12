@@ -1,5 +1,5 @@
 ---
-title: ASDF: Extendable version manager
+title: ASDF Extendable version manager
 date: "2019-11-11T20:12:00.121Z"
 tags: ["swift"]
 header: { type: 'icon', bgColor: '#F61653', icon: 'apple' }
