@@ -1,8 +1,10 @@
 ---
-title: ASDF Extendable version manager
+title: MacBook setup ASDF VM
 date: "2019-11-11T20:12:00.121Z"
 tags: ["swift"]
 header: { type: 'icon', bgColor: '#F61653', icon: 'apple' }
+description: Setup macbook pro with asdf vm
+author: Kevin Ponce III
 ---
 
 I have been using rvm, nvm, and pyenv for so long. It has always annoys me that I had to use different version managers.

@@ -6,7 +6,7 @@ module.exports = {
     description: `Kevin Ponce Blog`,
     siteUrl: `https://kevinponce.com/`,
     social: {
-      twitter: `KevinPonce88`,
+      twitter: `UnofficiallyKev`,
     },
   },
   plugins: [
@@ -119,20 +119,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
-    `gatsby-plugin-feed`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Kevin Ponce Blog`,
-        short_name: `Kevin Ponce`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        trackingId: `UA-152714591-1`,
       },
     },
     `gatsby-plugin-offline`,
@@ -142,6 +129,12 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        sitemapSize: 5000
+      }
     },
   ],
 }

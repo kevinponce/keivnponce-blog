@@ -54,7 +54,7 @@ class Layout extends React.Component {
                 <a href="https://github.com/kevinponce"><img src={githubSVG} className="icon" alt="github icon"/><span>GITHUB</span></a>
               </li>
               <li className="nav-secondary social-link-wrapper">
-                <a href="https://twitter.com/KevinPonce88"><img src={twitterSVG} className="icon" alt="twitter icon"/><span>TWITTER</span></a>
+                <a href="https://twitter.com/UnofficiallyKev"><img src={twitterSVG} className="icon" alt="twitter icon"/><span>TWITTER</span></a>
               </li>
               <li className="nav-secondary social-link-wrapper">
                 <a href="https://codepen.io/kevinponce"><img src={codepenSVG} className="icon" alt="codepen icon"/><span>CODEPEN</span></a>

@@ -16,6 +16,9 @@ class BlogPostTemplate extends React.Component {
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
+          author={post.frontmatter.author}
+          canonical={this.props.location.href}
+          tags={[]}
         />
         <div className="blog-container">
           <h1
@@ -90,6 +93,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        author
       }
     }
   }
