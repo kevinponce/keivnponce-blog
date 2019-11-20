@@ -3,6 +3,7 @@ title: React Loading Button
 date: "2019-10-23T22:12:00.121Z"
 tags: ["javascript", "react"]
 header: { type: 'icon', bgColor: '#E6CE33', icon: 'js' }
+description: How to add a loading button to reactjs to provide feedback for good user experience
 ---
 
 In order to provide a good user experience, user should recieve fast feedback when they click a button.

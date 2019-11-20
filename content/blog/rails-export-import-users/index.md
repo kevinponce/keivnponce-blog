@@ -3,6 +3,7 @@ title: Rails export/import users
 date: "2019-08-03T22:12:00.121Z"
 tags: ["ruby", "ruby-on-rails"]
 header: { type: 'icon', bgColor: '#DE3F24', icon: 'ruby' }
+description: How to export and import json files with active record
 ---
 
 Here is a simple script to export and import users in rails.

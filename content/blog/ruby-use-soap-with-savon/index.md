@@ -3,6 +3,7 @@ title: Ruby use Soap with Savon
 date: "2019-10-28T22:12:00.121Z"
 tags: ["ruby", "ruby-on-rails"]
 header: { type: 'icon', bgColor: '#DE3F24', icon: 'ruby' }
+description: How to use Savon in ruby to talk with a soap server
 ---
 
 So recently had to play around with a soap api. It was a little confusing, but after a while it was easy to use. Soap uses the same url endpoint for all operations, and you pass the operation in the header.

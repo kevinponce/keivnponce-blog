@@ -3,6 +3,7 @@ title: Heroku static website
 date: "2019-09-12T12:12:00.121Z"
 tags: ["html"]
 header: { type: 'icon', bgColor: '#E44D25', icon: 'html' }
+description: How to host a static website on Heroku.
 ---
 
 Before you begin make sure you have ruby installed.

@@ -3,6 +3,7 @@ title: OSX install matplotlib without anaconda
 date: "2019-08-03T22:12:00.121Z"
 tags: ["python"]
 header: { type: 'icon', bgColor: '#4B8BBE', icon: 'python' }
+description: How to install matplotlib without anaconda on OSX macbook.
 ---
 
 If you ever tried to install matplotlib without using anaconda, then you probably pulled out some hair.

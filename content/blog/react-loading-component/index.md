@@ -3,6 +3,7 @@ title: React Loading Component
 date: "2019-10-23T22:12:00.121Z"
 tags: ["javascript", "react"]
 header: { type: 'icon', bgColor: '#E6CE33', icon: 'js' }
+description: How to create a loading Component in reactjs to prevent user from seeing component before data is loaded
 ---
 
 Sometimes in react your view is dependent on a api call, and need to display a loading icon as you wait for the api.

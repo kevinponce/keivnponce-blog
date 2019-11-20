@@ -136,5 +136,12 @@ module.exports = {
         sitemapSize: 5000
       }
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        sitemap: 'https://kevinponce.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
   ],
 }

@@ -3,6 +3,7 @@ title: React Print Pretty Object
 date: "2019-10-21T22:12:00.121Z"
 tags: ["javascript", "react"]
 header: { type: 'icon', bgColor: '#E6CE33', icon: 'js' }
+description: How to print pretty object in the reactjs dom
 ---
 
 Debugging in react is super easy. I personally use React Developer Tools.

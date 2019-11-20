@@ -3,8 +3,8 @@ title: Adding image to Gatsby Component
 date: "2019-08-04T22:12:00.121Z"
 tags: ["javascript", "gatsby"]
 header: { type: 'icon', bgColor: '#663399', icon: 'gatsby' }
+description: Tutorial on how to add images to Gatsby page using graphql and resizing for optimize performance.
 ---
-
 # Setup
 Before you can add an image to a react component in gatsby, you need to install gatsby-image.
 ```

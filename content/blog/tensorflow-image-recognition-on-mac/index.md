@@ -3,6 +3,7 @@ title: Tensorflow image recognition on mac
 date: "2019-08-03T22:12:00.121Z"
 tags: ["python"]
 header: { type: 'icon', bgColor: '#4B8BBE', icon: 'python' }
+description: How to use Tensorflow image recognition on macbook
 ---
 
 Here is a simple tutorial on getting tensorflow zoo models image recognition.

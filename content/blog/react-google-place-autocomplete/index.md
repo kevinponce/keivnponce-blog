@@ -3,6 +3,7 @@ title: React Google Place Autocomplete
 date: "2019-08-19T14:38:00.121Z"
 tags: ["javascript", "google"]
 header: { type: 'icon', bgColor: '#E6CE33', icon: 'js' }
+description: How to add Google Place autocomplete to a reactjs location based project
 ---
 
 Google Places autocomplete is amazing.

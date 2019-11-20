@@ -3,9 +3,10 @@ title: How crop an image in python
 date: "2019-08-03T22:12:00.121Z"
 tags: ["python"]
 header: { type: 'icon', bgColor: '#4B8BBE', icon: 'python' }
+description: How crop an image in python to use in machine learning, or your next project. 
 ---
 
-Here is a snipet of code how to parse an image in pythond
+Here is a snipet of code how to parse an image in python:
 ```python
 import cv2
 import os

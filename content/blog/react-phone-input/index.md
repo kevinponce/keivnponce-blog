@@ -3,6 +3,7 @@ title: React Phone Input
 date: "2019-09-05T22:16:00.121Z"
 tags: ["javascript", "react"]
 header: { type: 'icon', bgColor: '#E6CE33', icon: 'js' }
+description: How to add phone input to react js project to validate and format phone numbers and auto add country code
 ---
 
 Phone Input with a country code is something designers love, and every time have to make one I grown.

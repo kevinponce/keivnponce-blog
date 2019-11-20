@@ -3,6 +3,7 @@ title: How capture webcam in python
 date: "2019-08-03T22:12:00.121Z"
 tags: ["python"]
 header: { type: 'icon', bgColor: '#4B8BBE', icon: 'python' }
+description: How capture webcam in python to use in machine learning, or your next project.
 ---
 
 Here is a simple tutorial on how to capture your webcam in python.

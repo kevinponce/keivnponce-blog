@@ -3,6 +3,7 @@ title: React Confetti
 date: "2019-08-12T22:12:00.121Z"
 tags: ["javascript", "react"]
 header: { type: 'icon', bgColor: '#E6CE33', icon: 'js' }
+description: How to add Confetti to a React project
 ---
 
 Now I am almost ready to launch my website.

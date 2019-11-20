@@ -3,8 +3,8 @@ title: Adding Algolia to Rails
 date: "2019-08-07T22:12:00.121Z"
 tags: ["ruby", "ruby-on-rails"]
 header: { type: 'icon', bgColor: '#DE3F24', icon: 'ruby' }
+description: How to add search to ruby on rails using Algolia which will simply search queries and speed up search results.
 ---
-
 Only twice in my career, I was amazed with how simple integrating with a third party library.
 Algolia has done an amazing job with their gem.
 

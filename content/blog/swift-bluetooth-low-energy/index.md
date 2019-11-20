@@ -3,6 +3,7 @@ title: Swift Bluetooth Low Energy
 date: "2019-09-12T20:12:00.121Z"
 tags: ["swift"]
 header: { type: 'icon', bgColor: '#F61653', icon: 'apple' }
+description: How to use Bluetooth low engery in swift
 ---
 
 I was recently working on a project and need to connect my cell phone to and android controller.

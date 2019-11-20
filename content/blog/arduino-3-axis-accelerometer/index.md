@@ -3,8 +3,8 @@ title: Arduino 3 Axis Accelerometer
 date: "2019-10-26T22:12:00.121Z"
 tags: ["arduino"]
 header: { type: 'icon', bgColor: '#0C9097', icon: 'arduino' }
+description: How to use a axis accelerometer with an Arduino using Adafruit ADXL345.
 ---
-
 Here is a snippet of code to use ADXL345 a  Axis accelerometer.
 
 ```

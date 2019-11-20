@@ -3,6 +3,7 @@ title: Gatsby blog pagination
 date: "2019-08-05T22:12:00.121Z"
 tags: ["javascript", "gatsby"]
 header: { type: 'icon', bgColor: '#663399', icon: 'gatsby' }
+description: How to add pagination to Gatsby project/blog.
 ---
 
 Pagination to gatsby was a little weird. Hopefully this is some what helpful

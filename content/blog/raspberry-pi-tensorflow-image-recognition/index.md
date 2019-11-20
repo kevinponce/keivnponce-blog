@@ -3,6 +3,7 @@ title: Raspberry PI Tensorflow Image Recognition
 date: "2019-08-04T22:12:00.121Z"
 tags: ["raspberry"]
 header: { type: 'icon', bgColor: '#B41039', icon: 'raspberry' }
+description: How to use Tensorflow Image Recognition on a Raspberry PI for your next machine learning project
 ---
 
 ###Updated Raspberry p

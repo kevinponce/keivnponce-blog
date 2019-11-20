@@ -3,6 +3,7 @@ title: Raspberry Setup
 date: "2019-08-04T22:12:00.121Z"
 tags: ["raspberry"]
 header: { type: 'icon', bgColor: '#B41039', icon: 'raspberry' }
+description: How to set up a Raspberry for next side project
 ---
 
 ##Download Raspberry pi OS

@@ -25,7 +25,9 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
+        <SEO title="Kevin Ponce Blog | tech tips and tutorials"
+             description="A blog featuring tutorials about Ruby on Rails, HTML5, CSS, JavaScipt, Apple, Python, Arduino, and everything else development."
+        />
         <Blogs posts={posts}
                pageContext={pageContext}
                prefixUrl={'/blogs/'}

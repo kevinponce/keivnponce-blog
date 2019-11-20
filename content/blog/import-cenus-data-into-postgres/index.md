@@ -1,11 +1,12 @@
 ---
-title: Import Cenus data into Postgres
+title: Import Census data into Postgres
 date: "2019-08-03T22:12:00.121Z"
 tags: ["postgres"]
 header: { type: 'icon', bgColor: '#2A5480', icon: 'postgres' }
+description: How to import Census data into Postgres to use United States Zip Codes in your location based project
 ---
 
-The cenus provides alot of useful data.
+The Census provides alot of useful data.
 To import it go to `https://www2.census.gov/geo/tiger/` and select `Directory_Contents_ReadMe.pdf`.
 
 Depending on the time of year, not all of the current data is provided, so you might have to use previous year.

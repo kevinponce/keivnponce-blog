@@ -3,6 +3,7 @@ title: Ruby randomize lat/long
 date: "2019-11-12T22:12:00.121Z"
 tags: ["ruby", "ruby-on-rails"]
 header: { type: 'icon', bgColor: '#DE3F24', icon: 'ruby' }
+description: How to randomize by x amount lag and long in ruby
 ---
 
 Sometime you want to share a location of something, but for security reasons you do not want to share the exact location...

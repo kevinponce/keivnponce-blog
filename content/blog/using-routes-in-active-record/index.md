@@ -3,6 +3,7 @@ title: Using routes in active record
 date: "2019-08-07T22:12:00.121Z"
 tags: ["ruby"]
 header: { type: 'icon', bgColor: '#DE3F24', icon: 'ruby' }
+description: How to use routes in side of rails active record model
 ---
 
 Some times in rails you need to render the path in the model.

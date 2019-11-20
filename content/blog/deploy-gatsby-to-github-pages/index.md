@@ -3,6 +3,7 @@ title: Deploy Gatsby to Github Pages
 date: "2019-08-12T22:12:00.121Z"
 tags: ["javascript", "gatsby"]
 header: { type: 'icon', bgColor: '#663399', icon: 'gatsby' }
+description: Deploy Gatsby Site to Github Pages to host for free.
 ---
 
 Github pages is great, free, and easy to deploy static websites.

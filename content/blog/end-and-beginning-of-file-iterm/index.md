@@ -3,6 +3,7 @@ title: End and Beginning of File iTerm
 date: "2019-11-11T20:12:00.121Z"
 tags: ["iterm"]
 header: { type: 'icon', bgColor: '#F61653', icon: 'apple' }
+description: How to add command to iTerm to get to end of line and end of line.
 ---
 
 One small I change I always need to make to iterm is a shortcut to end of line and begining of line.

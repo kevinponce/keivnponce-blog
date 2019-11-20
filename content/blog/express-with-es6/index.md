@@ -3,6 +3,7 @@ title: Express with es6
 date: "2019-09-07T22:12:00.121Z"
 tags: ["javascript"]
 header: { type: 'icon', bgColor: '#E6CE33', icon: 'js' }
+description: How to add es6 to an express project.
 ---
 
 Express is a framework that easily provide http requests.

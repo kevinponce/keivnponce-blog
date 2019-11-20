@@ -3,6 +3,7 @@ title: S3 Presigned Upload Rails
 date: "2019-10-29T22:12:00.121Z"
 tags: ["ruby", "ruby-on-rails"]
 header: { type: 'icon', bgColor: '#DE3F24', icon: 'ruby' }
+description: How to use S3 Presigned to upload files directly from client side
 ---
 
 Before you start playing around with rails, it is important to setup AWS to support presigned upload.

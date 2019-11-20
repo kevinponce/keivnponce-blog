@@ -3,6 +3,7 @@ title: Creating blog with Gatsby
 date: "2019-08-02T22:12:00.121Z"
 tags: ["javascript", "gatsby"]
 header: { type: 'icon', bgColor: '#663399', icon: 'gatsby' }
+description: How to create a custom blog using gatsby.
 ---
 
 Before we start, we must download gatsby cli to create our blog.

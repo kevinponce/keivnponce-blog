@@ -3,6 +3,7 @@ title: Checkbox Custom Style
 date: "2019-08-29T12:12:00.121Z"
 tags: ["html"]
 header: { type: 'icon', bgColor: '#E44D25', icon: 'html' }
+description: How to style checkbox only using html and sass.
 ---
 
 Checkboxes are too hard to style, but designers always design them...

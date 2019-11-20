@@ -3,11 +3,11 @@ title: Add Tags to Gatsby
 date: "2019-08-06T22:12:00.121Z"
 tags: ["javascript", "gatsby"]
 header: { type: 'icon', bgColor: '#663399', icon: 'gatsby' }
+description: Tutorial on how to add tags to a blog post so you can group post by category.
 ---
-
-Update graphql query that gets all of the blogs posts to get `tags` under `edges.node.frontmatter`.
-
+Update graphql query that gets all of the blogs posts to get `tags` under `edges.node.frontmatter` like so:
 ```javascript
+// gatsby-node.js
 const result = await graphql(
   `
     {
@@ -36,7 +36,7 @@ First you need to gather all of the uniq tags and then iterate through tags and 
 When you create the page you need to pass the tag into the page context.
 In the example below, we are also passing pagination.
 ```javascript
-
+// gatsby-node.js
 // TOP of the file
 const _ = require("lodash")
 
@@ -75,7 +75,7 @@ Object.keys(tags).forEach(tag => {
 })
 ```
 
-The last part is to create the tagss template which can be found below:
+The last part is to create the tags template which can be found below:
 ```javascript
 // src/templates/tags.js
 import React from "react"

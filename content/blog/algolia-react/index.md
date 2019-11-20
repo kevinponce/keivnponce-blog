@@ -3,6 +3,7 @@ title: Algolia React
 date: "2019-08-07T22:12:00.121Z"
 tags: ["javascript"]
 header: { type: 'icon', bgColor: '#E6CE33', icon: 'js' }
+description: How to add search to reactjs using Algolia which will provide suggestions through search box.
 ---
 
 Algolia for ruby on rails was soo simple.

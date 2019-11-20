@@ -3,6 +3,7 @@ title: Ruby Matmul
 date: "2019-08-04T22:12:00.121Z"
 tags: ["ruby"]
 header: { type: 'icon', bgColor: '#DE3F24', icon: 'ruby' }
+description: How to do matrix multiplication in ruby
 ---
 
 So I just started playing around with machine learning, and keep seeing matmul.
