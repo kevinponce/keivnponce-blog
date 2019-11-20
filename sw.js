@@ -45,7 +45,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "78267a1a3d4e7a7add576b7ba925baa3"
+    "revision": "c8b37b7abdfea86429bab652685f2f4c"
   },
   {
     "url": "google-fonts/s/notosans/v9/o-0IIpQlx3QUlC5A4PNr5TRA.woff2",
@@ -58,6 +58,18 @@ self.__precacheManifest = [
   {
     "url": "google-fonts/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2",
     "revision": "0edb76284a7a0f8db4665b560ee2b48f"
+  },
+  {
+    "url": "google-fonts/s/opensans/v17/mem5YaGs126MiZpBA-UN8rsOUuhp.woff2",
+    "revision": "ab3e500e7375695d702cff19513e4470"
+  },
+  {
+    "url": "google-fonts/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOUuhp.woff2",
+    "revision": "819af3d3abdc9f135d49b80a91e2ff4c"
+  },
+  {
+    "url": "google-fonts/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0b.woff2",
+    "revision": "33543c5cc5d88f5695dd08c87d280dfd"
   },
   {
     "url": "manifest.webmanifest",
