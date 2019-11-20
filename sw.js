@@ -45,7 +45,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "8ff2d67cc2ffe0aad23972c9ae8771c1"
+    "revision": "78267a1a3d4e7a7add576b7ba925baa3"
   },
   {
     "url": "google-fonts/s/notosans/v9/o-0IIpQlx3QUlC5A4PNr5TRA.woff2",
