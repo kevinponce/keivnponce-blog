@@ -35,7 +35,7 @@ self.__precacheManifest = [
     "url": "styles-3addc23621d7ae33e7d8.js"
   },
   {
-    "url": "commons-42529f9da1cf6eb70863.js"
+    "url": "commons-a05ccf2a403b17170333.js"
   },
   {
     "url": "app-7205d190a61bd209793e.js"
@@ -45,7 +45,19 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "d51074412d350fa8e925c03f93f057e1"
+    "revision": "8ff2d67cc2ffe0aad23972c9ae8771c1"
+  },
+  {
+    "url": "google-fonts/s/notosans/v9/o-0IIpQlx3QUlC5A4PNr5TRA.woff2",
+    "revision": "175853ded2a4e2249d37c46ca0ca33c5"
+  },
+  {
+    "url": "google-fonts/s/notosans/v9/o-0NIpQlx3QUlC5A4PNjXhFVZNyB.woff2",
+    "revision": "43750a193b8ff0b4e929323a72d79301"
+  },
+  {
+    "url": "google-fonts/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2",
+    "revision": "0edb76284a7a0f8db4665b560ee2b48f"
   },
   {
     "url": "manifest.webmanifest",
