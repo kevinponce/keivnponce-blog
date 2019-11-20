@@ -1,10 +1,10 @@
 module.exports = {
-  pathPrefix: "",
+  pathPrefix: "/keivnponce-blog",
   siteMetadata: {
     title: `Kevin Ponce Blog`,
     author: `Kevin Ponce`,
     description: `Kevin Ponce Blog`,
-    siteUrl: `https://kevinponce.com/`,
+    siteUrl: `https://www.kevinponce.com/`,
     social: {
       twitter: `UnofficiallyKev`,
     },
@@ -139,7 +139,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        sitemap: 'https://kevinponce.com/sitemap.xml',
+        sitemap: 'https://www.kevinponce.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
