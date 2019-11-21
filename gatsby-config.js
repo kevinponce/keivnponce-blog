@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/keivnponce-blog",
+  pathPrefix: "",
   siteMetadata: {
     title: `Kevin Ponce Blog`,
     author: `Kevin Ponce`,
@@ -142,6 +142,25 @@ module.exports = {
         sitemap: 'https://www.kevinponce.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Oswald`,
+            subsets: [`latin`],
+          },
+          {
+            family: `Open Sans`,
+            variants:  [`300`, `400`, `600`,`800`, ]
+          },
+          {
+            family: `Noto Sans`,
+            variants: [`400`,`700`, ]
+          },
+        ],
+      },
     },
   ],
 }

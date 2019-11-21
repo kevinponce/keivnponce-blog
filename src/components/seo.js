@@ -71,6 +71,10 @@ function SEO({ description, lang, meta, title, author, canonical }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `theme-color`,
+          content: `#3a4043`,
+        },
       ].concat(meta)}
 
       link={[
