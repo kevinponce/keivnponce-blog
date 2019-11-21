@@ -35,6 +35,7 @@ export default class Search extends Component {
                 key={page.id}
                 header={page.header}
                 slug={`/blog/${page.slug}`}
+                description={page.description || page.excerpt}
                 title={page.title}
                 tags={page.tags}
                 id={page.id}

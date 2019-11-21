@@ -1,3 +1,6 @@
+const remark = require('remark')
+const visit = require('unist-util-visit')
+
 module.exports = {
   pathPrefix: "",
   siteMetadata: {
@@ -175,8 +178,17 @@ module.exports = {
             path: node => node.frontmatter.path,
             html: node => node.internal.content,
             header: node => node.frontmatter.header,
+            description: node => node.frontmatter.description,
             slug: node => node.fields.slug,
-            excerpt: node => node.node,
+            excerpt: node => {
+              const length = 136
+              const tree = remark().parse(node.rawMarkdownBody)
+              let excerpt = ''
+              visit(tree, 'text', (node) => {
+                excerpt += node.value
+              })
+              return excerpt.slice(0, length) + '...'
+            },
           },
         },
       },
