@@ -162,5 +162,24 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
+      options: {
+        // Fields to index
+        fields: [`title`, `tags`, `html`],
+        // How to resolve each field`s value for a supported node type
+        resolvers: {
+          MarkdownRemark: {
+            title: node => node.frontmatter.title,
+            tags: node => node.frontmatter.tags,
+            path: node => node.frontmatter.path,
+            html: node => node.internal.content,
+            header: node => node.frontmatter.header,
+            slug: node => node.fields.slug,
+            excerpt: node => node.node,
+          },
+        },
+      },
+    },
   ],
 }
