@@ -9,7 +9,7 @@ import chevronLeft from '../images/chevron-left-solid.svg'
 import chevronRight from '../images/chevron-right-solid.svg'
 
 const masonryOptions = {
-    transitionDuration: 0
+  transitionDuration: 0
 };
 
 class Blogs extends React.Component {

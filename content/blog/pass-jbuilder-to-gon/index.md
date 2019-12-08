@@ -1,6 +1,6 @@
 ---
 title: Pass Jbuilder to gon
-date: "2019-08-03T22:12:00.121Z"
+date: "2019-11-21T22:12:00.121Z"
 tags: ["ruby", "ruby-on-rails"]
 header: { type: 'icon', bgColor: '#DE3F24', icon: 'ruby' }
 description: How to pass data from jbuilder to gon.
