@@ -5,7 +5,7 @@ tags: ["arduino", "circuit"]
 header: { type: 'icon', bgColor: '#0C9097', icon: 'arduino' }
 description: How to use an arcade button in your next arduino project.
 ---
-Arcade buttons are create to use in projects, but are a little confusing if you never used them before.
+Arcade buttons are great to use in projects, but are a little confusing if you never used them before.
 There are three connections on "COM" and two that are labeled "NO", but what do they do...
 
 "COM" is as an input where you provide 5 volts to.
