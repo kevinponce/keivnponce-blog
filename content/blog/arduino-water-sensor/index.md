@@ -3,6 +3,7 @@ title: Arduino Water Sensor
 date: "2019-10-24T22:12:00.121Z"
 tags: ["arduino"]
 header: { type: 'icon', bgColor: '#0C9097', icon: 'arduino' }
+description: How to detect moisture with an Arduino
 ---
 
 Here is a snippet of code to use water sensor.
