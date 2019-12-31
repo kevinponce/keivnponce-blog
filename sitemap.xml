@@ -6,10 +6,10 @@
 <url> <loc>https://www.kevinponce.com/blogs/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blogs/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blogs/6</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.kevinponce.com/python/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.kevinponce.com/python/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/arduino/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/arduino/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.kevinponce.com/python/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.kevinponce.com/python/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/circuit/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/circuit/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/ruby/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -37,8 +37,11 @@
 <url> <loc>https://www.kevinponce.com/postgres/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/googe-maps/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/googe-maps/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.kevinponce.com/blog/arduino-control-mouse/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.kevinponce.com/blog/arduino-control-keyboard/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/control-your-mouse-using-python/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/control-your-keyboard-using-python/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.kevinponce.com/blog/find-icon-screenshot-using-python/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/arduino-arcade-button/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/pass-jbuilder-to-gon/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/ruby-random-location/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
