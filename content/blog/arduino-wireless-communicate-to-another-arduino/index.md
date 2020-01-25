@@ -1,5 +1,5 @@
-title: Arduino wireless communicate to another Arduino
 ---
+title: Arduino wireless communicate to another Arduino
 date: "2020-01-06T22:12:00.121Z"
 tags: ["arduino"]
 header: { type: 'icon', bgColor: '#0C9097', icon: 'arduino' }
