@@ -5,7 +5,13 @@ tags: ["arduino"]
 header: { type: 'icon', bgColor: '#0C9097', icon: 'arduino' }
 description: How to use a axis accelerometer with an Arduino using Adafruit ADXL345.
 ---
-Here is a snippet of code to use ADXL345 a  Axis accelerometer.
+
+Before you can use Adafruit_Sensor, you must install the library.
+Go to Tools -> Manage libraries
+Search for Adxl345 and install it.
+
+
+Here is a snippet of code to use ADXL345 a Axis accelerometer.
 
 ```
 // Click sketch

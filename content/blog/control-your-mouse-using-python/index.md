@@ -9,7 +9,7 @@ description: How to control your mouse using pythong.
 Here is a simple snippet of code that allows you move the mouse around the perimeter of a screen programmatically.
 It also prints out the mouse position and scrolls.
 
-Before you can use the colde, make sure you install pyautogui
+Before you can use it, make sure you install pyautogui.
 ```
 $ pip install pyautogui
 ```
