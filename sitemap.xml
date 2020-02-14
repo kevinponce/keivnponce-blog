@@ -63,8 +63,8 @@
 <url> <loc>https://www.kevinponce.com/blog/end-and-beginning-of-file-iterm/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/asdf/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/s3-presigned-upload-rails/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.kevinponce.com/blog/ruby-use-soap-with-savon/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/ruby-use-yaml/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.kevinponce.com/blog/ruby-use-soap-with-savon/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/arduino-3-axis-accelerometer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/arduino-relay/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/arduino-water-sensor/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -91,14 +91,14 @@
 <url> <loc>https://www.kevinponce.com/blog/add-tags-to-gatsby/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/gatsby-blog-pagination/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/ruby-matmul/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.kevinponce.com/blog/raspberry-lan-osx/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.kevinponce.com/blog/raspberry-setup/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/raspberry-pi-tensorflow-image-recognition/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.kevinponce.com/blog/raspberry-setup/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.kevinponce.com/blog/raspberry-lan-osx/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/adding-image-to-gatsby-component/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/tensorflow-image-recognition-on-mac/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/rails-export-import-users/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.kevinponce.com/blog/osx-install-matplotlib-without-anaconda/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/import-cenus-data-into-postgres/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.kevinponce.com/blog/osx-install-matplotlib-without-anaconda/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/how-crop-an-image-in-python/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/how-capture-webcam-in-python/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/google-maps-draw-polygon-and-change-color-on-click/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
