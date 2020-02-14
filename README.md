@@ -6,6 +6,7 @@ TODO
 my laptop script
 
 rails doc api two different apis one project
+https://leetcode.com/problems/n-queens/
 
 
 googe advance search inurl: ''

@@ -164,6 +164,14 @@ class Layout extends React.Component {
                         }
                       }
                     }
+
+                    databaseIcon: file(absolutePath: { regex: "/database.png/" }) {
+                      childImageSharp {
+                        fixed(width: 50, height: 50) {
+                          ...GatsbyImageSharpFixed
+                        }
+                      }
+                    }
                   }
                 `}
               render={data => (
@@ -178,6 +186,7 @@ class Layout extends React.Component {
                         htmlIcon={data.htmlIcon}
                         jsIcon={data.jsIcon}
                         appleIcon={data.appleIcon}
+                        databaseIcon={data.databaseIcon}
                 />
               )}
             />

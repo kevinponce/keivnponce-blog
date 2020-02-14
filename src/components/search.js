@@ -50,6 +50,7 @@ export default class Search extends Component {
                 rubyIcon={this.props.rubyIcon}
                 htmlIcon={this.props.htmlIcon}
                 appleIcon={this.props.appleIcon}
+                databaseIcon={this.props.databaseIcon}
               />
             ))}
           </Masonry>

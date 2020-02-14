@@ -33,7 +33,8 @@ class Blogs extends React.Component {
       raspberryIcon,
       rubyIcon,
       htmlIcon,
-      appleIcon
+      appleIcon,
+      databaseIcon
     } = this.props
     const { header } = node.frontmatter;
     let iconImage;
@@ -83,6 +84,10 @@ class Blogs extends React.Component {
       } else if (icon === 'apple') {
         iconImage = (<Image
           fixed={appleIcon.childImageSharp.fixed}
+        />)
+      } else if (icon === 'database') {
+        iconImage = (<Image
+          fixed={databaseIcon.childImageSharp.fixed}
         />)
       }
 
@@ -222,6 +227,7 @@ Blogs.propTypes = {
   rubyIcon: PropTypes.object,
   htmlIcon: PropTypes.object,
   appleIcon: PropTypes.object,
+  databaseIcon: PropTypes.object,
 }
 
 export default Blogs

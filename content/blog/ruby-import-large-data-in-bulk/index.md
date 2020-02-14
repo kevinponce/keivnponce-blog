@@ -7,7 +7,7 @@ description: How to import large amounts of data without abusing your database
 ---
 
 Sometimes you have to import a large amount of data.
-If you were to do this buret force, you would do it like this:
+If you were to do this brute force, you would do it like this:
 
 
 ```ruby

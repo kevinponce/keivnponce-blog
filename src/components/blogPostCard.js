@@ -23,7 +23,8 @@ class BlogPostCard extends React.Component {
       raspberryIcon,
       rubyIcon,
       htmlIcon,
-      appleIcon
+      appleIcon,
+      databaseIcon,
     } = this.props
     const { header } = this.props;
     let iconImage;
@@ -73,6 +74,10 @@ class BlogPostCard extends React.Component {
       } else if (icon === 'apple') {
         iconImage = (<Image
           fixed={appleIcon.childImageSharp.fixed}
+        />)
+      } else if (icon === 'database') {
+        iconImage = (<Image
+          fixed={databaseIcon.childImageSharp.fixed}
         />)
       }
 
@@ -143,6 +148,7 @@ BlogPostCard.propTypes = {
   rubyIcon: PropTypes.object,
   htmlIcon: PropTypes.object,
   appleIcon: PropTypes.object,
+  databaseIcon: PropTypes.object,
 }
 
 export default BlogPostCard
