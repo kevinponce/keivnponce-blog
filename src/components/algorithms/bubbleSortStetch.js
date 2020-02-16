@@ -55,8 +55,8 @@ export default function(p) {
   };
 };
 
-
-function bubleSort(ar) {
+/*
+function bubbleSort(ar) {
   for (let i = 0; i < ar.length; i++) {
     for (let j = 0; j < ar.length - 1 - i; j++) {
 
@@ -66,7 +66,7 @@ function bubleSort(ar) {
     }
   }
 }
-
+*/
 function swap(ar, i, j) {
   const temp = ar[i];
 

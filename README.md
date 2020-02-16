@@ -8,6 +8,9 @@ my laptop script
 rails doc api two different apis one project
 https://leetcode.com/problems/n-queens/
 
+db overlap
+handing time like availabilites
+
 
 googe advance search inurl: ''
 

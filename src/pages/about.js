@@ -20,7 +20,7 @@ class AboutPage extends React.Component {
           <h5>About</h5>
           <h1>Let me introduce myself.</h1>
 
-          <div class="intro-info">
+          <div className="intro-info">
             <Image
               fixed={data.avatar.childImageSharp.fixed}
               alt="Kevin Ponce"
@@ -37,7 +37,7 @@ class AboutPage extends React.Component {
               className="img-small"
             />
 
-            <p class="lead">Hello. I am Kevin Ponce and I love to build things. Welcome to my blog! I am using my blog to document things I have learned throughout my career, and hopely make someone else's life easier by making it available.</p>
+            <p className="lead">Hello. I am Kevin Ponce and I love to build things. Welcome to my blog! I am using my blog to document things I have learned throughout my career, and hopely make someone else's life easier by making it available.</p>
           </div>
         </div>
       </Layout>

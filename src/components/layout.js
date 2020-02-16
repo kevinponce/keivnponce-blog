@@ -54,15 +54,20 @@ class Layout extends React.Component {
                   ABOUT
                 </Link>
               </li>
+              <li className="nav-primary">
+                <Link
+                  style={{
+                    color: (location.pathname.indexOf('/games') === 0 ? '#6AF087': '#fff'),
+                  }}
+                  to={`/games`}
+                >
+                  GAMES
+                </Link>
+              </li>
               <li className="nav-secondary social-link-wrapper">
                 <a href="https://github.com/kevinponce"><img src={githubSVG} className="icon" alt="github icon"/><span>GITHUB</span></a>
               </li>
-              <li className="nav-secondary social-link-wrapper">
-                <a href="https://twitter.com/UnofficiallyKev"><img src={twitterSVG} className="icon" alt="twitter icon"/><span>TWITTER</span></a>
-              </li>
-              <li className="nav-secondary social-link-wrapper">
-                <a href="https://codepen.io/kevinponce"><img src={codepenSVG} className="icon" alt="codepen icon"/><span>CODEPEN</span></a>
-              </li>
+              
               <li className="nav-secondary social-link-wrapper">
                 <a onClick={() => this.setState({ showSearch: true })}><img src={searchSVG} className="icon" alt="search icon"/><span>SEARCH</span></a>
               </li>
@@ -198,3 +203,12 @@ class Layout extends React.Component {
 }
 
 export default Layout
+
+/*
+<li className="nav-secondary social-link-wrapper">
+  <a href="https://twitter.com/UnofficiallyKev"><img src={twitterSVG} className="icon" alt="twitter icon"/><span>TWITTER</span></a>
+</li>
+<li className="nav-secondary social-link-wrapper">
+  <a href="https://codepen.io/kevinponce"><img src={codepenSVG} className="icon" alt="codepen icon"/><span>CODEPEN</span></a>
+</li>
+*/

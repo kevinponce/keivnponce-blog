@@ -1,4 +1,4 @@
-function randomColor(p) {
+/*function randomColor(p) {
   const colors = [p.color(105,210,231), p.color(249,212,35), p.color(243,134,48), p.color(255,78,80)];
 
   return colors[parseInt((colors.length)* Math.random())];
@@ -138,26 +138,26 @@ async function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function mergeSort(ar) {
+async function mergeSort(ar, mem) {
   if (ar.length <= 1) {
     return ar;
   }
 
   // animations.pop();
   const middle = parseInt(ar.length / 2);
+  mem.push(ar.slice(0, middle))
   // animations.push(ar.slice(0, middle));
-  animations.push([ar.slice(0, middle), [ar.slice(middle)]]);
 
   console.log(JSON.stringify(animations))
 
-  const ar1 = await mergeSort(ar.slice(0, middle))
+  const [ar1, mem1] = await mergeSort(ar.slice(0, middle))
   // animations.pop();
   // animations.push(ar.slice(middle));
-  animations.push([ar1, [ar.slice(middle)]]);
+  mem.push(ar.slice(middle))
 
   console.log(JSON.stringify(animations))
 
-  const ar2 = await mergeSort(ar.slice(middle))
+  const [ar2, mem2] = await mergeSort(ar.slice(middle))
 
   await sleep(500);
   
@@ -167,7 +167,7 @@ async function mergeSort(ar) {
   animations.push(newArray);
   // console.log(JSON.stringify(animations.slice(0)))
   await sleep(500);
-  return newArray;
+  return [newArray, mem];
 }
 
 async function mergeArray (ar1, ar2) {
@@ -200,3 +200,13 @@ async function mergeArray (ar1, ar2) {
 
 
 // mergeSort([2, 5, 1, 7, 4, 9])
+*/
+import React, { Component } from "react";
+
+export default class App extends Component {
+ 
+  render() {
+    return <div>test</div>;
+  }
+}
+

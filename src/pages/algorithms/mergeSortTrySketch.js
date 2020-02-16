@@ -1,3 +1,4 @@
+/*
 function randomColor(p) {
   const colors = [p.color(105,210,231), p.color(249,212,35), p.color(243,134,48), p.color(255,78,80)];
 
@@ -192,4 +193,12 @@ function mergeArray(ar1, ar2) {
 
   return newArray;
 }
+*/
+import React, { Component } from "react";
 
+export default class App extends Component {
+ 
+  render() {
+    return <div>test</div>;
+  }
+}
