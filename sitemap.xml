@@ -91,8 +91,8 @@
 <url> <loc>https://www.kevinponce.com/blog/add-tags-to-gatsby/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/gatsby-blog-pagination/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/ruby-matmul/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.kevinponce.com/blog/raspberry-pi-tensorflow-image-recognition/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/raspberry-setup/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.kevinponce.com/blog/raspberry-pi-tensorflow-image-recognition/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/raspberry-lan-osx/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/adding-image-to-gatsby-component/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/tensorflow-image-recognition-on-mac/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -109,12 +109,9 @@
 <url> <loc>https://www.kevinponce.com/blog/ui-helpful-resources/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/hello-world/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.kevinponce.com/algorithms/bubble-sort/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.kevinponce.com/algorithms/mergeSortTrySketch/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.kevinponce.com/algorithms/quick-sort/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.kevinponce.com/algorithms/sketch/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/games/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/games/mine-sweeper/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.kevinponce.com/games/tetris/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/games/tic-tac-toe/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/projects/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
