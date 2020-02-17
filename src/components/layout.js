@@ -64,6 +64,16 @@ class Layout extends React.Component {
                   GAMES
                 </Link>
               </li>
+              <li className="nav-primary">
+                <Link
+                  style={{
+                    color: (location.pathname.indexOf('/algorithms') === 0 ? '#F38630': '#fff'),
+                  }}
+                  to={`/algorithms`}
+                >
+                  ALGORITHMS
+                </Link>
+              </li>
               <li className="nav-secondary social-link-wrapper">
                 <a href="https://github.com/kevinponce"><img src={githubSVG} className="icon" alt="github icon"/><span>GITHUB</span></a>
               </li>

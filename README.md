@@ -29,3 +29,12 @@ end
 
 good blogs:
 https://catswhocode.com/programming-blogs/
+
+TODO games:
+pong
+pac man
+buble trouble
+seperate ball game
+pipe game
+21
+rubix cube
