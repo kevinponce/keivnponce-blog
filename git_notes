@@ -1,0 +1,40 @@
+# Create a new git 
+git init
+
+git status
+
+git diff
+git diff src/example.js
+
+git add . 
+git add src/example.js
+
+git commit -m "example of a commit"
+
+git remote
+git add remote <name> <url>
+git remote <name>
+
+git push origin master
+
+git rebase master
+
+git log
+
+git checkout -b example_branch
+git checkout example_branch
+
+git branch
+
+# squash commits to a single commit
+# first use git log to to how many commits you want to merge
+git reset --soft HEAD~3 && git commit
+
+git rebase -i
+
+# Reset project to a certain commit but your project will be the same at that point of the project
+git reset --hard 0ad5a7a6
+
+# Reset project to a certain commit but keep all of the changes locally
+git reset --soft 0ad5a7a6
+
