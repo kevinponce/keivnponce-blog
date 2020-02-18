@@ -69,6 +69,10 @@ export default class MineSweeper {
   }
 
   isAMine(mines, x, y) {
+    if (x < 0) return false;
+    if (y < 0) return false;
+    if (x >= this.size) return false;
+    if (y >= this.size) return false;
     if (mines.indexOf((x + 1) * (y + 1)) !== -1) return 1;
 
     return 0;
