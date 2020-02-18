@@ -5,7 +5,7 @@ export default class Cell {
     this.x = x;
     this.y = y
     this.value = value
-    this.show = true;
+    this.show = false;
   }
 
   showMe() {
