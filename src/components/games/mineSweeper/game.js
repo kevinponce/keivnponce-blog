@@ -29,7 +29,11 @@ export default class MineSweeper {
       this.board[y][x].showMe();
     }
 
-    this.won = this.playerWon();
+    if (this.playerWon()) {
+      this.won = true;
+      this.gameOver = true;
+    }
+
     return true;
   }
 
@@ -119,7 +123,9 @@ export default class MineSweeper {
   playerWon() {
     for (let y = 0; y < this.board.length; y++) {
       for (let x = 0; x < this.board[y].length; x++) {
-        if (this.board[y][x].show === false) {
+        if (this.board[y][x].show === false && !this.board[y][x].isMine()) {
+          console.log(x, y)
+          console.log(this.board[y][x])
           return false;
         }
       }

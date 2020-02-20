@@ -38,3 +38,7 @@ git reset --hard 0ad5a7a6
 # Reset project to a certain commit but keep all of the changes locally
 git reset --soft 0ad5a7a6
 
+
+# File out a single file
+## use if you deleted a file in the working tree
+git checkout -- <file>

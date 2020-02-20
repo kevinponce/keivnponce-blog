@@ -46,21 +46,37 @@ class Algorithms extends React.Component {
             </div>
           </section>
           <section className="band band-c">
-          <div className="band-container">
-            <div className="band-inner">
-              <h1>Flood Fill</h1>
-              <p>Here is a visualization of flood fill that was created in p5.</p>
-              <Link
-                style={{
-                  color: '#fff',
-                }}
-                to={`/algorithms/flood-fill`}
-              >
-                Play Me
-              </Link>
+            <div className="band-container">
+              <div className="band-inner">
+                <h1>Flood Fill</h1>
+                <p>Here is a visualization of flood fill that was created in p5.</p>
+                <Link
+                  style={{
+                    color: '#fff',
+                  }}
+                  to={`/algorithms/flood-fill`}
+                >
+                  Play Me
+                </Link>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+          <section className="band band-d">
+            <div className="band-container">
+              <div className="band-inner">
+                <h1>Permutation</h1>
+                <p>Here is a visualization of permutation that was created in p5.</p>
+                <Link
+                  style={{
+                    color: '#fff',
+                  }}
+                  to={`/algorithms/permutation`}
+                >
+                  Play Me
+                </Link>
+              </div>
+            </div>
+          </section>
         </div>
       </Layout>
     );
@@ -78,16 +94,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-/*
-
-<section className="band band-d">
-  <div className="band-container">
-    <div className="band-inner">
-      <h1>Nulla tempor laoreet</h1>
-      <p>Nulla tempor laoreet sagittis. Donec molestie odio sit amet tincidunt egestas. Ut ut nisi nec felis vehicula pharetra. Nunc ullamcorper vitae lectus vitae consectetur. Quisque pharetra lorem metus, at lacinia magna malesuada non. Maecenas tristique risus quis massa convallis tempus in non turpis. Mauris pretium purus sed lacus euismod, eu cursus massa commodo. Nulla in erat ut ex imperdiet iaculis. Aliquam erat volutpat. Sed pellentesque et neque vitae accumsan. Etiam nec dolor quis est dignissim viverra. Nunc et pulvinar felis. Nulla in varius turpis. Curabitur non diam libero. Nam porttitor orci in metus sagittis</p>
-    </div>
-  </div>
-</section>
-*/
-

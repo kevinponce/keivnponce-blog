@@ -11,6 +11,7 @@ export default function(p) {
   const mineColor = '#ff4e50';
   const dirtColor = '#68623B';
   const dirt2Color = '#807142';
+  const fontColor = '#ff4e50';
 
   let mineSweeper;
 
@@ -74,6 +75,22 @@ export default function(p) {
           }
         }
       }
+
+      if (mineSweeper.gameOver) {
+        let message = 'You lost...';
+
+        if (mineSweeper.won) {
+          message = 'You won!';
+        }
+
+        p.push()
+        p.fill(fontColor); 
+        p.rectMode(p.CENTER);
+        p.textSize(50);
+        p.textAlign(p.CENTER, p.CENTER);
+        p.text(message, width / 2, height / 2);
+        p.pop();
+      }
     }
   };
 
@@ -93,7 +110,6 @@ export default function(p) {
   }
 
   p.mouseClicked = function(event) {
-    const { layerX, layerY } = event;
     let x = -1;
     let y = -1;
 
@@ -101,11 +117,11 @@ export default function(p) {
       const inner = i * squareSize;
       const outter = (i + 1) * squareSize;
 
-      if (inner <= layerX && layerX <= outter) {
+      if (inner <= p.mouseX && p.mouseX <= outter) {
         x = i;
       }
 
-      if (inner <= layerY && layerY <= outter) {
+      if (inner <= p.mouseY && p.mouseY <= outter) {
         y = i;
       }
     }
@@ -115,12 +131,6 @@ export default function(p) {
     }
 
     mineSweeper.place(x, y);
-    if (mineSweeper.gameOver) {
-      if (mineSweeper.won) {
-        alert('You won')
-      } else {
-        alert('Game Over')
-      }
-    }
+    
   }
 };

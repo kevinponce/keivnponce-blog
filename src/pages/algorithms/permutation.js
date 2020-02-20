@@ -3,7 +3,7 @@ import Prism from 'prismjs';
 import Loadable from '@loadable/component';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
-const QuickSort = Loadable(() => import('../../components/algorithms/QuickSort'))
+const Permutation = Loadable(() => import('../../components/algorithms/perm/index'))
 
 class PermApp extends Component {
   componentDidMount() {
@@ -20,8 +20,8 @@ class PermApp extends Component {
              description="Personal blog documenting fun facts, projects and things I have learned"
         />
         <div>
-          <h1>Quick Sort</h1>
-          <QuickSort />
+          <h1>Permutation</h1>
+          <Permutation />
         </div>
         <div>
           <h2>Javascript Code</h2>

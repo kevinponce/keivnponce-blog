@@ -9,6 +9,7 @@ export default function(p) {
   const backgroundColor = '#ffffff';
   const colorX = '#69d2e7';
   const colorO = '#f9d523';
+  const fontColor = '#ff4e50';
 
   let ticTacToe;
 
@@ -33,6 +34,22 @@ export default function(p) {
             p.drawO(x, y);
           }
         }
+      }
+
+      if (ticTacToe.gameOver) {
+        let message = 'Cats game';
+
+        if (ticTacToe.winner) {
+          message = `Player ${ticTacToe.winner} wins!`;
+        }
+
+        p.push()
+        p.fill(fontColor); 
+        p.rectMode(p.CENTER);
+        p.textSize(50);
+        p.textAlign(p.CENTER, p.CENTER);
+        p.text(message, width / 2, height / 2);
+        p.pop();
       }
     }
   };
@@ -85,7 +102,6 @@ export default function(p) {
   }
 
   p.mouseClicked = function(event) {
-    const { layerX, layerY } = event;
     let x = -1;
     let y = -1;
 
@@ -93,11 +109,11 @@ export default function(p) {
       const inner = i * squareSize;
       const outter = (i + 1) * squareSize;
 
-      if (inner <= layerX && layerX <= outter) {
+      if (inner <= p.mouseX && p.mouseX <= outter) {
         x = i;
       }
 
-      if (inner <= layerY && layerY <= outter) {
+      if (inner <= p.mouseY && p.mouseY <= outter) {
         y = i;
       }
     }
@@ -107,12 +123,5 @@ export default function(p) {
     }
 
     ticTacToe.place(x, y);
-    if (ticTacToe.gameOver) {
-      if (ticTacToe.winner) {
-        alert(`Player ${ticTacToe.turn} Won`)
-      } else {
-        alert('Game Over')
-      }
-    }
   }
 };
