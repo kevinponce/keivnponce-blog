@@ -16,7 +16,7 @@ class PermApp extends Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Kevin Ponce Quick Sort"
+        <SEO title="Kevin Ponce Permutation"
              description="Personal blog documenting fun facts, projects and things I have learned"
         />
         <div>
