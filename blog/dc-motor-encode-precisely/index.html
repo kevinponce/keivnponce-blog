@@ -16,13 +16,13 @@
  * L298N Motor Driver
  * L298N Out3 -&gt; Motor-
  * L298N Out4 -&gt; Motor+
- * L298N IN3 -&gt; Arduino 10
- * L298N IN2 -&gt; Arduino 11
+ * L298N IN3 -&gt; Arduino 9
+ * L298N IN2 -&gt; Arduino 10
  * L298N 12V+ -&gt; 12 Volt Power Supply
  * L298N GND -&gt; GND
  * 
  * 5 Lead Pot
- * POT LEFT to RIGHT
+ * POT LEFT to RIGHT leads facing you
  * POT LEAD 0 -&gt; N/A
  * POT LEAD 1 -&gt; GND
  * POT LEAD 2 -&gt; Arduino A0
@@ -38,64 +38,63 @@
 #define motorB 10
 
 volatile long int encoder_pos = 0;
----
-title: List branch sort by commit date
-date: &quot;2020-11-13T22:12:00.121Z&quot;
-tags: [&quot;javascript&quot;, &quot;gatsby&quot;]
-header: { type: &#39;icon&#39;, bgColor: &#39;#663399&#39;, icon: &#39;gatsby&#39; }
-description: List branch sort by commit date
----
-List branch sort by commit date</code></pre></div>
-<p>PIDController pos<em>pid;
-int motor</em>value = 255;</p>
-<p>void setup() {
-Serial.begin(9600);
-pinMode(encoderA, INPUT);
-pinMode(encoderB, INPUT);
-pinMode(motorA, OUTPUT);
-pinMode(motorB, OUTPUT);
-attachInterrupt(digitalPinToInterrupt(2), encoder, RISING);</p>
-<p>  pos<em>pid.begin();<br>
-pos</em>pid.tune(20, 0, 200);<br>
-pos_pid.limit(-255, 255);
-}</p>
-<p>void loop() {
-pos<em>pid.setpoint((int)(((float)analogRead(A0)/1023) * 374.0 *1));
-motor</em>value = pos<em>pid.compute(encoder</em>pos);</p>
-<p>  if (motor<em>value > 0) {
-MotorCounterClockwise(motor</em>value);
-} else {
-MotorClockwise(abs(motor_value));
-}</p>
-<p>  Serial.println(encoder_pos);
-delay(2);
-}</p>
-<p>void encoder() {
-if (digitalRead(3) == HIGH) {
-encoder<em>pos++;
-} else {
-encoder</em>pos—;
+PIDController pos_pid;
+int motor_value = 255;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(encoderA, INPUT);
+  pinMode(encoderB, INPUT);
+  pinMode(motorA, OUTPUT);
+  pinMode(motorB, OUTPUT);
+  attachInterrupt(digitalPinToInterrupt(2), encoder, RISING);
+
+  pos_pid.begin();    
+  pos_pid.tune(20, 0, 200);    
+  pos_pid.limit(-255, 255);
 }
-}</p>
-<p>void MotorClockwise(int power){
-if (power > 50) {
-analogWrite(9, power);
-digitalWrite(10, LOW);
-} else {
-digitalWrite(9, LOW);
-digitalWrite(10, LOW);
+
+void loop() {
+  pos_pid.setpoint((int)(((float)analogRead(A0)/1023) * 374.0 *1));
+  motor_value = pos_pid.compute(encoder_pos);
+
+  if (motor_value &gt; 0) {
+    MotorCounterClockwise(motor_value);
+  } else {
+    MotorClockwise(abs(motor_value));
+  }
+
+  Serial.println(encoder_pos);
+  delay(2);
 }
-}</p>
-<p>void MotorCounterClockwise(int power) {
-if (power > 50) {
-analogWrite(10, power);
-digitalWrite(9, LOW);
-} else {
-digitalWrite(9, LOW);
-digitalWrite(10, LOW);
+
+void encoder() {
+  if (digitalRead(3) == HIGH) {
+    encoder_pos++;
+  } else {
+    encoder_pos--;
+  }
 }
-}</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"></code></pre></div></div><hr style="margin-bottom:1.666rem"/><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/blog/reformat-sd-card/">← <!-- -->Reformat SD Card</a></li><li></li></ul></div></div></div><div class="search-fullpage "><div class="fullpage"><button id="close_btn"><span>×</span></button><div class="search-wrapper"><h2>Search</h2><input type="text" value="" placeholder="What do you need help with?"/><div class="blogs-wrapper"><div class="my-gallery-class"></div></div></div></div></div></div></div></div><script>
+
+void MotorClockwise(int power){
+  if (power &gt; 50) {
+    analogWrite(9, power);
+    digitalWrite(10, LOW);
+  } else {
+    digitalWrite(9, LOW);
+    digitalWrite(10, LOW);
+  }
+}
+
+void MotorCounterClockwise(int power) {
+  if (power &gt; 50) {
+    analogWrite(10, power);
+    digitalWrite(9, LOW);
+  } else {
+    digitalWrite(9, LOW);
+    digitalWrite(10, LOW);
+  }
+}</code></pre></div></div><hr style="margin-bottom:1.666rem"/><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/blog/reformat-sd-card/">← <!-- -->Reformat SD Card</a></li><li></li></ul></div></div></div><div class="search-fullpage "><div class="fullpage"><button id="close_btn"><span>×</span></button><div class="search-wrapper"><h2>Search</h2><input type="text" value="" placeholder="What do you need help with?"/><div class="blogs-wrapper"><div class="my-gallery-class"></div></div></div></div></div></div></div></div><script>
   
   
   if(true) {
