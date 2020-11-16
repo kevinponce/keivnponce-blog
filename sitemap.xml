@@ -52,6 +52,7 @@
 <url> <loc>https://www.kevinponce.com/googe-maps/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/ui/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/ui/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.kevinponce.com/blog/arduino-pot/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/dc-motor-encode-precisely/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/reformat-sd-card/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/list-branch-sort-by-commit-date/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
