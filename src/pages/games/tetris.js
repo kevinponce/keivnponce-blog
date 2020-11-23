@@ -1,3 +1,4 @@
+import { graphql } from 'gatsby';
 import React, { Component } from "react";
 import Loadable from '@loadable/component'
 import Layout from '../../components/layout'

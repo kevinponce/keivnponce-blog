@@ -27,9 +27,6 @@ PhiAttrs.configure do |conf|
 end
 
 
-good blogs:
-https://catswhocode.com/programming-blogs/
-
 TODO games:
 pong
 pac man

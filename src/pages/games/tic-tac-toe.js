@@ -1,7 +1,9 @@
-import React, { Component } from "react";
+import { graphql } from 'gatsby';
+import React, { Component } from 'react';
 import Loadable from '@loadable/component'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
+
 const TicTacToe = Loadable(() => import('../../components/games/ticTacToe/index'))
 
 class TicTacToeApp extends Component {

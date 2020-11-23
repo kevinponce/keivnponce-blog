@@ -1,3 +1,4 @@
+import { graphql } from 'gatsby';
 import React, { Component } from "react";
 import Prism from 'prismjs';
 import Loadable from '@loadable/component';
