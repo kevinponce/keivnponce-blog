@@ -4,7 +4,7 @@
   factory :example do
     slug &#39;example1&#39;
 
-    initialize_with { Example.find_or_create_by(slug: slug) }
+    initialize_with { Example.find_or_initialize_by(slug: slug) }
   end
 end</code></pre></div>
 <h1>Example Used:</h1>
