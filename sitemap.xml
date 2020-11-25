@@ -59,6 +59,7 @@
 <url> <loc>https://www.kevinponce.com/ui/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/python/download-youtube-videos/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/ruby/rails/add-services/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.kevinponce.com/blog/arduino/adafruit-bno055-imu/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/ruby/create-a-cipher/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/ruby/factory-bot/sequence/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/ruby/rails/boolean-cast/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -106,7 +107,6 @@
 <url> <loc>https://www.kevinponce.com/blog/ruby/soap-with-savon/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/ruby/yaml/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/arduino/3-axis-accelerometer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.kevinponce.com/blog/arduino/adafruit-bno055-imu/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/arduino/relay/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/arduino/water-sensor/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.kevinponce.com/blog/react-js/loading-button/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
