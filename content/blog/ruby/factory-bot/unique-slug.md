@@ -13,7 +13,7 @@ FactoryBot.define do
   factory :example do
     slug 'example1'
 
-    initialize_with { Example.find_or_create_by(slug: slug) }
+    initialize_with { Example.find_or_initialize_by(slug: slug) }
   end
 end
 ```
