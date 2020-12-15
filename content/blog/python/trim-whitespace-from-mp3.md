@@ -27,7 +27,7 @@ pip install pydub
 ```
 
 # Script:
-```
+```python
 # mac: brew install ffmpeg
 # linux: sudo apt-get install ffmpeg
 # pip install pydub

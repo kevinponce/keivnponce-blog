@@ -22,7 +22,7 @@ pip install pyaudio
 ```
 
 # Script:
-```
+```python
 # brew install portaudio
 # pip install pyaudio
 

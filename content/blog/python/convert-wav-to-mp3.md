@@ -27,7 +27,7 @@ pip install pydub
 ```
 
 # Script:
-```
+``````python
 from pydub import AudioSegment
 
 AudioSegment.from_wav("example.wav").export("example.mp3", format="mp3")
