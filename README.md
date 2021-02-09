@@ -63,6 +63,17 @@ console.log(moment.tz.countries())
 ```
 
 
+```
+D2822/12 1250KV
+
+28 motor or rotor diameter (wider typically means more torque)
+22 Motor or roto height
+12 number of wire turns. smaller the number the faster the motor will turn, but with less torque. The higher the number means more torque but it will be slower.
+
+1250 Revolution per volt
+```
+
+
 
 
 rails routes
