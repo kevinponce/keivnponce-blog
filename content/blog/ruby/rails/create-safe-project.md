@@ -8,15 +8,16 @@ description: Learn how to create a safe rails app that will help find vulnerabil
 ## Create Application
 First you need to create new project by running the following command in a terminal:
 ```
-rails new app-name -T -d postgresql
+rails new app-name --webpack=react -T -d postgresql
 ```
 
+`--webpack=react`  adds webpacker and configures it to work with react
 `-T` will prevent creating minitest test
 `-d postgresql` will create rails project with postgresql instead of sqlite
 
 ## Update `development` and `test` gems
 Next you need update `Gemfile` to have the following in group `:development, :test`:
-```
+```ruby
 group :development, :test do
   gem 'brakeman'
   gem 'bullet'
@@ -38,7 +39,7 @@ bundle install
 ### Rspec
 Rspec is a test framework for ruby that makes it simple to test a application.
 To setup rspec, run the following command in a terminal:
-```
+```ruby
 rails generate rspec:install
 ```
 
@@ -52,7 +53,7 @@ Factory Bot provides factory methods to create test fixtures for automated softw
 It makes it easy to create, or build data for tests in ruby.
 
 Create a support file to add Factory Bot to Rspec by doing the following to `spec/support/factory_bot.rb`:
-```
+```ruby
 # frozen_string_literal: true
 
 RSpec.configure do |config|
@@ -63,7 +64,7 @@ end
 # Database Cleaner
 Database Cleaner is a set of gems containing strategies for cleaning your database in Ruby.
 Create a support file to add Database Cleaner to Rspec by doing the following to `spec/support/database_cleaner.rb`:
-```
+```ruby
 # frozen_string_literal: true
 
 RSpec.configure do |config|
@@ -94,7 +95,7 @@ This gem helps find a lot of potenial performance issues.
 
 
 To add Bullet add the following snippet code to `config/environments/development.rb` and `config/environments/test.rb`
-```
+```ruby
 Rails.application.configure do
   ...
 
@@ -122,7 +123,7 @@ To run Rubocop, run the following command in a terminal:
 SimpleCov is a code coverage analysis tool for Ruby.
 It allows you to see how well your coverage is.
 Create a support file to add Simplecov to Rspec by doing the following to `spec/support/simplecov.rb`:
-```
+```ruby
 # frozen_string_literal: true
 
 require 'simplecov'
@@ -135,7 +136,7 @@ Make sure to add `/coverage/` to `.gitignore`.
 
 # Run
 To make see if everything is good with your application run the following:
-```
+```ruby
 bundle exec rspec
 bundle exec brakeman
 bundle exec bundle-audit
@@ -145,12 +146,12 @@ bundle exec rubocop
 # Database
 Before you can run your application, you need to make sure your database is create and your migrations up to date.
 This can be done by running the following command:
-```
+```ruby
 bundle exec rails db:create
 bundle exec rails db:migrate
 ```
 
 Last but not least, to your application run the following command in a terminal:
-```
+```ruby
 bundle exec rails s
 ```

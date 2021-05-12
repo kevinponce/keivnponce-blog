@@ -11,7 +11,7 @@ gem 'devise'
 gem 'jwt'
 
 group :development, :test do
-  gem 'dotenv'
+  gem 'dotenv-rails'
 end
 ```
 
@@ -320,7 +320,7 @@ end
 ```
 class Api::ExampleController < ApiController
   def index
-    render json { user: current_user }
+    render json: { user: current_user }
   end
 end
 ```
