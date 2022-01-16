@@ -24,14 +24,15 @@ asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 asdf plugin-add python https://github.com/tuvistavie/asdf-python.git
 asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+asdf plugin-add php https://github.com/asdf-community/asdf-php.git
 ```
 
 Once you have the plugin installed you need to install a version:
 ```
-asdf install <language> <versio>
+asdf install <language> <version>
 
 # example
-asdf instsall ruby 2.6.0
+asdf install ruby 2.6.0
 ```
 
 If you do not know which version to install, you can list all of the versions for the language:
@@ -54,4 +55,11 @@ If you are wondering what asdf is current, the a command for that:
 asdf current
 ```
 
+If not seeing a desired version, you might need to update the plugin by doing the following:
+```
+asdf plugin-update ruby
+```
 
+```
+asdf plugin-remove ruby
+```

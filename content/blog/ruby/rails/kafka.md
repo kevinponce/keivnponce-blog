@@ -1,3 +1,11 @@
+---
+title: Kafka to Rails
+date: "2021-01-07T22:12:00.121Z"
+tags: ["ruby", "ruby-on-rails"]
+header: { type: 'icon', bgColor: '#DE3F24', icon: 'ruby' }
+description: How to Kafka in ruby on rails
+---
+
 ```
 brew install kafka
 ```

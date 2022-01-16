@@ -1,9 +1,9 @@
 ---
-title: Mac Moteous Python
+title: Raspberry Moteous Python
 date: "2021-05-18T22:12:00.121Z"
-tags: ["python"]
+tags: ["python", "raspberry"]
 header: { type: 'icon', bgColor: '#4B8BBE', icon: 'python' }
-description: How to use Moteous with python on mac
+description: How to use Moteous with python on Raspberry
 ---
 
 ```python
@@ -25,6 +25,7 @@ async def main():
     # In case the controller had faulted previously, at the start of
     # this script we send the stop command in order to clear it.
     await c.set_stop()
+
 
     # `set_position` accepts an optional keyword argument for each
     # possible position mode register as described in the moteus
@@ -58,7 +59,7 @@ async def main():
     
     await asyncio.sleep(5.02)
     await c.set_stop()
-
 if __name__ == '__main__':
     asyncio.run(main())
+
 ```

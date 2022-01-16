@@ -101,5 +101,3 @@ docker ps
 docker exec -it f82394b79b0d sh
 redis-sever
 ```
-
-# Create Custon Image

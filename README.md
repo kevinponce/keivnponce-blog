@@ -1,14 +1,21 @@
+https://medium.com/voice-tech-podcast/single-word-speech-recognition-892c7e01f5fc
+https://github.com/RRisto/single_word_asr_gmm_hmm
+
+
+
 npm run develop
 npm run deploy
 
 TODO 
 
+https://blog.cloud66.com/adding-sso-to-your-rails-application-with-saml/
 
 my laptop script
 
 immer
 react dropzone
 react flatten data model
+create a post on kaminari
 
 rails doc api two different apis one project
 https://leetcode.com/problems/n-queens/
@@ -74,12 +81,11 @@ D2822/12 1250KV
 ```
 
 
-
-
 rails routes
 resources :example, only: [:show], param: 'zip_code'
 namespace
 nested
+js obfuscator
 
 
 
@@ -96,4 +102,7 @@ rubix cube
 inspiration:
 https://jasoncharnes.com
 https://www.joshuawood.net
+https://blog.ueber.io/post/list-of-side-projects/
+https://jenniferdewalt.com/
+https://www.drip.com/
 
