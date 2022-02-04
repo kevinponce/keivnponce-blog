@@ -7,7 +7,7 @@ description: How to use a piezo buzzer with an Arduino.
 ---
 
 # Piezo.cpp
-```
+```c
 // CPP
 // Piezo + -> 5V
 // Piezo - -> GND

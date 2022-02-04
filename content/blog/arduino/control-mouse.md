@@ -8,7 +8,7 @@ description: How to control a mouse using an Arduino
 
 Here is a snippet of code to used to control a mouse using an Arduino.
 
-```
+```c
 #include "Mouse.h"
 
 void setup() {

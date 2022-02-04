@@ -13,7 +13,7 @@ Search for Adafruit_NeoPixel and install it.
 
 Here is a snippet of code that displays a loading NeoPixel.
 
-```
+```c
 // Arduino 5V -> NeoPixel PWR
 // Arduino GND -> NeoPixel GDN
 // Arduino D1 -> NeoPixel Data Input

@@ -5,7 +5,7 @@ tags: ["arduino"]
 header: { type: 'icon', bgColor: '#0C9097', icon: 'arduino' }
 ---
 
-```
+```c
 long previousMillis = 0;
 long interval = 1000;  
 int tftrefresh = 0;

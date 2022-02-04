@@ -6,7 +6,7 @@ header: { type: 'icon', bgColor: '#0C9097', icon: 'arduino' }
 description: Using POT with an Arduino.
 ---
 
-```
+```c
 /* Wiring:
  * 5 Lead Pot
  * POT LEFT to RIGHT leads facing you

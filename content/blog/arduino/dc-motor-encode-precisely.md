@@ -17,7 +17,7 @@ Before you can use the code, you must install PIDController library by doing the
 * Install PIDController
 ```
 
-```
+```c
 /* Wiring:
  * 12V Geared DC motor with Hall Effect Quadrature Encoder
  * Hall Sensor B Vout -> Arduino  D2

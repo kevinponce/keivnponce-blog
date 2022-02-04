@@ -17,7 +17,7 @@ Time to connect the sensor to Arduino:
 
 Now you are able to use the following snippet of code to determine the amount of force.
 
-```
+```c
 // Force Sensor Right -> 5V
 // Force Sensor Left -> ((100k ohm && A0 )-> GND)
 

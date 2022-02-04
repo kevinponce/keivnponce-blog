@@ -13,7 +13,7 @@ Search for `HX711` and install the one created by `RobTillaart`.
 
 Here is a snippet of code to use HX711
 
-```
+```c
 #include "HX711.h"
 
 HX711 scale;

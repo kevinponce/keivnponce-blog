@@ -6,7 +6,27 @@ header: { type: 'icon', bgColor: '#0C9097', icon: 'arduino' }
 description: How to use an Arduino as a Nintendo controller
 ---
 
-Most of the code comes from: `https://github.com/bootsector/wii-retropad-adapter`, but I modified the main to be controlled without buttons.
+Most of the code comes from: `https://github.com/bbtinkerer/NesClassicAdvantage`, but I modified the main to be controlled without buttons.
+
+## Wiring:
+```
+If you bought after market, the colors will not match.
+Instead use the digram, from the perspective of the backside of the plug....
+|~~_____~~|
+|         |
+|  6 4 2  |
+|  -----  |
+|  5 3 1  |
+\_________/
+
+Pin   Cable color   Description
+1     Red           3.3V
+2     Yellow        SCL. I²C Serial Clock. (400 kHz)
+3     Red           Connected to 3.3V inside attachment connector
+4     Not connected.
+5     Green         SDA. I²C Serial Data
+6     White         Ground 
+```
 
 ## main
 ```c

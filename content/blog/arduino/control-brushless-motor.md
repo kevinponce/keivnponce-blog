@@ -6,7 +6,7 @@ header: { type: 'icon', bgColor: '#0C9097', icon: 'arduino' }
 description: How to control brushless motor with an Arduino.
 ---
 
-```
+```c
 /* Wiring:
  * ESC GND -> Arduino GND
  * ESC V -> Arduino 5V

@@ -6,7 +6,7 @@ header: { type: 'icon', bgColor: '#0C9097', icon: 'arduino' }
 description: How to use a piezo as a trigger with an Arduino.
 ---
 
-```
+```c
 void setup() {
   Serial.begin(9600);
 }

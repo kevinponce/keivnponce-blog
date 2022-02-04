@@ -13,16 +13,23 @@ Search for Adafruit BNO055 and install it.
 
 Here is a snippet of code to use Adafruit BNO055.
 
-```
+```c
 // Click sketch
 // Select Include Librart
 // Select Manage Libraies...
 // Install Adafruit BNO055
 
+// Uno R2
 // Adafruit BNO055 VIN: Arduino 5V
 // Adafruit BNO055 GND: Arduino GDN
 // Adafruit BNO055 SDA: Arduino A4
 // Adafruit BNO055 SCL: Arduino A5
+
+// MKR Wifi 1010
+// Adafruit BNO055 VIN: Arduino 5V
+// Adafruit BNO055 GND: Arduino GDN
+// Adafruit BNO055 SDA: Arduino SDA
+// Adafruit BNO055 SCL: Arduino SCL
 
 #include <Wire.h>
 #include <Adafruit_Sensor.h>

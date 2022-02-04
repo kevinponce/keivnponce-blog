@@ -16,8 +16,8 @@ Here is a circuit diagram:
 
 ![Arcade Button Digram](./digram.png)
 
-# Button.cpp
-```
+# Debounce.cpp
+```c
 #include "Debounce.h"
 
 uint8_t _pin;
@@ -59,8 +59,8 @@ boolean Debounce::pressed() {
 }
 ```
 
-## Button.h
-```
+## Debounce.h
+```c
 #ifndef Debounce_h
 #define Debounce_h
 
@@ -88,7 +88,7 @@ class Debounce {
 ```
 
 ## Example
-```
+```c
 #include "Debounce.h"
 
 Debounce button = Debounce(2, 50);
@@ -106,4 +106,3 @@ void loop() {
 }
 
 ```
-

@@ -10,7 +10,7 @@ The port can be found in arduino studio. Example:
 ![Arduino Serial Port](./arduinoSerialPort.png)
 
 # pythonSerial.cpp
-```
+```c
 int x;
 
 void setup() {
@@ -27,7 +27,7 @@ void loop() {
 
 ## ArduinoSerial.py
 *Make sure you do not name the file `serial.py` or it will break `import serial`*
-```
+```python
 # pip install pyserial
 
 import serial

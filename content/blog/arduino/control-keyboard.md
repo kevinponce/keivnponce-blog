@@ -8,7 +8,7 @@ description: How to control a keyboard using an Arduino
 
 Here is a snippet of code to used to control a keyboard using an Arduino.
 
-```
+```c
 #include "Keyboard.h"
 
 void setup() {

@@ -8,7 +8,7 @@ description: How to send and receive messages through Bluetooth on Arduino.
 Adding Bluetooth to Arduino using HM-10 is really easy.
 
 It can be achieve by uploading the following to an arduino.
-```
+```c
 // Bluetooth vcc to Arduino 3.3V
 // Bluetooth gnd to Arduino gnd
 // Bluetooth gnd to Arduino gnd

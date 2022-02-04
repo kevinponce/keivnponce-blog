@@ -7,7 +7,7 @@ header: { type: 'icon', bgColor: '#0C9097', icon: 'arduino' }
 
 Here is a snippet of code to use relay.
 
-```
+```c
 // Relay VCC to Arduino 5V
 // Relay GND to Arduino GND
 // Relay IN1 to Arduino 7

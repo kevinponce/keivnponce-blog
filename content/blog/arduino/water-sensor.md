@@ -8,7 +8,7 @@ description: How to detect moisture with an Arduino
 
 Here is a snippet of code to use water sensor.
 
-```
+```c
 // Water Sensor + to Arduino 5V
 // Water Sensor - to Arduino GND
 // Water Sensor S to Arduino A5

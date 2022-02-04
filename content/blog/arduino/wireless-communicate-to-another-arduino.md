@@ -21,7 +21,7 @@ Time to connect the NRF24L01 to Arduino:
 Here is the snippets of code for both the transmitter and receiver:
 
 ## Transmitter Code
-```
+```c
 // NRF24L01 VCC -> Arduino 3.3V
 // NRF24L01 GND -> Arduino GND
 // NRF24L01 CSN -> Arduino 8
@@ -54,7 +54,7 @@ void loop() {
 ```
 
 ## Receiver Code
-```
+```c
 // NRF24L01 VCC -> Arduino 3.3V
 // NRF24L01 GND -> Arduino GND
 // NRF24L01 CSN -> Arduino 8

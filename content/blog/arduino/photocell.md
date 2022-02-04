@@ -6,7 +6,7 @@ header: { type: 'icon', bgColor: '#0C9097', icon: 'arduino' }
 description: How to use a photocell with an Arduino.
 ---
 
-```
+```c
 // Arduino 5V -> photocell -> 10k -> [A0 & Arduino GND]
 int photocellPin = 0;     // the cell and 10K pulldown are connected to a0
 int photocellReading;     // the analog reading from the sensor divider
