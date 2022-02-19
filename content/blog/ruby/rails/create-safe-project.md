@@ -8,6 +8,10 @@ description: Learn how to create a safe rails app that will help find vulnerabil
 ## Create Application
 First you need to create new project by running the following command in a terminal:
 ```
+brew install libpq
+sudo gem install rails
+brew install postgresql
+brew services restart postgresql
 rails new app-name --webpack=react -T -d postgresql
 ```
 
