@@ -350,3 +350,82 @@ let matrix:[[f32; 3]; 2] = [
 
 println!("{:?}", matrix);
 ```
+
+## Slice
+```rust
+fn use_slice(slice: &mut [i32]) {
+  println!("{}, {}", slice.len(), slice[0]);
+
+  slice[1] = 123;
+}
+
+let mut data = [1, 2, 3, 4, 5];
+
+use_slice(&mut data[1..4]);
+use_slice(&mut data);
+```
+
+## Tuple
+```rust
+let sp = sum_and_product(3, 4);
+println!("{}, {}", sp.0, sp.1);
+
+let (a, b) = sum_and_product(5, 6);
+println!("{}, {}", a, b);
+
+let sp2 = sum_and_product(5, 6);
+let ((c, d), (e, f)) = (sp, sp2);
+println!("{}, {}", e, f);
+```
+
+## Pattern Matching
+```rust
+fn how_many(n: i32) -> &'static str{
+  match n {
+
+    0 => "no",
+    1 | 2 => "one or two",
+    12 => "a dozen",
+    9..=11 => "lots",
+    _ => "a few"
+  }
+}
+
+for x in 0..13 {
+  println!("{}, {}", x, how_many(x));
+}
+
+
+let point = (3,4);
+match (point) {
+  (0, 0) => println!("origin"),
+  (0, y) => println!("x axis and y is {}", y),
+  (x, 0) => println!("y axis and x is {}", x),
+  (_, y) => println!("(?,{})", y),
+}
+```
+
+## Generic
+```rust
+struct Point<T> {
+  x: T,
+  y: T
+}
+
+struct OtherPoint<T, V> {
+  x: T,
+  y: V
+}
+
+struct Line<T> {
+  start: Point<T>,
+  end: Point<T>,
+}
+
+let a = Point { x: 0.0, y: 1.1 };
+let b = Point { x: 0, y: 1 };
+let c = Point { x: 3, y: 2 };
+
+let myLine = Line { start: c, end: b };
+println!("{:?}", (myLine.start).x);
+```

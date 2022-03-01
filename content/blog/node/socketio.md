@@ -102,7 +102,7 @@ Create view `views/chat.html`:
 ```
 
 Add the following under `scripts` in `package.json`
-```
+```json
 "scripts": {
   "start": "nodemon index.js --exec babel-node --presets babel-preset-env"
 },
