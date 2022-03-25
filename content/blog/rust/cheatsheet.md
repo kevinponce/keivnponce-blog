@@ -429,3 +429,189 @@ let c = Point { x: 3, y: 2 };
 let myLine = Line { start: c, end: b };
 println!("{:?}", (myLine.start).x);
 ```
+
+## Vector
+Dynamic array
+```rust
+let mut a = Vec::new();
+a.push(1);
+a.push(2);
+a.push(3);
+
+println!("{:?}", a); // 1, 2, 3
+
+a.push(44);
+println!("{:?}", a); // 1, 2, 3, 44
+
+println!("{:?}", a[0]); // 1
+
+// println!("{:?}", a[6]); // fails
+
+match a.get(6) {
+  Some(x) => println!("{}", x),
+  None => println!("error, no such element"),
+}
+
+for x in &a {
+  println!("{:?}", x);
+}
+
+let last_el = a.pop();
+println!("{:?}", last_el);
+
+while let Some(x) = a.pop() {
+  println!("{:?}", x);
+}
+```
+
+## VecDeque
+Double ended queue
+
+## BinaryHeap
+Max heap or priorty queue
+
+
+## Hashmap
+Dictionary
+```rust
+use std::collections::HashMap;
+
+fn main() {
+  let mut shapes = HashMap::new();
+  shapes.insert(String::from("triangle"), 3);
+  shapes.insert(String::from("square"), 4);
+
+  println!("a square has {} sides", shapes["square".into()]);
+
+  for (key, value) in &shapes {
+    println!("a {} has {} sides", key, value);    
+  }
+
+  shapes.entry("circle".into()).or_insert(1);
+
+  println!("{:?}", shapes);
+}
+
+```
+
+## BTreeMap
+Sorted Dictionary
+
+## HashSet
+unordered set
+```rust
+use std::collections::HashSet;
+
+fn main() {
+  let mut greeks = HashSet::new();
+  greeks.insert("gamma"); // => true
+  greeks.insert("delta"); // => true
+  println!("{:?}", greeks); // "gamma", "delta"
+
+  greeks.insert("delta"); // => false
+  println!("{:?}", greeks); // "gamma", "delta"
+
+  if !greeks.contains("kappa") {
+    println!("We do not have kappa");
+  }
+
+  let removed = greeks.remove("delta");
+  println!("{:?}", removed); // => true
+
+  let _1_5:  HashSet<_> = (1..=5).collect();
+  let _1_10:  HashSet<_> = (1..=10).collect();
+  let _6_10:  HashSet<_> = (6..=10).collect();
+  let _2_8:  HashSet<_> = (2..=8).collect();
+  println!("{:?}", _1_5);
+  println!("{:?}", _2_8);
+
+  println!("{:?}", _1_10.is_subset(&_1_5));
+  println!("{:?}", _1_5.is_disjoint(&_6_10));
+  println!("{:?}", _2_8.union(&_6_10));
+  println!("{:?}", _2_8.difference(&_6_10));
+}
+```
+
+## BTreeSet
+Sorted Set
+
+## Iterators
+```rust
+let vec = vec![3, 2, 1];
+
+for x in &vec {
+  println!("{:?}", x);
+}
+
+for x in vec.iter() {
+  println!("{:?}", x);
+}
+
+// reverse
+for x in vec.iter().rev() {
+  println!("{:?}", x);
+}
+
+let mut mut_vec = vec![3, 2, 1];
+
+for x in mut_vec.iter_mut() {
+  *x += 2
+}
+
+println!("{:?}", mut_vec);
+```
+
+## Strings
+```rust
+let s:&'static str = "hello world"; // no mutable
+
+for c in s.chars().rev() {
+  println!("{:?}", c);
+}
+
+if let Some(first_char) = s.chars().nth(0) {
+  println!("{:?}", first_char);
+}
+
+let mut letters = String::new();
+
+let mut a = 'a' as u8;
+
+while a <= ('z' as u8) {
+  letters.push(a as char);
+  letters.push_str(",");
+
+  a += 1;
+}
+
+println!("{:?}", letters);
+
+let u:&str = &letters;
+
+
+// concatentation
+let z = letters + "abc";
+let mut abc = "hello world".to_string();
+abc.remove(0);
+
+println!("{:?}", abc.replace("ello", "goodbye"));
+
+
+// format
+let greating = format!("hi, {}", "kevin");
+println!("{:?}", greating);
+
+
+let rfr = format!("{0}, {1}, {0}", "run", "forest");
+println!("{:?}", rfr);
+
+let info = format!(
+  "the name's {last}. {first} {last}",
+  first = "james",
+  last = "bond"
+);
+
+println!("{:?}", info);
+```
+
+

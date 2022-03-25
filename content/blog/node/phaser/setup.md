@@ -174,6 +174,6 @@ function create () {
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
   "build": "webpack --config webpack.prod.js",
-  "dev": "webpack-dev-server --config webpack.common.js --watch"
+  "dev": "webpack serve --config webpack.common.js"
 },
 ```
