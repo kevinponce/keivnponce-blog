@@ -31,8 +31,15 @@ export default class CollideScene extends Phaser.Scene {
 
     this.trap = this.physics.add.sprite(20, 100, 'guy').setOrigin(0, 1);
 
+
+    this.pipes = this.physics.add.group();
+    for (let i = 0; i < 4; i++) {
+      this.pipes.create(0, 0, 'pipe').setImmovable(true).setOrigin(0, 1);
+    }
+
     this.physics.add.collider(this.guy, this.platform, null, null, this);
     this.physics.add.collider(this.guy, this.trap, this.trapCollision, null, this);
+    this.physics.add.collider(this.guy, this.pipes, this.trapCollision, null, this);
   }
 
   update() { }
