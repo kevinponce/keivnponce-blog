@@ -30,7 +30,7 @@ console.log(`app running on port ${config.port}`);
 export default app;
 ```
 
-## config/index.js
+## config/db.js
 ```javascript
 export default {
   "port": 3005,
@@ -93,6 +93,12 @@ let exampleSchema = new Schema({
   nestedExamples: [{
     type: Schema.Types.ObjectId,
     ref: 'NestedExample'
+  }],
+  options: [{
+    answer: String,
+    isCorrectAnswer: Boolean,
+    willSmithIndex: Number,
+    startDate​:​ Date,
   }],
 });
 

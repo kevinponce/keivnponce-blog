@@ -37,7 +37,7 @@ Create `.babelrc`:
 Add the following under `scripts` in `package.json`
 ```
 "scripts": {
-  "start": "nodemon index.js --exec babel-node",
+  "start": "nodemon index.js --exec babel-node"
 },
 ```
 
