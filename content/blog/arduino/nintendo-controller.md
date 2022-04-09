@@ -28,6 +28,12 @@ Pin   Cable color   Description
 6     White         Ground 
 ```
 
+1 green
+2 white
+3 black
+4 
+5 yellow
+6 red
 ## main
 ```c
 #include <Arduino.h>
