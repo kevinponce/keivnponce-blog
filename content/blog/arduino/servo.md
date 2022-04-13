@@ -15,8 +15,8 @@ I added it the arduino library folder.
 # Wired
 ```
 PC9685 VCC -> Arduino 5V
-PC9685 SDA -> Arduino A4
-PC9685 SCW -> Arduino A5
+PC9685 SDA -> Arduino  | MKR SDA
+PC9685 SCW -> Arduino A5 | MKR SLC
 PC9685 GND -> Arduino GND
 ```
 
